@@ -1,0 +1,201 @@
+<app-navbar></app-navbar>
+
+<section class="section-container business-solution-section">
+    <!-- <img class="business-solution-image" src="assets/images/cta.jpg" alt="business-solution" loading="lazy"> -->
+    <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" class="business-solution-video"
+        preload="auto">
+        <source src="assets/videos/business-solutions.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="business-solution-container">
+        <div class="business-solution-wrapper">
+            <h1 class="business-solution-header business-solution-item"
+                [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Digital Display Management Services</h1>
+            <p class="business-solution-subheader business-solution-item"
+                [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                We empower your business with innovative business-to-business solutions to drive growth, enhance
+                efficiency, and gain a competitive edge. <br> From advanced technologies to tailored strategies, we
+                provide
+                the tools and expertise to optimize performance, expand reach, and adapt to <br> market demands,
+                ensuring
+                sustained success in a changing landscape.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-container business-solution-contents">
+    <div class="gradient-bg-top-right"></div>
+    <div class="business-solution-container">
+        <div class="business-solution-wrapper">
+            <h2>VCastplay</h2>
+            <div class="vcastplay-info">
+                <div class="vcastplay-description">
+                    <p>A cloud-based CMS for the DOOH industry, popular among major Philippine companies for indoor and
+                        outdoor digital signage. Developed by Nyxsys Philippines, Inc., a leading advertising firm with
+                        25 years of experience since its spinoff from Mediapool. It also operates one of the largest
+                        LEDs in the Philippines, situated in a prime location for both indoor and outdoor DOOH displays.
+                        Digital Signage Software is applicable for all verticals engaged in using digital screen
+                        displays in OOH advertising, retail, and more.</p>
+                    <p>Take your business to the next level with vcastplay, the intelligent, cloud-powered solution
+                        designed to deliver organized, engaging digital ad content. Seamlessly tailored for your
+                        business needs, vcastplay makes managing your digital signage effortless.
+                    </p>
+                    <p>With its user-friendly interface, vcastplay helps boost your sales and transform how your
+                        audience experiences your brand. Elevate your marketing strategy with this cutting-edge
+                        advertising tool! </p>
+                </div>
+                <div class="row g-3 align-items-center flex-wrap-reverse">
+                    <div class="col-12 col-lg-6 m-0">
+                        <h4 class="my-4">Feature Benefits</h4>
+                        <mat-accordion>
+                            @for (item of e2eSolutions; track $index) {
+                            <mat-expansion-panel>
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        <img [src]="item.image" [alt]="item.text" loading="lazy" width="25">
+                                        <span class="mx-3 e2eTitle">{{ item.text }}</span>
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <p>{{ item.details }}</p>
+                            </mat-expansion-panel>
+                            }
+                        </mat-accordion>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div id="video-container" class="vcastplay-video">
+                            <video id="vcastplay" [controls]="true" [autoplay]="false" [loop]="true"
+                                [playsInline]="true" class="vcastplay-video" preload="auto">
+                                <source src="assets/videos/vcastplay software video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <h2>Digital Signage B2B Case Studies</h2>
+            <p class="mt-5">Successful businesses leverage digital signage to achieve various objectives, enhancing
+                customer
+                engagement and improving operational efficiency. These versatile platforms deliver dynamic, targeted
+                content that captures attention and drives meaningful interactions, supporting lead generation and
+                acquisition. This approach ensures the right message reaches the right audience, boosting brand
+                visibility and business growth. By streamlining operations and automating content delivery, businesses
+                stay agile and competitive.
+            </p>
+            <p>Outsourcing content management, charting, and digital content creation allows companies to focus on core
+                operations while ensuring high-quality, professional content. These services offer expertise in creating
+                compelling visual experiences and managing content flow, maximizing the impact of digital signage
+                campaigns. </p>
+            <div class="business-solution-carousel">
+                <div class="row g-3">
+                    @for (item of caseStudies; track $index) {
+                    <div class="col-12 col-xl-6">
+                        <div class="business-solution-item">
+                            <img [src]="item.image" [alt]="item.image">
+                            <div class="business-solution-item-overlay">
+                                <div class="business-solution-item-text">
+                                    <h4>{{ item.text }}</h4>
+                                    <p>{{ item.details }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container post-service-section">
+    <div class="business-solution-container">
+        <div class="business-solution-wrapper">
+            <h2>Content Management System</h2>
+            <div class="post-service-impact mt-5">
+                <div class="row g-5">
+                    <div class="col-12">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-12">
+                                <div id="video-container" class="post-service-video">
+                                    <video id="vcastplay" [controls]="true" [autoplay]="false" [loop]="true"
+                                        [playsInline]="true" class="vcastplay-video" preload="auto">
+                                        <source src="assets/videos/digital signage.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p>Fueled by advancements in technology, enhanced user experiences, and the growing integration
+                            of artificial intelligence and data analytics, NYXSYS will make your brand fully embrace the
+                            promising future of digital display management.
+                            NYXSYS will simplify the process and make it cost-effective together with our team of
+                            experts supporting you from setup to daily operations, ensuring your playlists and content
+                            are effortlessly managed with cutting-edge cloud tech.
+                            With NYXSYS, you can easily upload, manage, and schedule your media across unlimited screens
+                            from one central location and enjoy the operational costs savings.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center my-4 g-5">
+                @for (item of postServices; track $index) {
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="post-service-list">
+                        <div class="post-service-item">
+                            <img [src]="item.image" [alt]="item.text" loading="lazy">
+                        </div>
+                        <div class="post-service-text">
+                            <h4>{{ item.text }}</h4>
+                            <p>{{ item.details }}</p>
+                            @if (item.link) {
+                            <!-- <p>For more details, visit <a [href]="item.link" target="_blank">vCastPlay's packages
+                                    page.</a></p> -->
+                            }
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+            <!-- <hr> -->
+
+        </div>
+    </div>
+</section>
+
+<section class="section-container b2b-industries-section">
+    <div class="business-solution-container">
+        <div class="business-solution-wrapper">
+            <h2>B2B Verticals</h2>
+            <p>Nyxsys Philippines is a leading provider of innovative and customizable software solutions, catering to a
+                wide range of B2B industries. The company focuses on delivering cutting-edge technology that helps
+                businesses optimize operations, enhance customer experiences, and drive growth. With expertise in
+                sectors such as retail, hospitality, transport hubs, healthcare, education, and food services, Nyxsys
+                provides tailored solutions that address the unique challenges of each industry. Their offerings include
+                advanced point-of-sale systems, inventory management, data analytics, and process automation, all
+                designed to streamline operations, improve efficiency, and ensure seamless integration across business
+                functions. By prioritizing customer satisfaction and operational excellence, Nyxsys has become a trusted
+                partner for businesses looking to modernize and scale their operations in today’s competitive market.
+            </p>
+            <div class="row justify-content-center g-3 mt-4">
+                @for (item of b2bIndustries; track $index) {
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="b2b-industries">
+                        <img [src]="item.image" [alt]="item.text" loading="lazy">
+                        <div class="b2b-industries-text">
+                            <h3>{{ item.text }}</h3>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<app-see-more-services-section></app-see-more-services-section>
+
+<app-footer></app-footer>

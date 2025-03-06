@@ -1,0 +1,25 @@
+.number-counting-container {
+    padding: 2%;
+    text-align: center;
+    min-width: 200px;
+
+    h2 {
+        font-family: 'Poppins', Arial, sans-serif !important;
+        font-size: 2.3rem !important;
+        font-weight: 600;
+    }
+
+    &:hover {
+        color: #F58F20;
+    }
+}
+
+
+/* Media Queries */
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+
+    .number-counting-container {
+        text-align: start;
+    }
+}

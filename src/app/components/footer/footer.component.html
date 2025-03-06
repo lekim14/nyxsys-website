@@ -1,0 +1,55 @@
+<footer>
+    <div class="container-lg">
+        <div class="wrapper">
+            <div class="row gx-2 gy-5 w-100 align-items-md-start align-items-center">
+                <div class="col-12 col-lg-6">
+                    <img src="assets/images/logo white.png" alt="logo white.png" class="logo" loading="lazy">
+                    <div class="footer-socials">
+                        @for (item of socialLinks; track $index) {
+                        <a [href]="item.url" target="_blank" rel="noopener noreferrer">
+                            <img [src]="'assets/icons/' + item.icon + '.png'" [alt]="item.icon">
+                        </a>
+                        }
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-quick-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/team">Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h3>Contacts</h3>
+                    <div class="footer-contacts">
+                        <div class="footer-contacts-item">
+                            <mat-icon>mail</mat-icon>
+                            <p>{{ emailAddress }}</p>
+                        </div>
+                        <div class="footer-contacts-item">
+                            <mat-icon>location_on</mat-icon>
+                            <p>{{ address }}</p>
+                        </div>
+                        <div class="footer-contacts-item">
+                            <mat-icon>phone</mat-icon>
+                            <p>{{ phone }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row g-2 mt-3 footer-small w-100">
+                <div class="col-12 col-lg-9">
+                    <p>&copy; 2024 Nyxsys Philippines, Inc. All rights reserved.</p>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <a [href]="'/privacy-policy'">Privacy Policy</a>
+                    <span class="dot-separator">•</span>
+                    <a [href]="'/terms'">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

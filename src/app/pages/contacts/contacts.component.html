@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+
+<section class="section-container contact-section">
+    <div class="contact-overlay"></div>
+    <img class="contact-image" src="assets/images/contact-bg.jpg" alt="contact Us" loading="lazy">
+    <div class="contact-container">
+        <div class="contact-wrapper">
+            <h1 class="contact-header contact-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Get in Touch</h1>
+            <p class="contact-subheader contact-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                Ready to take on the digital landscape for your brand? Talk to us!
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-container contact-list-section">
+    <div class="contact-list-container">
+        <div class="contact-list-wrapper">
+            <div class="left-content">
+                <p>SEND US EMAIL</p>
+                <h2>Feel free to write</h2>
+                <form [formGroup]="contactUs" class="row">
+                    <div class="col-12 col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input formControlName="name" matInput placeholder="Enter your full name">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Company</mat-label>
+                            <input formControlName="company" matInput placeholder="Enter your company name">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email Address</mat-label>
+                            <input formControlName="email" matInput placeholder="Enter your email address">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Phone</mat-label>
+                            <input formControlName="contact" matInput placeholder="Enter your phone number">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Message</mat-label>
+                            <textarea formControlName="message" matInput placeholder="Enter your message"></textarea>
+                        </mat-form-field>
+                    </div>
+                </form>
+                <button (click)="onClickSendEmail()" class="w-100" color="accent" mat-raised-button>Get Started with us</button>
+            </div>
+            <div class="right-content">
+                <p>NEED ANY HELP?</p>
+                <h2>Contact Us</h2>
+                <p>
+                    Leading the <span>Digital Out-of-Home Media</span> and <span>Innovative Digital Solutions.</span>
+                </p>
+                <div class="contacts-list">
+                    <div class="contacts-list-item">
+                        <mat-icon>mail</mat-icon>
+                        <p>{{ emailAddress }}</p>
+                    </div>
+                    <div class="contacts-list-item">
+                        <mat-icon>location_on</mat-icon>
+                        <p>{{ address }}</p>
+                    </div>
+                    <div class="contacts-list-item">
+                        <mat-icon>phone</mat-icon>
+                        <p>{{ phone }}</p>
+                    </div>
+                </div>
+
+                <div class="socials">
+                    @for (item of socialLinks; track $index) {
+                    <a [href]="item.url" target="_blank" rel="noopener noreferrer">
+                        <img [src]="'assets/icons/' + item.icon + '.png'" [alt]="item.icon">
+                    </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

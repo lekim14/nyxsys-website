@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+
+<section class="section-container static-section">
+    <!-- <img class="static-image" src="assets/images/cta.jpg" alt="static" loading="lazy"> -->
+    <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" class="static-video" preload="auto">
+        <source src="assets/videos/static.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="static-container">
+        <div class="static-wrapper">
+            <h1 class="static-header static-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Static Fixed
+                Inventories</h1>
+            <p class="static-subheader static-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                Achieve consistent brand exposure with Nyxsys Static Fixed Inventories, strategically placed in
+                high-traffic locations. These high-quality, non-digital ads offer timeless, cost-effective visibility,
+                ensuring your message resonates day after day with clarity and professionalism.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-container static-gallery">
+    <div class="static-container">
+        <div class="static-wrapper" style="margin-bottom: 10%;">
+            <h2>Static Inventories</h2>
+            <div class="row g-3 mt-2">
+                @for (item of staticInvetories; track $index) {
+                <div class="col-12 col-md-6">
+                    <div class="static-content">
+                        <img [src]="item.image" [alt]="item.image">
+                        <div class="static-content-overlay">
+                            <div class="static-content-text">
+                                <h4>{{ item.text }}</h4>
+                                <p>{{ item.address }}</p>
+                                <p>{{ item.size }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-see-more-services-section></app-see-more-services-section>
+
+<app-footer></app-footer>

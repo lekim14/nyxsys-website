@@ -1,0 +1,18 @@
+<nav class="navbar" [ngClass]="{ 'scrolled': isScrolled }">
+    <div class="navbar-container">
+        <a href="/">
+            <!-- <img src="assets/images/logo white.png" alt="logo white.png" class="logo" loading="lazy"> -->
+            <img ngSrc="assets/images/logo white.png" alt="logo white.png" class="logo" width="250" height="56"
+                priority>
+        </a>
+        <button class="navbar-toggler" (click)="isMenuOpen = !isMenuOpen"
+            mat-icon-button><mat-icon>menu</mat-icon></button>
+    </div>
+
+    <ul class="navbar-menu" [class.active]="isMenuOpen">
+        <li><a href="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a href="/services" routerLinkActive="active">Services</a></li>
+        <li><a href="/about" routerLinkActive="active">About</a></li>
+        <li><a href="/team" routerLinkActive="active">Team</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,91 @@
+h2 {
+    font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+.why-section {
+    font-family: 'Poppins', Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    
+    .why-container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        z-index: 1;
+
+        .why-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: auto 20px;
+            text-align: center;
+        
+            h2 {
+                font-family: 'Poppins', Arial, sans-serif;
+                font-size: 2.3rem;
+                line-height: 2.3rem !important;
+                font-weight: 800;
+                margin: 2% 2% 10px 2%;
+            }
+
+            .why-content-item {
+                height: 100%;
+                padding: 8%;
+                border: solid #EBEDF0 2px;
+                border-radius: 8px;
+                transition: transform 0.3s, box-shadow 0.3s;
+                animation: fadeIn 0.5s ease-in-out;
+
+                img {
+                    height: 50px;
+                    margin-bottom: 15%
+                }
+
+                h4 {
+                    font-weight: 500;
+                    margin-bottom: 26px;
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    h2 {
+        font-size: 2rem !important;
+    }
+    
+}

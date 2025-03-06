@@ -1,0 +1,34 @@
+<section class="feature-section section-container">
+    <div class="feature-container">
+        <div class="feature-wrapper">
+            <h2>Our Driving Force</h2>
+            <!-- <div class="row g-5 align-items-stretch justify-content-center my-4">
+                @for (item of drivingForce; track $index) {
+                    <div class="col-12 col-lg-4 text-center feature-content" [@slideIn]="isVisible[$index] ? 'visible' : 'hidden'">
+                        <div class="feature-item">
+                            <img src="assets/icons/lamp.png" alt="Light Bulb">
+                            <h4>{{ item.title }}</h4>
+                            <p>{{ item.details }}</p>
+                        </div>
+                    </div>
+                }
+            </div> -->
+            
+            <div class="row my-4 g-5">
+                @for (item of drivingForce; track $index) {
+                    <div class="col-12 col-md-4 text-center">
+                        <div class="driving-force-list">
+                            <div class="driving-force-item">
+                                <img [src]="item.image" [alt]="item.text">
+                            </div>
+                            <div class="driving-force-text">
+                                <h4>{{ item.title }}</h4>
+                                <p>{{ item.details }}</p>
+                            </div>
+                        </div> 
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

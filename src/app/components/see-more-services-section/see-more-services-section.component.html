@@ -1,0 +1,37 @@
+<section class="section-container more-services">
+    <div class="more-container">
+        <div class="more-wrapper">
+            <div class="more-services-headline-container">
+                <div class="more-services-headline-text">
+                    <h2><span class="fw-normal">&mdash;</span>More Services</h2>
+                    <p>Discover how our integrated digital advertising services can elevate your brand and drive
+                        results!</p>
+                </div>
+                <div class="more-services-headline-buttons-top">
+                    <button (click)="onClickPrev()" mat-icon-button><mat-icon>keyboard_arrow_left</mat-icon></button>
+                    <button (click)="onClickNext()" mat-icon-button><mat-icon>keyboard_arrow_right</mat-icon></button>
+                </div>
+            </div>
+            <div class="more-services-container">
+                <ngx-slick-carousel class="more-services-carousel carousel" #slickModal="slick-carousel"
+                    [config]="config">
+                    @for (item of services; track $index) {
+                    <div class="more-services-item" ngxSlickItem>
+                        <img [src]="item.image" [alt]="item.title">
+                        <div class="more-service-overlay">
+                            <h4>{{ item.title }}</h4>
+                            <p>{{ item.description }}</p>
+                            <a class="more-services-item-button" [href]="item.routerLink" color="accent"
+                                mat-raised-button>LEARN MORE</a>
+                        </div>
+                    </div>
+                    }
+                </ngx-slick-carousel>
+                <div class="more-services-headline-buttons-bottom">
+                    <button (click)="onClickPrev()" mat-icon-button><mat-icon>keyboard_arrow_left</mat-icon></button>
+                    <button (click)="onClickNext()" mat-icon-button><mat-icon>keyboard_arrow_right</mat-icon></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,69 @@
+.company-section {
+    font-family: 'Poppins', Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .company-wrapper {
+        text-align: center;
+        margin: 40px auto;
+        
+        .logos {
+            position: relative;
+            overflow: hidden;
+            margin-top: 5%;
+            padding: 60px auto;
+            white-space: nowrap;
+
+            &:hover .logo-slide {
+                animation-play-state: paused;
+            }
+
+            .logo-slide {
+                animation: 35s slide infinite linear;
+    
+                img {
+                    margin: 0 40px;
+                    height: 50px;
+                    filter: grayscale(100%);
+                    transition: filter 0.1s ease;
+                }
+                img:hover {
+                    filter: grayscale(0%);
+                    cursor: pointer;
+                }
+            }
+
+            &:before, 
+            &:after {
+                position: absolute;
+                top: 0;
+                width: 250px;
+                height: 100%;
+                content: "";
+                z-index: 2;
+            }
+
+            &:before {
+                left: 0;
+                background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+            }
+
+            &:after {
+                right: 0;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+            }
+        }
+    }
+}
+
+// Animations
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-250%);
+    }
+}

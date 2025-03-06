@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+
+<section class="section-container led-section">
+    <!-- <img class="led-image" src="assets/images/cta.jpg" alt="led" loading="lazy"> -->
+    <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" class="led-video" preload="auto">
+        <source src="assets/videos/led.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="led-container">
+        <div class="led-wrapper">
+            <h1 class="led-header led-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">LED Media Inventories</h1>
+            <p class="led-subheader led-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                Maximize your brand’s visibility with Nyxsys’ high-impact LED media, strategically placed in prime
+                locations for optimal exposure. Our dynamic displays captivate audiences, providing unmatched reach and
+                lasting impressions in urban centers, highways, and commercial hubs, helping your brand stand out in a
+                competitive landscape.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-container led-services">
+    <div class="led-container">
+        <div class="led-wrapper" style="margin-bottom: 10%;">
+            <h2>LED Inventories</h2>
+            <div class="row g-3 mt-2">
+                @for (item of ledInventories; track $index) {
+                <div class="col-12 col-lg-4">
+                    <div class="led-content">
+                        <img [src]="item.image" [alt]="item.image" loading="lazy">
+                        <div class="led-content-overlay">
+                            <div class="led-content-text">
+                                <h4>{{ item.text }}</h4>
+                                <p>{{ item.address }}</p>
+                                <p>{{ item.size }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        <div class="led-wrapper">
+            <h2>Mall Posterboxes</h2>
+            <mat-tab-group color="accent" [dynamicHeight]="true" mat-stretch-tabs>
+                @for (item of mallPosterboxes; track $index) {
+                <mat-tab [label]="item.text">
+                    <div class="row g-3 mt-2">
+                        @for (childItem of item.items; track $index) {
+                        <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <div class="led-content">
+                                <img [src]="childItem.image" [alt]="childItem.image" loading="lazy">
+                                <div class="led-content-overlay">
+                                    <div class="led-content-text">
+                                        <h4>{{ childItem.text }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </mat-tab>
+                }
+            </mat-tab-group>
+        </div>
+    </div>
+    <!-- <img src="assets/images/graphics/dots.png" class="img-bottom-left-corner" alt="Dots" loading="lazy"> -->
+</section>
+
+<app-see-more-services-section></app-see-more-services-section>
+
+<app-footer></app-footer>

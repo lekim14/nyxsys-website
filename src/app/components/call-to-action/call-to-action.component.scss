@@ -1,0 +1,60 @@
+h2 {
+    font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+.wrapper {
+    position: relative;
+
+    .cta-container {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        background: url('https://nyxsys.ph/assets/images/cta.jpg');
+        background-attachment: fixed; // This creates the parallax effect
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+
+        .cta-content {
+            padding: 5%;
+            color: #fafafa;
+
+            .header {
+                margin: 0 !important;
+                padding: 0 !important;
+                line-height: 1.2 !important;
+
+                span {
+                    color: #F58F20;
+                }
+            }
+
+            a {
+                padding: 1.5rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    .cta-content {
+        padding: 2%;
+
+        .header {
+            text-align: center;
+        }
+    }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cta-content {
+        padding: 2%;
+
+        .header {
+            text-align: center;
+        }
+    }
+}

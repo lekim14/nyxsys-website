@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Home -->
+    <url>
+        <loc>https://nyxsys.ph/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Services -->
+    <url>
+        <loc>https://nyxsys.ph/services</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- About -->
+    <url>
+        <loc>https://nyxsys.ph/about</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- LED -->
+    <url>
+        <loc>https://nyxsys.ph/services/led-media-inventories</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Static -->
+    <url>
+        <loc>https://nyxsys.ph/services/static-fixed-inventories</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Digital Business -->
+    <url>
+        <loc>https://nyxsys.ph/services/digital-display-management-services</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Audience Measruement -->
+    <url>
+        <loc>https://nyxsys.ph/services/audience-measurement</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+</urlset>

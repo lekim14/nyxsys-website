@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+<section class="section-container about-section">
+    <img class="about-image" src="assets/images/about/about-bg.png" alt="About Us" loading="lazy">
+    <div class="about-container">
+        <div class="about-wrapper">
+            <h1 class="about-header about-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Who We Are</h1>
+            <p class="about-subheader about-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                At Nyxsys Philippines, we help businesses thrive in the digital age with Digital Out-of-Home (DOOH)
+                media and innovative technologies. Our platforms, from high-impact billboards to immersive displays,
+                engage audiences with real-time content. By integrating data-driven insights and cloud-based solutions,
+                we boost brand visibility, streamline operations, and drive sustained success. We’re shaping the future
+                of brand communication, enabling innovation and growth with strategies that deliver transformative
+                outcomes today and beyond.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-container history-section">
+    <div class="history-container">
+        <div class="left-content" [@slideInLeft]="isVisibleHistroy ? 'visible' : 'hidden'">
+            <img src="assets\images\about\history.png" alt="History.png" loading="lazy">
+        </div>
+        <div class="right-content" [@slideInRight]="isVisibleHistroy ? 'visible' : 'hidden'">
+            <h2 class="header">How We Began</h2>
+            <p>Founded in June 2014, Nyxsys Philippines, Inc. has quickly become a
+                pioneer in Digital Media and Business Technology Solutions. What
+                started as a bold spin-off from an Out-Of-Home (OOH) advertising
+                company dating back to the 1990s has evolved into a powerhouse
+                for digital transformation.
+            </p>
+            <p>
+                At Nyxsys, we’re not just about solutions; we’re about experiences.
+                With a dynamic team of highly-trained professionals, we push the
+                boundaries of innovation in Corporate Business Solutions, Digital
+                Signage, and Out-Of-Home Advertising. Our digital-first approach
+                ensures that our services are at the forefront of technology, offering
+                end-to-end, cutting-edge solutions designed to redefine your
+                business potential.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section-container mission-section">
+    <div class="mission-container">
+        <div class="left-content" [@slideInLeft]="isVisibleMission ? 'visible' : 'hidden'">
+            <h2 class="header">Our Mission</h2>
+            <p>Our Mission? To become the global partner of choice for businesses seeking to lead in this fast-changing
+                world
+                of digital media and business solutions. With each Project, we aim to set new standards in service
+                delivery and technological advancement.
+            </p>
+            <p>
+                At the heart of Nyxsys is a deep-rooted belief that faith and innovation go hand-in-hand. As we rise to
+                new height, we acknowledge God
+                as the ultimate source of our growth and success. We believe that without His guidance, no lasting
+                impact can be achieved.
+            </p>
+            <p>
+                <span>Nyxsys</span>&mdash; short for "<span>Next Year's System Technology</span>"&mdash;is more than
+                just a name; its a commitment.
+                A commitment to stay ahead of the curve, to inspire transformation and to shape the future of digital
+                and business technology.
+            </p>
+        </div>
+        <div class="right-content" [@slideInRight]="isVisibleMission ? 'visible' : 'hidden'">
+            <img src="assets\images\about\mission.png" alt="History.png" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<app-gallery-section></app-gallery-section>
+
+<app-companies></app-companies>
+
+<!-- <app-testimonials></app-testimonials> -->
+
+<app-call-to-action></app-call-to-action>
+
+<app-footer></app-footer>

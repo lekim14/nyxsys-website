@@ -1,0 +1,164 @@
+h2 {
+    font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+.testimonial-container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    z-index: 1;
+
+    .testimonial-wrapper {
+        position: relative;
+        text-align: center;
+        
+        h2 {
+            font-size: 2.3rem;
+            font-weight: 700;
+        }
+
+        .testimonials {
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            
+            .carousel {
+                position: relative;
+
+                .testimonial-slide {
+                    margin: 15px;
+                    width: 500px;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                    .testimonial-item {
+                        background-color: #ffffff;
+                        border-radius: 10px;
+                        padding: 20px;
+                        text-align: center;
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+                        .testimonial-avatar {
+                            width: 80px;
+                            height: 80px;
+                            margin: 0 auto;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+
+                        .testimonial-text {
+                            display: none;
+                            margin-top: 10px;
+                            font-style: italic;
+                            color: #555;
+                            opacity: 1;
+                            transition: opacity 0.3s ease, display 0.3s ease;
+                            
+
+                            h4 {
+                                font-weight: bold;
+                                color: #333;
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+                    }
+
+                    &:hover .testimonial-item .testimonial-text {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .testimonials-two {
+            margin-top: 15%;
+
+            .testimonial-avatar {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+            .testimonial-text {
+                position: relative;
+                text-align: start;
+                padding: 2%;
+                height: 100%;
+
+                .testimonial-quote {
+                    position: absolute;
+                    top: -42px;
+                    left: -32px;
+                    height: 100px;
+                    width: auto;
+                    filter: opacity(0.08);
+                }
+
+                h4 {
+                    font-weight: 700;
+                }
+
+                p {
+                    margin-bottom: 8%;
+                }
+            }
+        }
+    }
+}
+
+/* Media Queries */
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    .testimonial-item {
+        padding: 2% !important;
+    }
+    
+    .slick-slide{
+        margin: 2px;
+    }
+
+    .testimonial-quote {
+        left: 0 !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .testimonial-item {
+        padding: 2% !important;
+    }
+    
+    .slick-slide{
+        margin: 2px;
+    }
+
+    .testimonial-quote {
+        left: 0 !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+}

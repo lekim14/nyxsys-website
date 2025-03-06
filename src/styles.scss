@@ -1,0 +1,295 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@import './theme-color.scss';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$nyxsys-website-primary: mat.define-palette($color-primary, 500);
+$nyxsys-website-accent: mat.define-palette($color-accent, 500);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$nyxsys-website-theme: mat.define-light-theme((
+  color: (
+    primary: $nyxsys-website-primary,
+    accent: $nyxsys-website-accent,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($nyxsys-website-theme);
+
+/* You can add global styles to this file, and also import other style files */
+/* Custom Fonts */
+@import 'custom-fonts';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Poppins", "Roboto", sans-serif; }
+
+h1 {
+  font-family: "MicroSquare", Arial, sans-serif !important;
+}
+
+/* Base font sizes */
+.hero-headline {
+  font-style: normal;
+  color: #fafafa;
+  margin: 0;
+  font-size: 3rem !important;
+
+  span {
+    font-size: 10rem;
+    line-height: 10rem;
+  }
+
+  span {
+    display: block;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #F58F20;
+    font-weight: bolder;
+  }
+}
+
+.hero-subheadline {
+  font-size: 1.08rem; /* Default font size for large screens */
+  margin-top: 32px;
+  color: #fafafa;
+  text-align: center;
+  
+  span {
+    font-weight: 600;
+  }
+}
+
+
+/* Title */
+.header {
+  font-size: 38px !important;
+  font-weight: 700 !important;
+  margin-bottom: 5% !important;
+  line-height: 42px !important;
+}
+
+/* SubTitle */
+.subHeader {
+  font-size: 24px  !important;
+  margin: 32px 0 12px;
+}
+
+/* Paragraphs */
+.paragrahps {
+  font-size: 14px;
+}
+
+.navbar {
+  padding: 1.2% 10%;
+}
+
+.section-container {
+  font-family: 'Poppins', Arial, sans-serif;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 8% 10% !important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  font-family: 'Poppins', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgba($color: #002868, $alpha: 1.0);
+  color: #fafafa;
+  padding: 10% 10% 12px;
+}
+
+.img-top-left-corner,
+.img-top-right-corner {
+  position: absolute;
+  top: 0;
+  height: auto;
+  width: 250px;
+  z-index: -999;
+  filter: opacity(20%);
+}
+
+.img-bottom-left-corner,
+.img-bottom-right-corner {
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  width: 250px;
+  z-index: -999;
+  filter: opacity(20%);
+}
+
+.img-bottom-right-corner,
+.img-top-right-corner {
+  right: 0;
+}
+
+.img-bottom-left-corner,
+.img-top-left-corner {
+  left: 0;
+}
+
+// Gradient Background
+.gradient-bg-top,
+.gradient-bg-top-left,
+.gradient-bg-top-right {
+  position: absolute;
+  top: 0;
+  background-color: #002868;
+  filter: blur(256px);
+}
+
+.gradient-bg-bottom,
+.gradient-bg-bottom-left,
+.gradient-bg-bottom-right {
+  position: absolute;
+  bottom: 0;
+  background-color: #F58F20;
+  filter: blur(256px);
+}
+
+.gradient-bg-center-right {
+  position: absolute;
+  top: 30%;
+  right: -18%;
+  background-color: #002868;
+  height: 279px;
+  width: 559px;
+  border-radius: 100%;
+  filter: blur(256px);
+  transform: translate(0, -18%);
+}
+
+.gradient-bg-top-right, .gradient-bg-bottom-right {
+  height: 279px;
+  width: 559px;
+  right: -18%;
+  border-radius: 100%;
+}
+
+.gradient-bg-top-left, .gradient-bg-bottom-left {
+  height: 279px;
+  width: 559px;
+  left: -18%;
+  border-radius: 100%;
+}
+
+.gradient-bg-top, .gradient-bg-bottom {
+  height: 279px;
+  width: 100%;
+  left: 0;
+}
+
+/* Media Queries */
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 1.2% 3%;
+  }
+
+  .section-container {
+    padding: 10% 3% !important;
+  }
+
+  .hero-section {
+    height: 80vh;
+  }
+  
+  .hero-headline {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: 4px;
+    
+    span {
+      font-size: 5rem;
+      line-height: 5rem;
+      letter-spacing: 0;
+    }
+  }
+
+  .hero-subheadline {
+    font-size: 1.2rem; 
+  }
+  
+  /* Title */
+  .header {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 28px !important;
+    margin-bottom: 5% !important;
+  }
+
+  footer {
+    padding: 10% 3% 12px;
+  }
+
+  
+  .img-bottom-right-corner,
+  .img-top-right-corner,
+  .img-bottom-left-corner,
+  .img-top-left-corner {
+    width: 100px;
+  }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    padding: 1.2% 3%;
+  }  
+
+  .section-container {
+    padding: 10% 3% !important;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 8px;
+
+    span {
+        font-size: 8rem;
+        line-height: 8rem;
+        letter-spacing: 12px;
+    }
+  }
+
+  .hero-subheadline {
+    font-size: 1.25rem; 
+  }
+
+  /* Title */
+  .header {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    line-height: inherit;
+    margin-bottom: 5% !important;
+  }
+
+  footer {
+    padding: 10% 3% 12px;
+  }
+}
