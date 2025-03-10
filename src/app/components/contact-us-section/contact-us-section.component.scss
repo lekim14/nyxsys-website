@@ -1,0 +1,60 @@
+.contact-us-section {
+    font-family: 'Poppins', Arial, sans-serif;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    
+    .contact-us-container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        z-index: 1;
+
+        .contact-us-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: auto 20px;
+            
+            h2 {
+                font-size: 2.3rem;
+                font-weight: 700;
+            }
+            
+            form {
+
+                mat-form-field {
+                    font-family: 'Poppins', Arial, sans-serif !important;
+                    width: 100%;
+                }
+
+                textarea {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Media Queries */
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    h2 {
+        font-size: 2rem !important;
+    }
+    
+}

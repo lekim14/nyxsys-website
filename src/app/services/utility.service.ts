@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, Subject, takeUntil } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { FormGroup } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -93,5 +94,15 @@ export class UtilityService {
     if (element) {
       element.scrollIntoView({ behavior:'smooth', block: 'start' });
     }
+  }
+  
+
+  async onSendEmail(contactForm: FormGroup) {
+    const emailAddress: string = 'inquire@nyxsys.ph';
+    const { name, company, email, contact, message }: any = contactForm.value;
+    
+    const mailToLink = `mailto:${emailAddress}?subject=Inquiry: Digital Out-of-Home Advertising Solutions&body=${encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nContact: ${contact}\nMessage: ${message}`)}`;
+    window.open(mailToLink, '_blank');
+    contactForm.reset();
   }
 }

@@ -74,10 +74,6 @@ export class ContactsComponent implements OnInit {
   }
 
   async onClickSendEmail() {
-    const { name, company, email, contact, message }: any = this.contactUs.value;
-    
-    const mailToLink = `mailto:${this.emailAddress}?subject=Inquiry: Digital Out-of-Home Advertising Solutions&body=${encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nContact: ${contact}\nMessage: ${message}`)}`;
-    window.open(mailToLink, '_blank');
-    this.contactUs.reset();
+    this.utils.onSendEmail(this.contactUs.value)
   }
 }

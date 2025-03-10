@@ -1,7 +1,6 @@
 <app-navbar></app-navbar>
 
 <section class="section-container led-section">
-    <!-- <img class="led-image" src="assets/images/cta.jpg" alt="led" loading="lazy"> -->
     <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" class="led-video" preload="auto">
         <source src="assets/videos/led.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -27,7 +26,7 @@
                 @for (item of ledInventories; track $index) {
                 <div class="col-12 col-lg-4">
                     <div class="led-content">
-                        <img [src]="item.image" [alt]="item.image" loading="lazy">
+                        <img [src]="item.image" [alt]="item.text" loading="lazy">
                         <div class="led-content-overlay">
                             <div class="led-content-text">
                                 <h4>{{ item.text }}</h4>
@@ -49,7 +48,7 @@
                         @for (childItem of item.items; track $index) {
                         <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
                             <div class="led-content">
-                                <img [src]="childItem.image" [alt]="childItem.image" loading="lazy">
+                                <img [src]="childItem.image" [alt]="childItem.text" loading="lazy">
                                 <div class="led-content-overlay">
                                     <div class="led-content-text">
                                         <h4>{{ childItem.text }}</h4>
@@ -64,7 +63,6 @@
             </mat-tab-group>
         </div>
     </div>
-    <!-- <img src="assets/images/graphics/dots.png" class="img-bottom-left-corner" alt="Dots" loading="lazy"> -->
 </section>
 
 <app-see-more-services-section></app-see-more-services-section>

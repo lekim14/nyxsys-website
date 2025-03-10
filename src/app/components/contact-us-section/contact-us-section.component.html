@@ -1,0 +1,40 @@
+<section class="contact-us-section section-container">
+    <div class="contact-us-container">
+        <div class="contact-us-wrapper">
+            <h2>Contact Us</h2>
+            <form [formGroup]="contactUs" class="row mt-4">
+                <div class="col-12 col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input formControlName="name" matInput placeholder="Enter your full name">
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Company</mat-label>
+                        <input formControlName="company" matInput placeholder="Enter your company name">
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email Address</mat-label>
+                        <input formControlName="email" matInput placeholder="Enter your email address">
+                    </mat-form-field>
+                </div>
+                <div class="col-12 col-md-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone</mat-label>
+                        <input formControlName="contact" matInput placeholder="Enter your phone number">
+                    </mat-form-field>
+                </div>
+                <div class="col-12">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Message</mat-label>
+                        <textarea formControlName="message" matInput placeholder="Enter your message"></textarea>
+                    </mat-form-field>
+                </div>
+            </form>
+            <button (click)="onClickSendEmail()" class="w-100" color="accent" mat-raised-button>Get Started with us</button>
+        </div>
+    </div>
+</section>

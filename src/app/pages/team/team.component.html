@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 
 <section class="section-container team-section">
-    <img class="team-image" src="assets/images/team/team-bg.jpg" alt="team Us" loading="lazy">
+    <img class="team-image" src="assets/images/team/team-bg.jpg" alt="Meet the experts at Nyxsys Philippines! Our team drives innovation in DOOH, LED advertising, and digital solutions for impactful brand experiences." loading="lazy">
     <div class="team-container">
         <div class="team-wrapper">
             <h1 class="team-header team-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Meet Our Team</h1>
@@ -22,11 +22,11 @@
                 meaningful and lasting impact.</p>
             <div class="row g-3 w-100 mt-3">
                 @for (item of [ 1, 2, 3, 4, 5, 6 ]; track $index) {
-                <div class="col-12 col-md-6">
-                    <div class="team-list-content">
-                        <img [src]="'assets/images/team/' + item + '.jpg'" [alt]="item + '.jpg'">
+                    <div class="col-12 col-md-6">
+                        <div class="team-list-content">
+                            <img [src]="'assets/images/team/' + item + '.jpg'" alt="Combining specialized knowledge and collaborative efforts to inspire and propel innovation that makes a meaningful and lasting impact.">
+                        </div>
                     </div>
-                </div>
                 }
             </div>
         </div>
@@ -34,8 +34,6 @@
 </section>
 
 <app-companies></app-companies>
-
-<!-- <app-testimonials></app-testimonials> -->
 
 <app-call-to-action></app-call-to-action>
 

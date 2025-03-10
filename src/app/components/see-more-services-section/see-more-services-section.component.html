@@ -17,7 +17,7 @@
                     [config]="config">
                     @for (item of services; track $index) {
                     <div class="more-services-item" ngxSlickItem>
-                        <img [src]="item.image" [alt]="item.title">
+                        <img [src]="item.image" [alt]="item.description">
                         <div class="more-service-overlay">
                             <h4>{{ item.title }}</h4>
                             <p>{{ item.description }}</p>

@@ -12,40 +12,27 @@ import { GallerySectionComponent } from '../../components/gallery-section/galler
 import { WhyChooseUsSectionComponent } from '../../components/why-choose-us-section/why-choose-us-section.component';
 import { SeeMoreServicesSectionComponent } from '../../components/see-more-services-section/see-more-services-section.component';
 import { NumberCountingComponent } from '../../components/number-counting/number-counting.component';
+import { ContactUsSectionComponent } from '../../components/contact-us-section/contact-us-section.component';
 
-
-
+const COMPONENT_MODULES = [
+  CommonModule,
+  NavbarComponent,
+  AboutSectionComponent,
+  DrivingForceSectionComponent,
+  ServicesSectionComponent,
+  CompaniesComponent,
+  TestimonialsComponent,
+  CallToActionComponent,
+  FooterComponent,
+  GallerySectionComponent,
+  WhyChooseUsSectionComponent,
+  SeeMoreServicesSectionComponent,
+  NumberCountingComponent,
+  ContactUsSectionComponent,
+]
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    NavbarComponent,
-    AboutSectionComponent,
-    DrivingForceSectionComponent,
-    ServicesSectionComponent,
-    CompaniesComponent,
-    TestimonialsComponent,
-    CallToActionComponent,
-    FooterComponent,
-    GallerySectionComponent,
-    WhyChooseUsSectionComponent,
-    SeeMoreServicesSectionComponent,
-    NumberCountingComponent,
-  ],
-  exports: [
-    CommonModule,
-    NavbarComponent,
-    AboutSectionComponent,
-    DrivingForceSectionComponent,
-    ServicesSectionComponent,
-    CompaniesComponent,
-    TestimonialsComponent,
-    CallToActionComponent,
-    FooterComponent,
-    GallerySectionComponent,
-    WhyChooseUsSectionComponent,
-    SeeMoreServicesSectionComponent,
-    NumberCountingComponent,
-  ]
+  imports: [ ...COMPONENT_MODULES ],
+  exports: [ ...COMPONENT_MODULES ],
 })
 export class ComponentsModule { }
