@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    { path: '', loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) },
+    { 
+        path: '', 
+        title: 'Digital Out of Home Advertising Philippines | NYXSYS PH',
+        loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) 
+    },
     {
         path: 'about',
-        data: {
-            title: 'Who We Are • NYXSYS Philippines, Inc.',
-        },
+        title: 'Who We Are • NYXSYS Philippines, Inc.',
         loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
     },
     {
@@ -49,8 +51,5 @@ export const routes: Routes = [
         title: 'Get in Touch • NYXSYS Philippines, Inc.',
         loadComponent: () => import('./pages/contacts/contacts.component').then(m => m.ContactsComponent)
     },
-    {
-        path: '**',
-        loadComponent: () => import('./pages/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)
-    },
+    { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

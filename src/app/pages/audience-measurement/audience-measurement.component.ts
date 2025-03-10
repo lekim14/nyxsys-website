@@ -3,7 +3,8 @@ import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { GraphsComponent } from "../../components/graphs/graphs.component";
-import { Meta, Title } from '@angular/platform-browser';
+import { UtilityService } from '../../services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-audience-measurement',
@@ -68,7 +69,13 @@ export class AudienceMeasurementComponent implements OnInit {
     },
   ];
   
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
 
   ngOnInit(): void {
     const elements = document.querySelectorAll('.audience-item');
@@ -77,49 +84,16 @@ export class AudienceMeasurementComponent implements OnInit {
       setTimeout(() => (this.isVisible[index] = true), index * 300);
     });
   
-    this.title.setTitle('Vehicle and Audience Analytics - Real-Time Traffic & People Counting Solutions');
-
-    this.meta.updateTag({
-      name: 'title',
-      content: 'Vehicle and Audience Analytics - Real-Time Traffic & People Counting Solutions'
-    });
-
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Our vehicle and audience analytics solutions offer advanced people tracking, real-time counting, and traffic flow analytics. From retail analytics to vehicle and people monitoring, our systems provide actionable insights for better decision-making and operational efficiency.'
-    });
-
-    this.meta.updateTag({
-      name: 'keywords',
-      content: 'Audience Analytics, Vehicle Counting Solutions, People Counting Systems, Traffic Flow Analytics, People Tracking Solutions, Real-Time People Counting, Data Analytics for Traffic, Retail Analytics Solutions, People Flow Measurement, Vehicle and People Monitoring, Audience Measurement Solutions'
-    });
-
-
-    // Update OpenGraph Meta
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'Vehicle and Audience Analytics - Real-Time Traffic & People Counting Solutions'
-    });
+    this.utils.setPageTitle('Audience Measurement | Data-Driven Insights by Calton Datx');
     
-    this.meta.updateTag({
-      property: 'og:description',
-      content: 'Our vehicle and audience analytics solutions offer advanced people tracking, real-time counting, and traffic flow analytics. From retail analytics to vehicle and people monitoring, our systems provide actionable insights for better decision-making and operational efficiency.'
-    });
+    this.utils.setMetaUpdateTag(
+      'title',
+      'Audience Measurement | Data-Driven Insights by Calton Datx',
+    )
 
-    this.meta.updateTag({
-      property: 'og:type',
-      content: 'website'
-    });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://nyxsys.ph/assets/images/nyxsys-logo-loading.png'
-    });
-
-    this.meta.updateTag({
-      property: 'og:url',
-      content: 'https://nyxsys.ph/services/audience-measurement'
-    });
-
+    this.utils.setMetaUpdateTag(
+      'description',
+      "Leverage Calton Datx's audience measurement for real-time insights, behavioral trends, and AI-driven analytics to optimize DOOH campaigns and engagement."
+    )
   }
 }

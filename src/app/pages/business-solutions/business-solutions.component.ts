@@ -4,6 +4,8 @@ import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
 import { Meta, Title } from '@angular/platform-browser';
+import { UtilityService } from '../../services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-business-solutions',
@@ -167,7 +169,13 @@ export class BusinessSolutionsComponent implements OnInit {
     ]
   };
   
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
 
   ngOnInit(): void {
     const elements = document.querySelectorAll('.business-solution-item');
@@ -176,50 +184,17 @@ export class BusinessSolutionsComponent implements OnInit {
       setTimeout(() => (this.isVisible[index] = true), index * 300);
     });
 
-    this.title.setTitle('Digital Display Management Services - Real-Time Signage & Content Solutions');
-
-    this.meta.updateTag({
-      name: 'title',
-      content: 'Digital Display Management Services - Real-Time Signage & Content Solutions'
-    });
-
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Our digital display management services offer cutting-edge digital signage solutions, interactive displays, and real-time content updates. We specialize in LED display management, multi-screen setups, and seamless digital content distribution, ensuring efficient visual content management across networks.'
-    });
-
-    this.meta.updateTag({
-      name: 'keywords',
-      content: 'Digital Display Solutions, Digital Signage Management, Digital Advertising Services, Interactive Display Solutions, Content Management Systems, Real-Time Display Updates, Digital Content Distribution, LED Display Management, Multi-Screen Display Solutions, Digital Signage Network, Visual Content Management'
-    });
-
-
-    // Update OpenGraph Meta
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'Digital Display Management Services - Real-Time Signage & Content Solutions'
-    });
-
-    this.meta.updateTag({
-      property: 'og:description',
-      content: 'Our digital display management services offer cutting-edge digital signage solutions, interactive displays, and real-time content updates. We specialize in LED display management, multi-screen setups, and seamless digital content distribution, ensuring efficient visual content management across networks.'
-    });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://nyxsys.ph/assets/images/nyxsys-logo-loading.png'
-    });
+    this.utils.setPageTitle('Next-Level Digital Display Management | Effortless Control');
     
-    this.meta.updateTag({
-      property: 'og:type',
-      content: 'website'
-    });
+    this.utils.setMetaUpdateTag(
+      'title',
+      'Next-Level Digital Display Management | Effortless Control',
+    )
 
-    this.meta.updateTag({
-      property: 'og:url',
-      content: 'https://nyxsys.ph/services/digital-display-management-services'
-    });
-
+    this.utils.setMetaUpdateTag(
+      'description',
+      "Nyxsys provides advanced digital display management with real-time updates, seamless integration, and optimized audience engagement for impactful advertising."
+    )
   }
 
   onClickPrev() {

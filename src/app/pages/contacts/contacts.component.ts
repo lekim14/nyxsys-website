@@ -3,7 +3,8 @@ import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Meta, Title } from '@angular/platform-browser';
+import { UtilityService } from '../../services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-contacts',
   standalone: true,
@@ -44,7 +45,13 @@ export class ContactsComponent implements OnInit {
     { name: 'LinkedIn', url: 'https://ph.linkedin.com/in/nyxsysph', icon: 'linkedin' },
   ];
 
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
 
   ngOnInit(): void {
     const elements = document.querySelectorAll('.contact-item');
@@ -53,10 +60,17 @@ export class ContactsComponent implements OnInit {
       setTimeout(() => (this.isVisible[index] = true), index * 300);
     })
 
-    this.title.setTitle('Get in Touch • NYXSYS Philippines, Inc.');
-    this.meta.updateTag({ name: 'title', content: 'Get in Touch • NYXSYS Philippines, Inc.' });
-    this.meta.updateTag({ name: 'description', content: 'Contact NYXSYS Philippines, Inc. for any inquiries, business enquiries, or to schedule a meeting.' });
-    this.meta.updateTag({ name: 'keywords', content: 'Nyxsys Philippines, Inc., contact, inquiries, business enquiries, meeting' });
+    this.utils.setPageTitle('Contact Nyxsys Philippines | Let’s Connect & Collaborate');
+    
+    this.utils.setMetaUpdateTag(
+      'title',
+      'Contact Nyxsys Philippines | Let’s Connect & Collaborate',
+    )
+
+    this.utils.setMetaUpdateTag(
+      'description',
+      "Need digital advertising solutions? Contact Nyxsys Philippines for expert DOOH, LED, and business tech services. Let’s build something great! Connect with Us"
+    )
   }
 
   async onClickSendEmail() {

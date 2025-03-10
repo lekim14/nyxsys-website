@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Meta, Title } from '@angular/platform-browser';
+import { UtilityService } from '../../services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-static',
@@ -49,8 +50,13 @@ export class StaticComponent implements OnInit {
     },
   ]
 
-  
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
 
   ngOnInit(): void {
     const elements = document.querySelectorAll('.static-item');      
@@ -59,17 +65,16 @@ export class StaticComponent implements OnInit {
       setTimeout(() => (this.isVisible[index] = true), index * 300);
     });
 
-    this.title.setTitle('Static Fixed Inventories • NYXSYS Philippines, Inc.');
-    this.meta.updateTag({ name: 'title', content: 'Static Fixed Inventories • NYXSYS Philippines, Inc.' });
-    this.meta.updateTag({ name: 'description', content: 'a leading global technology solutions company specializing in IoT, smart cities, and advanced manufacturing solutions. We offer customizable billboards, digital signage, and software solutions to help businesses achieve their goals.' });
-    this.meta.updateTag({ name: 'keywords', content: 'Nyxsys, IoT, smart cities, advanced manufacturing, customizable billboards, digital signage, software solutions' });
+    this.utils.setPageTitle('Static Billboard Advertising | Long-Lasting Brand Visibility');
 
+    this.utils.setMetaUpdateTag(
+      'title',
+      'Static Billboard Advertising | Long-Lasting Brand Visibility',
+    )
 
-    // Update OpenGraph Meta
-    this.meta.updateTag({ property: 'og:title', content: 'Static Fixed Inventories • NYXSYS Philippines, Inc.' });
-    this.meta.updateTag({ property: 'og:description', content: 'a leading global technology solutions company specializing in IoT, smart cities, and advanced manufacturing solutions. We offer customizable billboards, digital signage, and software solutions to help businesses achieve their goals.' });
-    this.meta.updateTag({ property: 'og:image', content: 'https://nyxsys.ph/assets/images/nyxsys-logo-loading.png' });
-    this.meta.updateTag({ property: 'og:type', content: 'website' });
-    this.meta.updateTag({ property: 'og:url', content: 'https://nyxsys.ph/services/static-fixed-inventories' });
+    this.utils.setMetaUpdateTag(
+      'description',
+      "Nyxsys’ static billboards offer durable, high-impact ads in strategic locations like EDSA Marcaleon & EDSA Orense, ensuring strong, lasting brand visibility."
+    )
   }
 }

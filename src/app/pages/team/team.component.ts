@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Meta, Title } from '@angular/platform-browser';
+import { UtilityService } from '../../services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-team',
@@ -22,7 +23,13 @@ export class TeamComponent implements OnInit {
 
   isVisible: boolean[] = [ false, false ];
 
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
 
   ngOnInit(): void {
     const elements = document.querySelectorAll('.team-item');      
@@ -31,33 +38,16 @@ export class TeamComponent implements OnInit {
       setTimeout(() => (this.isVisible[index] = true), index * 300);
     })
 
-    this.title.setTitle('Meet Our Team • NYXSYS Philippines, Inc.');
+    this.utils.setPageTitle('Meet the Nyxsys Team | Innovators in Digital Advertising');
+    
+    this.utils.setMetaUpdateTag(
+      'title',
+      'Meet the Nyxsys Team | Innovators in Digital Advertising',
+    )
 
-    this.meta.updateTag({
-      name: 'title',
-      content: 'Meet Our Team • NYXSYS Philippines, Inc.'
-    });
-
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Meet our team behind NYXSYS Philippines, Inc., a leading innovator in the IoT and wearable technology space.'
-    });
-
-    this.meta.updateTag({
-      name: 'keywords',
-      content: 'Nyxsys Philippines, Inc., team, digital media, IoT, wearable technology, outdoor advertising'
-    });
-
-
-    // Update OpenGraph Meta
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'Meet Our Team • NYXSYS Philippines, Inc.'
-    });
-
-    this.meta.updateTag({
-      property: 'og:description',
-      content: 'Meet our team behind NYXSYS Philippines, Inc., a leading innovator in the IoT and wearable technology space.'
-    });
+    this.utils.setMetaUpdateTag(
+      'description',
+      "Meet the experts at Nyxsys Philippines! Our team drives innovation in DOOH, LED advertising, and digital solutions for impactful brand experiences. Read More."
+    )
   }
 }

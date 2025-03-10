@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Meta, Title } from '@angular/platform-browser';
+import { UtilityService } from '../../services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-services',
@@ -20,9 +21,15 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class ServicesComponent implements OnInit {
 
-  isVisible: boolean[] = [ false, false ];
+  isVisible: boolean[] = [ false, false ]; 
   
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
 
   ngOnInit(): void {
     const elements = document.querySelectorAll('.services-item');      
@@ -31,49 +38,16 @@ export class ServicesComponent implements OnInit {
       setTimeout(() => (this.isVisible[index] = true), index * 300);
     })
 
-    this.title.setTitle('Our Services • NYXSYS Philippines, Inc.');
+    this.utils.setPageTitle('Our Services | Nyxsys Philippines - Digital Advertising Experts')
 
-    this.meta.updateTag({
-      name: 'title',
-      content: 'Our Services • NYXSYS Philippines, Inc.'
-    });
+    this.utils.setMetaUpdateTag(
+      'title',
+      'Our Services | Nyxsys Philippines - Digital Advertising Experts',
+    )
 
-    this.meta.updateTag({
-      name: 'description',
-      content: 'we provide cutting-edge digital solutions that empower businesses to thrive. Our team of experts in various industries has helped us build successful businesses in the Philippines.'
-    })
-
-    this.meta.updateTag({
-      name: 'keywords', 
-      content: 'nyxsys, digital solutions, business solutions, marketing, advertising, innovation, outdoor media, client-centric approach, visionary leadership'
-    });
-
-    // Update OpenGraph Meta
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'Our Services • NYXSYS Philippines, Inc.'
-    })
-
-    this.meta.updateTag({
-      property: 'og:description',
-      content: 'we provide cutting-edge digital solutions that empower businesses to thrive. Our team of experts in various industries has helped us build successful businesses in the Philippines.'
-    })
-
-    this.meta.updateTag({
-      property: 'og:type',
-      content: 'website'
-    })
-
-    this.meta.updateTag({
-      property: 'og:url',
-      content: 'https://nyxsys.ph/services'
-    })
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://nyxsys.ph/assets/images/nyxsys-logo-loading.png'
-    })
-
-
+    this.utils.setMetaUpdateTag(
+      'description',
+      "Explore Nyxsys Philippines' DOOH services, LED billboards, audience insights, and digital display management. Drive impact with cutting-edge solutions."
+    )
   }
 }

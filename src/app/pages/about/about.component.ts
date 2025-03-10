@@ -2,7 +2,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Meta, Title } from '@angular/platform-browser';
+import { UtilityService } from '../../services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -53,7 +54,13 @@ export class AboutComponent implements OnInit {
     }  
   }
 
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
   
   ngOnInit(): void {
     const elements = document.querySelectorAll('.about-item');      
@@ -61,49 +68,17 @@ export class AboutComponent implements OnInit {
     elements.forEach((element, index) => {  
       setTimeout(() => (this.isVisible[index] = true), index * 300);
     })
-    
-    this.title.setTitle('Who We Are • NYXSYS Philippines, Inc.');
 
-    this.meta.updateTag({
-      name: 'title',
-      content: 'Who We Are • NYXSYS Philippines, Inc.'
-    });
-
-    this.meta.updateTag({
-      name: 'description',
-      content: 'a leading technology company specializing in the development and implementation of advanced IoT solutions.'
-    })
-
-    this.meta.updateTag({ 
-      name: 'keywords', 
-      content: 'nyxsys, Philippines, IoT, technology, development, implementation' 
-    });
-
-
-    // Update OpenGraph Meta
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'Who We Are • NYXSYS Philippines, Inc.'
-    });
+    this.utils.setPageTitle('Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech'); 
     
-    this.meta.updateTag({
-      property: 'og:description',
-      content: 'a leading technology company specializing in the development and implementation of advanced IoT solutions.'
-    });
-    
-    this.meta.updateTag({
-      property: 'og:type',
-      content: 'website'
-    });
-    
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://nyxsys.ph/assets/images/nyxsys-logo-loading.png'
-    });
-    
-    this.meta.updateTag({
-      property: 'og:url',
-      content: 'https://nyxsys.com/about'
-    });
+    this.utils.setMetaUpdateTag(
+      'title',
+      'Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech',
+    )
+
+    this.utils.setMetaUpdateTag(
+      'description',
+      "Since 2014, Nyxsys Philippines has pioneered digital media and tech, transforming OOH advertising into advanced, data-driven business solutions. Learn more."
+    )
   }
 }

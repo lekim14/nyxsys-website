@@ -21,6 +21,13 @@
         <priority>1.0</priority>
     </url>
 
+    <!-- Team -->
+    <url>
+        <loc>https://nyxsys.ph/team</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
     <!-- LED -->
     <url>
         <loc>https://nyxsys.ph/services/led-media-inventories</loc>
@@ -45,6 +52,13 @@
     <!-- Audience Measruement -->
     <url>
         <loc>https://nyxsys.ph/services/audience-measurement</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Contacts -->
+    <url>
+        <loc>https://nyxsys.ph/services/contacts</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>

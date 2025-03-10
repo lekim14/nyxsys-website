@@ -2,7 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { MaterialUiModule } from "../../modules/material-ui/material-ui.module";
 import { ComponentsModule } from "../../modules/components/components.module";
 import { trigger, state, style, transition, animate } from "@angular/animations";
-import { Meta, Title } from "@angular/platform-browser";
+import { UtilityService } from "../../services/utility.service";
+import { NavigationEnd, Router } from "@angular/router";
 
 @Component({
   selector: "app-led",
@@ -92,8 +93,13 @@ export class LedComponent implements OnInit {
     }
   ]
 
-  
-  constructor(private meta: Meta, private title: Title) { }
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
 
   ngOnInit(): void {
     const elements = document.querySelectorAll(".led-item");      
@@ -101,51 +107,17 @@ export class LedComponent implements OnInit {
     elements.forEach((element, index) => {  
       setTimeout(() => (this.isVisible[index] = true), index * 300);
     });
-  
-  
-    this.title.setTitle('LED Media & Static Fixed Inventory Management - Indoor, Outdoor & Digital Advertising Solutions');
 
-    this.meta.updateTag({
-      name: 'title',
-      content: 'LED Media & Static Fixed Inventory Management - Indoor, Outdoor & Digital Advertising Solutions'
-    });
+    this.utils.setPageTitle('LED Billboard Advertising | High-Impact Digital Displays');
 
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Efficiently manage LED media and static fixed inventories with our advanced digital advertising solutions. We specialize in LED screen inventory, indoor and outdoor digital media, and digital billboard management, ensuring optimized tracking and usage of both static and dynamic advertising spaces.'
-    });
+    this.utils.setMetaUpdateTag(
+      'title',
+      'LED Billboard Advertising | High-Impact Digital Displays',
+    )
 
-    this.meta.updateTag({
-      name: 'keywords',
-      content: 'LED Media Inventory Management, Digital Advertising Inventory, Static Display Advertising, Fixed Media Solutions, LED Screen Inventory, Outdoor Digital Media, Fixed Location Advertising, Digital Billboard Management, Static Advertising Inventory, Media Inventory Solutions, Outdoor LED Displays, Digital Display Inventory Tracking'
-    });
-
-
-    // Update OpenGraph Meta
-    this.meta.updateTag({
-      property: 'og:title',
-      content: 'LED Media & Static Fixed Inventory Management - Indoor, Outdoor & Digital Advertising Solutions'
-    });
-    
-    this.meta.updateTag({
-      property: 'og:description',
-      content: 'Efficiently manage LED media and static fixed inventories with our advanced digital advertising solutions. We specialize in LED screen inventory, indoor and outdoor digital media, and digital billboard management, ensuring optimized tracking and usage of both static and dynamic advertising spaces.'
-    });
-
-    this.meta.updateTag({
-      property: 'og:type',
-      content: 'website'
-    });
-
-    this.meta.updateTag({
-      property: 'og:image',
-      content: 'https://nyxsys.ph/assets/images/nyxsys-logo-loading.png'
-    });
-    
-    this.meta.updateTag({
-      property: 'og:url',
-      content: 'https://nyxsys.ph/services/led-media-inventories'
-    });
-
+    this.utils.setMetaUpdateTag(
+      'description',
+      "Capture attention with Nyxsys' LED billboards. Our HD digital displays deliver vibrant, engaging ads in prime spots like EDSA Orense and C5 Market Market."
+    )
   }
 }

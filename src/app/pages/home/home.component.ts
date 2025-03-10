@@ -1,15 +1,36 @@
 import { Component } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
-import { RouterLink } from '@angular/router';
-
+import { UtilityService } from '../../services/utility.service';
+import { NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ MaterialUiModule, ComponentsModule, RouterLink ],
+  imports: [ MaterialUiModule, ComponentsModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 
+  constructor(private utils: UtilityService, private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        utils.setCanonicalURL()
+      }
+    })
+  }
+
+  ngOnInit(): void {
+    this.utils.setPageTitle('Digital Out of Home Advertising Philippines | NYXSYS PH')
+
+    this.utils.setMetaUpdateTag(
+      'title',
+      'Digital Out of Home Advertising Philippines | NYXSYS PH',
+    )
+
+    this.utils.setMetaUpdateTag(
+      'description',
+      'Nyxsys Philippines is a premier provider of Digital Out-of-Home (DOOH) media and business technology solutions. From LED billboards to audience measurement.'
+    )
+  }
 }
