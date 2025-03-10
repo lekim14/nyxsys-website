@@ -21,8 +21,8 @@
                         <div class="more-service-overlay">
                             <h4>{{ item.title }}</h4>
                             <p>{{ item.description }}</p>
-                            <a class="more-services-item-button" [href]="item.routerLink" color="accent"
-                                mat-raised-button>LEARN MORE</a>
+                            <a class="py-4" [href]="item.routerLink" color="accent"
+                                mat-raised-button>{{ item.buttonText }}</a>
                         </div>
                     </div>
                     }
