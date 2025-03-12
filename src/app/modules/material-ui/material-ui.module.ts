@@ -11,38 +11,28 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
+
+const MATERIAL_UI_MODULES = [
+  CommonModule,
+  SlickCarouselModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatTabsModule,
+  MatFormFieldModule,
+  MatInputModule,
+  ReactiveFormsModule,
+  FormsModule,
+  MatExpansionModule,
+  MatCardModule,
+]
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    SlickCarouselModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTabsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatExpansionModule,
-  ],
-  exports: [
-    CommonModule,
-    SlickCarouselModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTabsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatExpansionModule,
-  ]
+  imports: [ ...MATERIAL_UI_MODULES ],
+  exports: [ ...MATERIAL_UI_MODULES ]
 })
 export class MaterialUiModule { }

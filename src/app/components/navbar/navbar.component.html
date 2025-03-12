@@ -10,7 +10,8 @@
     </div>
 
     <ul class="navbar-menu" [class.active]="isMenuOpen">
-        <li><a href="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+        <li><a href="/about" routerLinkActive="active">About</a></li>
+        <!-- <li><a href="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li> -->
         <!-- <li><a href="/services" routerLinkActive="active">Services</a></li> -->
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
@@ -20,12 +21,13 @@
                 }
             </ul>
         </li>
-        <li><a href="/about" routerLinkActive="active">About</a></li>
+        <li><a href="/blog" routerLinkActive="active">Blog</a></li>
+        <li><a href="/testimonials" routerLinkActive="active">Tesimonials</a></li>
         <li><a href="/team" routerLinkActive="active">Team</a></li>
         <li>
-            <button class="d-none d-md-block" [routerLink]="['/contact']" color="accent" mat-raised-button>
+            <a href="/contact" class="d-none d-md-block" color="accent" mat-raised-button>
               Contact Us
-            </button>
+            </a>
             <a class="d-block d-md-none" href="/contact">Contact Us</a>
         </li>
     </ul>
