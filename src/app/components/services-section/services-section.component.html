@@ -10,7 +10,7 @@
                 @for (item of services; track $index) {
                 <div class="col-12 col-md-6 position-relative">
                     <div class="service-item" [@slideIn]="isVisible[$index] ? 'visible' : 'hidden'">
-                        <img [src]="item.image" [alt]="item.description">
+                        <img [src]="item.image" [alt]="item.alt">
                         <div class="service-item-overlay">
                             <h4>{{ item.title }}</h4>
                             <p>{{ item.description }}</p>

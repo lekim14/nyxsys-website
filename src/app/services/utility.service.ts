@@ -16,28 +16,32 @@ export class UtilityService {
       description: 'High-performance LED displays delivering unmatched quality and versatility for all your marketing and advertising needs.',
       image: 'assets/images/led/led-services.png',
       routerLink: '/services/led-media-inventories',
-      buttonText: 'Explore Our LED Media Inventory Solutions'
+      buttonText: 'Explore Our LED Media Inventory Solutions',
+      alt: 'Largest LED billboard along EDSA highway.'
     },
     {
       title: 'STATIC FIXED INVENTORIES',
       description: `Durable, high-quality static advertising solutions designed to deliver impactful, long-lasting brand messaging in high-traffic areas.`,
       image: 'assets/images/static/edsa northbound static billboard.jpg',
       routerLink: '/services/static-fixed-inventories',
-      buttonText: 'See Our Display Management Services'
+      buttonText: 'See Our Display Management Services',
+      alt: 'EDSA northbound static billboard over busy traffic.'
     },
     {
       title: 'DIGITAL DISPLAY MANAGEMENT SERVICES',
       description: `Dynamic, high-definition displays designed for impactful advertising, real-time updates, and seamless engagement across diverse industries.`,
       image: 'assets/images/business solutions/globe.jpg',
       routerLink: '/services/digital-display-management-services',
-      buttonText: 'Learn How We Manage Digital Displays'
+      buttonText: 'Learn How We Manage Digital Displays',
+      alt: 'LED display screens at Globe store showcase vibrant visuals.'
     },
     {
       title: 'AUDIENCE MEASUREMENT',
       description: `An advanced data platform that transforms real-time monitoring into actionable insights, empowering businesses to optimize operations and drive growth.`,
       image: 'assets/images/audience measurement/indoor/indoor mall audience measurement 1.png',
       routerLink: '/services/audience-measurement',
-      buttonText: 'Discover How We Measure Advertising Impact'
+      buttonText: 'Discover How We Measure Advertising Impact',
+      alt: 'People exiting a building with audience measurement overlays.'
     }
   ]
 

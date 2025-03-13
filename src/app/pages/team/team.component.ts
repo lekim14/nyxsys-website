@@ -23,6 +23,39 @@ export class TeamComponent implements OnInit {
 
   isVisible: boolean[] = [ false, false ];
 
+  teams: any[] = [
+    {
+      id: 1,
+      path: 'assets/images/team/1.jpg',
+      alt: 'Nyxsys Team in a conference room displaying the mantra "Breaking Barriers, Exceeding Limits"'
+    },
+    {
+      id: 2,
+      path: 'assets/images/team/2.jpg',
+      alt: 'Nyxsys team posing in a cozy, modern office lounge.'
+    },
+    {
+      id: 3,
+      path: 'assets/images/team/3.jpg',
+      alt: 'Nyxsys team wearing matching shirts, posing together at a company event.'
+    },
+    {
+      id: 4,
+      path: 'assets/images/team/4.jpg',
+      alt: 'Nyxsys team dressed in formal attirewith a futuristic LED backdrop.'
+    },
+    {
+      id: 5,
+      path: 'assets/images/team/5.jpg',
+      alt: 'Nyxsys team at a festive Christmas celebration.'
+    },
+    {
+      id: 6,
+      path: 'assets/images/team/6.jpg',
+      alt: 'Nyxsys team enjoying a traditional boodle fight feast.'
+    },
+  ]
+
   constructor(private utils: UtilityService, private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
