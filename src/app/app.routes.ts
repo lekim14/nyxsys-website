@@ -64,5 +64,4 @@ export const routes: Routes = [
         title: 'Customer Testimonials & Success Stories | NYXSYS Philippines, Inc.',
         loadComponent: () => import('./pages/testimonials/testimonials.component').then(m => m.TestimonialsComponent)
     },
-    { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
