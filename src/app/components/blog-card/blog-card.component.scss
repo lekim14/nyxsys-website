@@ -1,0 +1,51 @@
+h2, h3, h4, h5, h6, .blog-header {
+    font-family: 'Poppins', Arial, sans-serif !important;
+    color: #000;
+}
+
+h4 {
+    line-height: 1.2;
+}
+
+.blog-image-container {
+    height: 300px;
+    min-height: 300px;
+    width: 100%;
+    
+    img {
+        object-fit: cover;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+        text-decoration: underline;
+        color: #F58F20;
+    }
+}
+
+.blog-published {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Media Queries */
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    .blog-image-container {
+        height: 100px;
+        min-height: 150px;
+    }
+}
+
+/* Tablet Styles (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .blog-image-container {
+        height: 100px;
+        min-height: 150px;
+    }
+}

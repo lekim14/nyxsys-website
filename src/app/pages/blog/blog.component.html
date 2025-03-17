@@ -4,8 +4,8 @@
     <img class="blog-image" src="assets/images/about/about-bg.png" alt="We are one of the leading Digital Media and Business Technology Solutions providers in the country." loading="lazy">
     <div class="blog-container">
         <div class="blog-wrapper">
-            <h4 class="blog-header blog-item">Unlock the Power of DOOH: Insights, Trends & Strategies</h4>
-            <p class="blog-subheader blog-item">
+            <h4 class="blog-header blog-item" [@slideInLeft]="isVisible[0] ? 'visible' : 'hidden'">Unlock the Power of DOOH: Insights, Trends & Strategies</h4>
+            <p class="blog-subheader blog-item" [@slideInRight]="isVisible[1] ? 'visible' : 'hidden'">
                 Explore expert insights, industry trends, and innovative strategies in Digital Out-of-Home (DOOH) advertising to elevate your brand’s reach and impact.
             </p>
         </div>
@@ -15,29 +15,20 @@
 <section class="section-container blog-sections">
     <div class="blog-container">
         <div class="blog-wrapper">
-            <div class="row g-4 align-items-stretch">
+            <div class="row g-5 align-items-stretch">
                 @for (item of blogLists; track $index) {
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <mat-card class="h-100">
-                            <img mat-card-image src="https://placehold.co/600x400" class="w-100" alt="image placeholder">
-                            <mat-card-content class="d-flex flex-column justify-content-center h-100">
-                                <div class="p-3 blog-content">
-                                    <h6 class="fs-6 fw-semibold">{{ item.title }}</h6>
-                                    <p>{{ item.excerpt }}</p>
-                                </div>
-                            </mat-card-content>
-                            <mat-divider></mat-divider>
-                            <div class="p-2">
-                                <a [href]="'/blog/' + item.slug" class="float-end" color="accent" mat-button>READ MORE</a>
-                            </div>
-                        </mat-card>
+                    <div class="col-12 col-md-6">
+                        <app-blog-card [blog]="item"></app-blog-card>
+                    </div>
+                } @empty {
+                    <div class="text-center d-flex justify-content-center align-items-center" style="height: 300px;">
+                        <p>No blog posts found. Stay tuned for more blogs</p>
                     </div>
                 }
             </div>
         </div>
     </div>
 </section>
-
 
 <app-call-to-action />
 

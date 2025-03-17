@@ -13,6 +13,7 @@ import { WhyChooseUsSectionComponent } from '../../components/why-choose-us-sect
 import { SeeMoreServicesSectionComponent } from '../../components/see-more-services-section/see-more-services-section.component';
 import { NumberCountingComponent } from '../../components/number-counting/number-counting.component';
 import { ContactUsSectionComponent } from '../../components/contact-us-section/contact-us-section.component';
+import { BlogCardComponent } from '../../components/blog-card/blog-card.component';
 
 const COMPONENT_MODULES = [
   CommonModule,
@@ -29,6 +30,7 @@ const COMPONENT_MODULES = [
   SeeMoreServicesSectionComponent,
   NumberCountingComponent,
   ContactUsSectionComponent,
+  BlogCardComponent,
 ]
 @NgModule({
   declarations: [],

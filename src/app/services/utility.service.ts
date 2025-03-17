@@ -4,11 +4,15 @@ import { Observable, Subject, takeUntil } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
+import { environment } from '../../environments/environment.development';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilityService {
+  
+  url: string = environment.wp;
 
   services: any[] = [
     {
@@ -49,7 +53,8 @@ export class UtilityService {
     private breakPointObserver: BreakpointObserver,
     private meta: Meta,
     private title: Title,
-    private router: Router
+    private router: Router,
+    private http: HttpClient,
   ) { }
 
   isMobile(destroyed: Subject<void>): Observable<boolean> {
@@ -108,5 +113,17 @@ export class UtilityService {
     const mailToLink = `mailto:${emailAddress}?subject=Inquiry: Digital Out-of-Home Advertising Solutions&body=${encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nContact: ${contact}\nMessage: ${message}`)}`;
     window.open(mailToLink, '_blank');
     contactForm.reset();
+  }
+
+  getBlogPosts() {
+    return this.http.get(`${this.url}posts?_embed`)
+  }
+
+  getBlogPostBySlug(slug: string) {
+    return this.http.get(`${this.url}posts?slug=${slug}&_embed`)
+  }
+
+  getPreviousBlogPosts(date: any, page: number = 3) {
+    return this.http.get(`${this.url}posts?before=${date}&_embed&per_page=${page}`)
   }
 }

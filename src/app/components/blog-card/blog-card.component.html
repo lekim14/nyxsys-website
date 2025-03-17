@@ -1,0 +1,12 @@
+<mat-card class="h-100 rounded-2">
+    <div class="blog-image-container rounded-top-2">
+        <img mat-card-image [src]="blog?.media" class="w-100 h-100" [alt]="blog?.media">
+    </div>
+    <mat-card-content class="d-flex flex-column justify-content-center h-100 mt-5">
+        <div class="p-2 blog-content">
+            <a [href]="'/blog/' + blog?.slug" class="fs-3 fw-semibold">{{ blog?.title?.rendered }}</a>
+            <div class="text-secondary my-3" [innerHTML]="blog.excerpt?.rendered"></div>
+            <p class="fst-italic mat-caption text-body-tertiary blog-published"><mat-icon>schedule</mat-icon>Published: {{ blog.date | date: 'MMM dd, yyyy' }}</p>
+        </div>
+    </mat-card-content>
+</mat-card>

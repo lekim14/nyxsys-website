@@ -1,1 +1,41 @@
-<p>blog-details works!</p>
+<app-navbar />
+
+<section class="section-container blog-section">
+    <img class="blog-image" [src]="blogDetails?.media" [alt]="blogDetails?.media" loading="lazy">
+    <div class="blog-container">
+        <div class="blog-wrapper">
+            <h2 class="blog-header">{{ blogDetails?.title.rendered }}</h2>
+            <p class="blog-subheader"><mat-icon>schedule</mat-icon> Published: {{ blogDetails?.date | date: 'MMM dd, yyyy' }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="section-container">
+    <div [innerHTML]="blogDetails?.content.rendered"></div>
+</section>
+
+<section class="section-container blog-previous">
+    <div class="blog-previous-wrapper">
+        <div class="d-flex justify-content-between">
+            <h3 class="fs-3 fw-bold">&mdash; Other Posts</h3>
+            <a href="/blog" color="accent" mat-stroked-button>View All Posts</a>
+        </div>
+        <div class="mx-3 mt-5">
+            <ngx-slick-carousel [config]="slideConfig">
+                @for (item of previousBlogs; track $index) {
+                    <div class="mx-3 h-100" ngxSlickItem>
+                        <app-blog-card [blog]="item"></app-blog-card>
+                    </div>
+                } @empty {
+                    <div class="text-center">No previous blog posts found.</div>
+                }
+            </ngx-slick-carousel>
+        </div>
+    </div>
+</section>
+
+<app-call-to-action />
+
+<app-contact-us-section />
+
+<app-footer />
