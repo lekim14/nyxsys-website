@@ -23,9 +23,7 @@
         <div class="mx-3 mt-5">
             <ngx-slick-carousel [config]="slideConfig">
                 @for (item of previousBlogs; track $index) {
-                    <div class="mx-3 h-100" ngxSlickItem>
-                        <app-blog-card [blog]="item"></app-blog-card>
-                    </div>
+                    <app-blog-card class="mx-3" ngxSlickItem [blog]="item"></app-blog-card>
                 } @empty {
                     <div class="text-center">No previous blog posts found.</div>
                 }

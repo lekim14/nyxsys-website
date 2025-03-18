@@ -26,10 +26,10 @@
                 @for (item of ledInventories; track $index) {
                 <div class="col-12 col-lg-4">
                     <div class="led-content">
-                        <img [src]="item.image" [alt]="item.text" loading="lazy">
+                        <img [src]="item.image" [alt]="item.alt" loading="lazy">
                         <div class="led-content-overlay">
                             <div class="led-content-text">
-                                <h4>{{ item.text }}</h4>
+                                <h6 class="fs-6 fw-semibold">{{ item.text }}</h6>
                                 <p>{{ item.address }}</p>
                                 <p>{{ item.size }}</p>
                             </div>
@@ -48,10 +48,10 @@
                         @for (childItem of item.items; track $index) {
                         <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
                             <div class="led-content">
-                                <img [src]="childItem.image" [alt]="childItem.text" loading="lazy">
+                                <img [src]="childItem.image" [alt]="childItem.alt" loading="lazy">
                                 <div class="led-content-overlay">
                                     <div class="led-content-text">
-                                        <h4>{{ childItem.text }}</h4>
+                                        <h6 class="fs-6 fw-semibold">{{ childItem.text }}</h6>
                                     </div>
                                 </div>
                             </div>
