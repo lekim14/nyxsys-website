@@ -13,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class UtilityService {
   
   url: string = environment.wp;
+  custom_url: string = environment.custom_url;
 
   services: any[] = [
     {
@@ -125,5 +126,9 @@ export class UtilityService {
 
   getPreviousBlogPosts(date: any, page: number = 3) {
     return this.http.get(`${this.url}posts?before=${date}&_embed&per_page=${page}`)
+  }
+
+  getTestimonials() {
+    return this.http.get(`${this.custom_url}testimonials`);
   }
 }

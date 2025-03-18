@@ -14,6 +14,8 @@ import { SeeMoreServicesSectionComponent } from '../../components/see-more-servi
 import { NumberCountingComponent } from '../../components/number-counting/number-counting.component';
 import { ContactUsSectionComponent } from '../../components/contact-us-section/contact-us-section.component';
 import { BlogCardComponent } from '../../components/blog-card/blog-card.component';
+import { AudienceTestimonialsComponent } from '../../components/audience-testimonials/audience-testimonials.component';
+import { TestimonialsCardComponent } from '../../components/testimonials-card/testimonials-card.component';
 
 const COMPONENT_MODULES = [
   CommonModule,
@@ -22,7 +24,9 @@ const COMPONENT_MODULES = [
   DrivingForceSectionComponent,
   ServicesSectionComponent,
   CompaniesComponent,
+  AudienceTestimonialsComponent,
   TestimonialsComponent,
+  TestimonialsCardComponent,
   CallToActionComponent,
   FooterComponent,
   GallerySectionComponent,

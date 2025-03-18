@@ -1,29 +1,18 @@
-<div class="section-container">
-    <div class="testimonial-container">
-        <div class="testimonial-wrapper">
-            <h2>Customer Reviews</h2>
-            <p>What our customers are saying:</p>
-            <div class="testimonials-two">
-                <div class="row g-5 align-items-center">
-                    <div class="col-12 col-md-6">
-                        <div class="testimonial-avatar">
-                            <img [@animateImage]="currentState" (@animateImage.done)="animationFinished($event)"[src]="image" [alt]="image" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-start">
-                        <div class="testimonial-text">
-                            <img class="testimonial-quote" src="assets/icons/quote.png" alt="quote.png" loading="lazy">
-                            <p [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{ text }}</p>
-                            <h4 [@animateText]="currentState" (@animateText.done)="animationFinished($event)">&mdash;{{ name }}</h4>
-                        </div>
-                        <div class="testimonial-buttons">
-                            <button (click)="onClickChangeTestimonials(-1)" [disabled]="currentIndex == 0" mat-icon-button aria-label="Previous"><mat-icon>chevron_left</mat-icon></button>
-                            <button (click)="onClickChangeTestimonials(1)" [disabled]="currentIndex + 1 == testimonials.length" mat-icon-button aria-label="Next"><mat-icon>chevron_right</mat-icon></button>
-                        </div>
-                    </div>
+<section class="section-container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <h3 class="text-center fs-3 fw-semibold">What Our Clients Say</h3>
+        <p>Genuine Stories of Trust, Success, and Lasting Partnerships</p>
+        <div class="row g-3 justify-content-center my-5">
+            @for (item of testimonials; track $index) {
+                <div class="col-12 col-md-6 col-lg-4">
+                    <app-testimonials-card [item]="item" />
                 </div>
-            </div>
+            }
+        </div>
+        <div>
+            <a href="/testimonials" color="accent" mat-raised-button>View More Stories</a>
         </div>
     </div>
+    <div class="gradient-bg-bottom-left"></div>
     <div class="gradient-bg-bottom-right"></div>
-</div>
+</section>

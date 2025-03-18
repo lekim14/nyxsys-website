@@ -171,6 +171,7 @@ footer {
 .gradient-bg-bottom-right {
   position: absolute;
   bottom: 0;
+  z-index: -999;
   background-color: #F58F20;
   filter: blur(256px);
 }

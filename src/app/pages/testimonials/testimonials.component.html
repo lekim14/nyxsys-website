@@ -18,21 +18,7 @@
             <div class="row g-4 align-items-stretch">
                 @for (item of testimonialList; track $index) {
                     <div class="col-12 col-md-6 col-lg-4">
-                        <mat-card class="h-100">
-                            <mat-card-header>
-                                <img mat-card-avatar src="https://placehold.co/600x400" alt="image placeholder">
-                                <mat-card-title class="fw-semibold">{{ item.name }}</mat-card-title>
-                                <mat-card-subtitle>{{ item.company }}</mat-card-subtitle>
-                            </mat-card-header>
-                            <mat-card-content class="d-flex flex-column justify-content-center h-100 py-3">
-                                <p>{{ item.testimonial }}</p>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                @for (rating of onSetRatings(item.rating); track $index) {
-                                    <mat-icon class="text-warning">{{ rating }}</mat-icon>
-                                }
-                            </mat-card-actions>
-                        </mat-card>
+                        <app-testimonials-card [item]="item" />
                     </div>
                 }
             </div>
