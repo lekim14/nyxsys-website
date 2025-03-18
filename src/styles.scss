@@ -208,6 +208,32 @@ footer {
   left: 0;
 }
 
+
+.blog-content {
+  h2 {
+    padding: 2% 0 !important;
+  }
+  
+  .wp-block-table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+  
+  .wp-block-table th, 
+  .wp-block-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+  }
+  
+  .wp-block-table th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+  }
+  
+
+}
+
 /* Media Queries */
 /* Mobile Styles (max-width: 767px) */
 @media (max-width: 767px) {

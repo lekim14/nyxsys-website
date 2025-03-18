@@ -14,6 +14,7 @@ export class UtilityService {
   
   url: string = environment.wp;
   custom_url: string = environment.custom_url;
+  css_url: string = environment.css_url;
 
   services: any[] = [
     {
@@ -114,6 +115,10 @@ export class UtilityService {
     const mailToLink = `mailto:${emailAddress}?subject=Inquiry: Digital Out-of-Home Advertising Solutions&body=${encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nContact: ${contact}\nMessage: ${message}`)}`;
     window.open(mailToLink, '_blank');
     contactForm.reset();
+  }
+
+  getWPStyleSheet() {
+    return this.http.get(`${this.css_url}`, { responseType: 'text' });
   }
 
   getBlogPosts() {

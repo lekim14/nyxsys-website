@@ -3,6 +3,7 @@ import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { UtilityService } from '../../services/utility.service';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-blog-details',
@@ -12,6 +13,8 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
   styleUrl: './blog-details.component.scss'
 })
 export class BlogDetailsComponent {
+
+  css_url: string = environment.css_url;
 
   blogDetails: any;
   previousBlogs: any[] = [];
@@ -67,7 +70,7 @@ export class BlogDetailsComponent {
           )
           
           // Apply WordPress Styles
-          this.loadWordPressStyles();
+          // this.loadWordPressStyles();
         },
         error: (error) => {
           console.error(error);
@@ -92,10 +95,24 @@ export class BlogDetailsComponent {
   }
 
   loadWordPressStyles() {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://nyxsys.ph/wp-content/themes/your-theme/style.css'; // Change to your actual theme URL
-    link.type = 'text/css';
-    document.head.appendChild(link);
+    this.utils.getWPStyleSheet().subscribe({
+      next: (styles: any) => {
+        styles.forEach((style: any) => {
+          const link = document.createElement('link');
+          link.rel ='stylesheet';
+          link.href = style.url;
+          link.type = 'text/css';
+          document.querySelector('.blog-content')?.appendChild(link);
+        });
+      },
+      error: (error) => {
+        console.error(error);
+      }
+    })
+    // const link = document.createElement('link');
+    // link.rel = 'stylesheet';
+    // link.href = this.css_url;
+    // link.type = 'text/css';
+    // document.querySelector('.blog-content')?.appendChild(link);
   }
 }
