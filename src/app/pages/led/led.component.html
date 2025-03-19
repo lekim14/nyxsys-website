@@ -21,7 +21,7 @@
 <section class="section-container led-services">
     <div class="led-container">
         <div class="led-wrapper" style="margin-bottom: 10%;">
-            <h2>LED Inventories</h2>
+            <h3 class="fs-3 fw-semibold">LED Inventories</h3>
             <div class="row g-3 mt-2">
                 @for (item of ledInventories; track $index) {
                 <div class="col-12 col-lg-4">
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="led-wrapper">
-            <h2>Mall Posterboxes</h2>
+            <h3 class="fs-3 fw-semibold">Mall Posterboxes</h3>
             <mat-tab-group color="accent" [dynamicHeight]="true" mat-stretch-tabs>
                 @for (item of mallPosterboxes; track $index) {
                 <mat-tab [label]="item.text">
