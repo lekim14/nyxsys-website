@@ -8,6 +8,7 @@
   transition: background-color 0.3s ease;
   z-index: 99;
   top: 0;
+  font-size: 14px;
 
   &.scrolled {
     // background-color: rgba($color: #002868, $alpha: 1.0);
@@ -61,6 +62,10 @@
           color: #F58F20;
         }
       }
+
+      .contact-btn {
+        font-size: 12px;
+      }
     }
   }
   
@@ -90,7 +95,7 @@
   }
   
   /* Responsive styles */
-  @media (min-width: 768px) {
+  @media (min-width: 767px) {
     .navbar-menu {
       display: flex;
     }
@@ -100,7 +105,7 @@
     }
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .navbar-menu {
       display: none;
       flex-direction: column;
