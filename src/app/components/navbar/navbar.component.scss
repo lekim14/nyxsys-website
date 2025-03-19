@@ -57,6 +57,7 @@
         display: block; /* Make a take up full width */
         width: 100%; /* Ensure the a spans the full width of li */
         height: 100%;
+        font-size: 14px !important;
         
         &:hover {
           color: #F58F20;
