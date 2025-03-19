@@ -9,23 +9,23 @@
     </div>
 
     <ul class="navbar-menu" [class.active]="isMenuOpen">
-        <li><a href="/about" routerLinkActive="active">About</a></li>
+        <li><a class="nav-item" href="/about" routerLinkActive="active">About</a></li>
         <!-- <li><a href="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li> -->
         <!-- <li><a href="/services" routerLinkActive="active">Services</a></li> -->
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <a class="nav-link dropdown-toggle nav-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
             <ul class="dropdown-menu text-bg-dark">
                 @for (item of utility.services; track $index) {
-                    <li><a class="dropdown-item fs-6 fw-light" [href]="item.routerLink">{{ item.title }}</a></li>
+                    <li><a class="d-block w-100 text-nowrap fs-6 fw-light nav-item" [href]="item.routerLink">{{ item.title }}</a></li>
                 }
             </ul>
         </li>
-        <li><a href="/testimonials" routerLinkActive="active">Testimonials</a></li>
-        <li><a href="/team" routerLinkActive="active">Team</a></li>
-        <li><a href="/blog" routerLinkActive="active">Blog</a></li>
+        <li><a class="nav-item" href="/testimonials" routerLinkActive="active">Testimonials</a></li>
+        <li><a class="nav-item" href="/team" routerLinkActive="active">Team</a></li>
+        <li><a class="nav-item" href="/blog" routerLinkActive="active">Blog</a></li>
         <li>
             <a href="/contact" class="d-none d-md-block rounded-pill" color="accent" mat-raised-button>Contact Us</a>
-            <a class="d-block d-md-none" href="/contact">Contact Us</a>
+            <a class="d-block d-md-none nav-item" href="/contact">Contact Us</a>
         </li>
     </ul>
 </nav>

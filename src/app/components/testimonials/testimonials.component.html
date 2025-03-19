@@ -1,18 +1,24 @@
-<section class="section-container">
-    <div class="d-flex flex-column justify-content-center align-items-center">
-        <h3 class="text-center fs-3 fw-semibold">What Our Clients Say</h3>
-        <p>Genuine Stories of Trust, Success, and Lasting Partnerships</p>
-        <div class="row g-3 justify-content-center my-5">
-            @for (item of testimonials; track $index) {
-                <div class="col-12 col-md-6 col-lg-4">
-                    <app-testimonials-card [item]="item" />
-                </div>
-            }
+@if (testimonials.length > 0) {
+    <section class="section-container">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <h3 class="text-center fs-3 fw-semibold">What Our Clients Say</h3>
+            <p>Genuine Stories of Trust, Success, and Lasting Partnerships</p>
+            <div class="row g-3 justify-content-center my-5">
+                @for (item of testimonials; track $index) {
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <app-testimonials-card [item]="item" />
+                    </div>
+                } @empty {
+                    <div class="text-center d-flex justify-content-center align-items-center" style="height: 300px;">
+                        <p>No testimonials found. Stay tuned for more testimonials</p>
+                    </div>
+                }
+            </div>
+            <div class="text-center">
+                <a href="/testimonials" color="accent" mat-raised-button>View More Stories</a>
+            </div>
         </div>
-        <div>
-            <a href="/testimonials" color="accent" mat-raised-button>View More Stories</a>
-        </div>
-    </div>
-    <div class="gradient-bg-bottom-left"></div>
-    <div class="gradient-bg-bottom-right"></div>
-</section>
+        <div class="gradient-bg-bottom-left"></div>
+        <div class="gradient-bg-bottom-right"></div>
+    </section>
+}

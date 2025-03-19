@@ -28,25 +28,29 @@ export class StaticComponent implements OnInit {
       text: 'EDSA NORTHBOUND STATIC BILLBOARD',
       address: 'EDSA corner Orense St. Makati City',
       size: '90ft (H) x 70ft (W)',
-      image: 'assets/images/static/edsa orense parallel.jpg'
+      image: 'assets/images/static/edsa northbound static billboard.jpg',
+      alt: 'Static Parallel Billboard located at Edsa Northbound',
     },
     { 
       text: 'EDSA ORENSE PARALLEL NORTHBOUND STATIC BILLBOARD',
       address: 'EDSA corner Orense St., Makati City',
       size: '',
-      image: 'assets/images/static/edsa northbound static billboard.jpg'
+      image: 'assets/images/static/edsa orense parallel.jpg',
+      alt: 'Static Billboard located at Edsa Northbound',
     },
     { 
       text: 'EDSA MARCALEON (DOUBLE-FACED, SOUTHBOUND)',
       address: 'EDSA Mandaluyong - Marcaleon Site, next to Petron and Shell Gasoline stations, Mandaluyong City',
       size: '80FT (H) x 70FT (W)',
-      image: 'assets/images/static/edsa marcaleon double-faced southbound.jpg'
+      image: 'assets/images/static/edsa marcaleon double-faced southbound.jpg',
+      alt: 'Static Billboard located at Edsa Marcaleon Southbound',
     },
     { 
       text: 'EDSA MARCALEON (DOUBLE-FACED, NORTHBOUND)',
       address: 'EDSA Mandaluyong - Marcaleon Site, next to Petron and Shell Gasoline stations, Mandaluyong City',
       size: '80FT (H) x 70FT (W)',
-      image: 'assets/images/static/edsa marcaleon double-faced northbound.jpg'
+      image: 'assets/images/static/edsa marcaleon double-faced northbound.jpg',
+      alt: 'Static Billboard located at Edsa Marcaleon Northbound',
     },
   ]
 

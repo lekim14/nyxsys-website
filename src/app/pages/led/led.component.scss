@@ -35,7 +35,6 @@ h2 {
             flex-direction: column;
             align-items: start;
             justify-content: start;
-            // padding: 0 10%;
 
             .led-header {
                 font-family: 'Poppins', Arial, sans-serif !important;
@@ -89,18 +88,7 @@ h2 {
         flex-direction: column;
         align-items: center;
 
-        // .led-content-text, .led-content-overlay, img {
-        //     position: absolute;
-        //     left: 0;
-        //     width: 100%;
-        // }
-
         img {
-            // top: 0;
-            // height: 100%;
-            // width: 100%;
-            // z-index: -2;
-            // object-fit: cover;
             height: 180px;
             width: auto;
             max-width: 100%;
@@ -114,32 +102,6 @@ h2 {
                 font-weight: 700;
             }
         }
-
-        // .led-content-overlay {
-        //     height: 100%;
-        //     color: #fafafa;
-        //     background: linear-gradient(to top, #1f1f1f, rgba($color:#fff, $alpha: 0));
-
-
-        //     .led-content-text {
-        //         bottom: 0;
-        //         padding: 3% 5%;
-
-        //         h4 {
-        //             margin: 0;
-        //             padding: 0;
-        //             font-weight: 700;
-        //         }
-        //     }
-        // }
-
-        // & img {
-        //     transition: transform 0.7s ease;
-        // }
-
-        // &:hover img {
-        //     transform: scale(1.2);
-        // }
     }
 }
 

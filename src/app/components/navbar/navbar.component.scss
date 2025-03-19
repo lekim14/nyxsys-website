@@ -46,18 +46,19 @@
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
     list-style: none;
 
     li {
       margin: 0 10px;
       
-      a {
+      a.nav-item {
         display: block; /* Make a take up full width */
         width: 100%; /* Ensure the a spans the full width of li */
         height: 100%;
         
         &:hover {
-            color: #F58F20;
+          color: #F58F20;
         }
       }
     }

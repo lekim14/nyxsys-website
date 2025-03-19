@@ -40,7 +40,7 @@ export class LedComponent implements OnInit {
     },
     { 
       text: "C5 MARKET MARKET LED (NORTHBOUND)",
-      address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City 80FT",
+      address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
       size: "30FT (H) x 80FT (W)",
       image: "assets/images/led/led inventories/market market.png",
       alt: "C5 Market Market Billboard Northbound",
