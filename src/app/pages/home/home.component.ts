@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { UtilityService } from '../../services/utility.service';
@@ -11,6 +11,8 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+
+  showButton = signal<boolean>(false);
 
   constructor(private utils: UtilityService, private router: Router) {
     this.router.events.subscribe(event => {
@@ -32,5 +34,12 @@ export class HomeComponent {
       'description',
       'Nyxsys Philippines is a premier provider of Digital Out-of-Home (DOOH) media and business technology solutions. From LED billboards to audience measurement.'
     )
+  }
+
+  ngAfterViewInit() { }
+
+  onClickScrollSection() {
+    const element = document.getElementById('about');
+    element?.scrollIntoView({ behavior:'smooth', block: 'start' });
   }
 }

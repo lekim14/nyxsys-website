@@ -210,6 +210,7 @@ footer {
 
 
 .blog-content {
+
   h2 {
     padding: 2% 0 !important;
   }
@@ -232,6 +233,19 @@ footer {
   }
   
 
+}
+
+.blog-carousel {
+  
+  .slick-track {
+    display: flex !important;
+    align-items: stretch !important;
+  }
+
+  .slick-slide {
+    flex: 1;
+    height: auto !important;
+  }
 }
 
 /* Media Queries */

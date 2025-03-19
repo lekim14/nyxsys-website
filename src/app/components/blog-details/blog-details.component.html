@@ -17,13 +17,15 @@
 <section class="section-container blog-previous">
     <div class="blog-previous-wrapper">
         <div class="d-flex justify-content-between">
-            <h3 class="fs-3 fw-bold">&mdash; Other Posts</h3>
+            <h3 class="fs-3 fw-bold">&mdash; See Other Posts</h3>
             <a href="/blog" color="accent" mat-stroked-button>View All Posts</a>
         </div>
         <div class="mx-3 mt-5">
-            <ngx-slick-carousel [config]="slideConfig">
+            <ngx-slick-carousel class="blog-carousel" [config]="slideConfig">
                 @for (item of previousBlogs; track $index) {
-                    <app-blog-card class="mx-3" ngxSlickItem [blog]="item"></app-blog-card>
+                    <div class="mx-3 h-100" ngxSlickItem>
+                        <app-blog-card [blog]="item"></app-blog-card>
+                    </div>
                 } @empty {
                     <div class="text-center">No previous blog posts found.</div>
                 }
@@ -37,3 +39,5 @@
 <app-contact-us-section />
 
 <app-footer />
+
+<app-scroll-to-top-btn sectionName=".blog-section" />

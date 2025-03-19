@@ -75,6 +75,7 @@ export class GraphsComponent implements OnInit {
   text: string = '';
   name: string = '';
   image: string = '';
+  alt: string = '';
 
   currentValue: any;
 
@@ -82,6 +83,7 @@ export class GraphsComponent implements OnInit {
     this.text = this.carouselItemList[this.currentIndex].text;
     this.name = this.carouselItemList[this.currentIndex].name;
     this.image = this.carouselItemList[this.currentIndex].image;
+    this.alt = this.carouselItemList[this.currentIndex].alt;
 
     this.currentValue = this.carouselItemList[this.currentIndex];
   }
@@ -108,6 +110,7 @@ export class GraphsComponent implements OnInit {
       this.text = this.carouselItemList[this.currentIndex].text;
       this.name = this.carouselItemList[this.currentIndex].name;
       this.image = this.carouselItemList[this.currentIndex].image;
+      this.alt = this.carouselItemList[this.currentIndex].alt;
       this.currentState = 'visible';
     }
   }

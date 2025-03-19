@@ -109,10 +109,5 @@ export class BlogDetailsComponent {
         console.error(error);
       }
     })
-    // const link = document.createElement('link');
-    // link.rel = 'stylesheet';
-    // link.href = this.css_url;
-    // link.type = 'text/css';
-    // document.querySelector('.blog-content')?.appendChild(link);
   }
 }

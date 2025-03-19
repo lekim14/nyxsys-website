@@ -86,6 +86,11 @@ h6 {
     }
 }
 
+.prev-blogs {
+    display: flex;
+    align-items: stretch;
+}
+
             
 .blog-image-container {
     height: 200px;
@@ -95,7 +100,6 @@ h6 {
         object-fit: cover;
     }
 }
-
 
 /* Media Queries */
 /* Mobile Styles (max-width: 767px) */

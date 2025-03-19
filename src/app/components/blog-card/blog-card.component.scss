@@ -8,11 +8,13 @@ h4 {
 }
 
 .blog-image-container {
-    height: 200px;
+    height: 150px;
     min-height: 200px;
     width: 100%;
     
     img {
+        height: 100%;
+        width: 100%;
         object-fit: cover;
     }
 }
@@ -37,15 +39,15 @@ a {
 /* Mobile Styles (max-width: 767px) */
 @media (max-width: 767px) {
     .blog-image-container {
-        height: 100px;
-        min-height: 150px;
+        height: 150px;
+        min-height: 200px;
     }
 }
 
 /* Tablet Styles (min-width: 768px and max-width: 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .blog-image-container {
-        height: 100px;
-        min-height: 150px;
+        height: 150px;
+        min-height: 200px;
     }
 }

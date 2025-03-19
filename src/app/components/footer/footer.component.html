@@ -6,9 +6,9 @@
                     <img src="assets/images/logo white.png" alt="Company Logo" class="logo" loading="lazy">
                     <div class="footer-socials">
                         @for (item of socialLinks; track $index) {
-                        <a [href]="item.url" target="_blank" rel="noopener noreferrer">
-                            <img [src]="'assets/icons/' + item.icon + '.png'" [alt]="item.url">
-                        </a>
+                            <a [href]="item.url" target="_blank" rel="noopener noreferrer">
+                                <img [src]="'assets/icons/' + item.icon + '.png'" [alt]="item.url">
+                            </a>
                         }
                     </div>
                 </div>

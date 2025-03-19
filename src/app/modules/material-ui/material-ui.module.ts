@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 const MATERIAL_UI_MODULES = [
   CommonModule,
@@ -28,6 +29,7 @@ const MATERIAL_UI_MODULES = [
   FormsModule,
   MatExpansionModule,
   MatCardModule,
+  MatTooltipModule,
 ]
 
 @NgModule({

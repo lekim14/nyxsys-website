@@ -1,0 +1,11 @@
+<button 
+    class="position-fixed bottom-0 end-0 m-3 z-3" 
+    (click)="onClickScrollToTop()" 
+    [@fabAnimation]="showButton() ? 'visible' : 'hidden'"
+    matTooltip="Back to top"
+    matTooltipPosition="before"
+    color="accent" 
+    mat-fab
+>
+    <mat-icon>keyboard_arrow_up</mat-icon>
+</button>

@@ -1,5 +1,6 @@
-<app-navbar />
 
+<app-navbar />
+    
 <section class="hero-section">
     <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" class="hero-video" preload="auto">
         <source src="assets/videos/led.mp4" type="video/mp4">
@@ -14,8 +15,12 @@
                 presence, engage audiences, and thrive in the digital age. By delivering impactful campaigns and
                 scalable solutions, we help our partners set industry standards, stay ahead, and achieve lasting
                 success. </p>
-            <a href="/contact" color="accent" mat-raised-button>CONTACT US</a>
+            <!-- <a href="/contact" color="accent" mat-raised-button>CONTACT US</a> -->
         </div>
+    </div>
+    <div class="position-absolute bottom-0 w-100 text-center pb-3 scroll-btn text-white" (click)="onClickScrollSection()">
+        <mat-icon>keyboard_arrow_down</mat-icon>
+        <p class="mat-caption p-0 m-0">click or scroll down to see more</p>
     </div>
 </section>
 
@@ -34,3 +39,5 @@
 <app-contact-us-section />
 
 <app-footer />
+
+<app-scroll-to-top-btn sectionName=".hero-section" />

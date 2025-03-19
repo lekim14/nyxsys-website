@@ -122,15 +122,15 @@ export class UtilityService {
   }
 
   getBlogPosts() {
-    return this.http.get(`${this.url}posts?_embed`)
+    return this.http.get(`${this.url}posts?_embed=author`)
   }
 
   getBlogPostBySlug(slug: string) {
-    return this.http.get(`${this.url}posts?slug=${slug}&_embed`)
+    return this.http.get(`${this.url}posts?slug=${slug}&_embed=author`)
   }
 
   getPreviousBlogPosts(date: any, page: number = 3) {
-    return this.http.get(`${this.url}posts?before=${date}&_embed&per_page=${page}`)
+    return this.http.get(`${this.url}posts?before=${date}&_embed=author&per_page=${page}`)
   }
 
   getTestimonials() {

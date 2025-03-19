@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar />
 
 <section class="section-container business-solution-section">
     <!-- <img class="business-solution-image" src="assets/images/cta.jpg" alt="business-solution" loading="lazy"> -->
@@ -93,7 +93,7 @@
                     @for (item of caseStudies; track $index) {
                     <div class="col-12 col-xl-6">
                         <div class="business-solution-item">
-                            <img [src]="item.image" [alt]="item.details">
+                            <img [src]="item.image" [alt]="item.alt">
                             <div class="business-solution-item-overlay">
                                 <div class="business-solution-item-text">
                                     <h4>{{ item.text }}</h4>
@@ -145,7 +145,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="post-service-list">
                         <div class="post-service-item">
-                            <img [src]="item.image" [alt]="item.details" loading="lazy">
+                            <img [src]="item.image" [alt]="item.alt" loading="lazy">
                         </div>
                         <div class="post-service-text">
                             <h4>{{ item.text }}</h4>
@@ -183,7 +183,7 @@
                 @for (item of b2bIndustries; track $index) {
                 <div class="col-12 col-md-6 col-xl-4">
                     <div class="b2b-industries">
-                        <img [src]="item.image" [alt]="item.text" loading="lazy">
+                        <img [src]="item.image" [alt]="item.alt" loading="lazy">
                         <div class="b2b-industries-text">
                             <h3>{{ item.text }}</h3>
                         </div>
@@ -195,7 +195,8 @@
     </div>
 </section>
 
+<app-see-more-services-section />
 
-<app-see-more-services-section></app-see-more-services-section>
+<app-footer />
 
-<app-footer></app-footer>
+<app-scroll-to-top-btn sectionName=".business-solution-section" />

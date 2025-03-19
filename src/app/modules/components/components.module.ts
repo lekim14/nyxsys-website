@@ -16,6 +16,7 @@ import { ContactUsSectionComponent } from '../../components/contact-us-section/c
 import { BlogCardComponent } from '../../components/blog-card/blog-card.component';
 import { AudienceTestimonialsComponent } from '../../components/audience-testimonials/audience-testimonials.component';
 import { TestimonialsCardComponent } from '../../components/testimonials-card/testimonials-card.component';
+import { ScrollToTopBtnComponent } from '../../components/scroll-to-top-btn/scroll-to-top-btn.component';
 
 const COMPONENT_MODULES = [
   CommonModule,
@@ -35,6 +36,7 @@ const COMPONENT_MODULES = [
   NumberCountingComponent,
   ContactUsSectionComponent,
   BlogCardComponent,
+  ScrollToTopBtnComponent,
 ]
 @NgModule({
   declarations: [],

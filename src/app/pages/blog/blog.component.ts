@@ -66,12 +66,11 @@ export class BlogComponent {
         result.forEach((data: any) => {
           const { _embedded, ...info } = data;
           const media = _embedded['wp:featuredmedia'] ? _embedded['wp:featuredmedia'][0]?.source_url : 'https://placehold.co/600x400';
+          const author = _embedded['author'] ? _embedded['author'][0] : null;          
           this.blogLists.push({
-            media, ...info
+            media, author, ...info,
           })
         });
-
-        console.log(this.blogLists);
       }
     })
   }
