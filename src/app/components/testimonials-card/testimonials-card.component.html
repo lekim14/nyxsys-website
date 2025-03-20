@@ -1,15 +1,19 @@
 <mat-card class="h-100 rounded-2">
     <mat-card-header>
-        <img mat-card-avatar [src]="item.image" [alt]="item.name">
-        <mat-card-title class="fw-semibold">{{ item.name }}</mat-card-title>
-        <mat-card-subtitle>{{ item.company }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content class="d-flex flex-column justify-content-center h-100 py-3">
-        <div [innerHTML]="item.testimony"></div>
-    </mat-card-content>
-    <mat-card-actions>
         @for (rating of onSetRatings(item.rating); track $index) {
             <mat-icon class="text-warning">{{ rating }}</mat-icon>
         }
+    </mat-card-header>
+    <mat-card-content class="d-flex flex-column justify-content-start h-100 py-3">
+        <div [innerHTML]="item.testimony"></div>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="d-flex flex-row pb-4 px-2 w-100">
+            <img mat-card-avatar [src]="item.image || 'https://placehold.co/600x400?text=' + getInitials(item.name)" [alt]="item.name">
+            <div class="d-flex flex-column mx-3">
+                <mat-card-title class="fw-semibold">{{ item.name }}</mat-card-title>
+                <mat-card-subtitle>{{ item.company }}</mat-card-subtitle>
+            </div>
+        </div>
     </mat-card-actions>
 </mat-card>
