@@ -1,42 +1,55 @@
 <section class="contact-us-section section-container">
     <div class="contact-us-container">
         <div class="contact-us-wrapper">
-            <h3 class="fs-3 fw-semibold">Contact Us</h3>   
-            <form [formGroup]="contactUs" class="row mt-4">
-                <div class="col-12 col-md-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Name</mat-label>
-                        <input formControlName="name" matInput placeholder="Enter your full name">
-                    </mat-form-field>
+            <div class="gradient-bg-bottom-left"></div>
+            <div class="row g-md-5">
+                <div class="col-12 col-md-5 d-flex flex-column justify-content-between">
+                    <p>Contact Us</p>
+                    <!-- <h3 class="fs-3 fw-semibold">Contact Us</h3>   
+                    <p class="lh-base">Have a question, feedback, or need assistance? We’re here to help! Reach out to us via phone, email, or visit our office.</p> -->
+                    <div class="py-2">
+                        <h2 class="fs-2 fw-semibold">Let’s Connect & Innovate!</h2>
+                        <p class="lh-base">Have a question, need support, or want to collaborate? Fill out the form, and we’ll get back to you soon!</p>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Company</mat-label>
-                        <input formControlName="company" matInput placeholder="Enter your company name">
-                    </mat-form-field>
+                <div class="col-12 col-md-7">
+                    <form [formGroup]="contactUs" class="row ">
+                        <div class="col-12 col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Name</mat-label>
+                                <input formControlName="name" matInput placeholder="Enter your full name">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Company</mat-label>
+                                <input formControlName="company" matInput placeholder="Enter your company name">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email Address</mat-label>
+                                <input formControlName="email" matInput placeholder="Enter your email address">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Phone</mat-label>
+                                <input formControlName="contact" matInput placeholder="Enter your phone number">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Message</mat-label>
+                                <textarea formControlName="message" matInput placeholder="Enter your message"></textarea>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12">
+                            <button (click)="onClickSendEmail()" color="accent" mat-raised-button>Get Started with us</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-12 col-md-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Email Address</mat-label>
-                        <input formControlName="email" matInput placeholder="Enter your email address">
-                    </mat-form-field>
-                </div>
-                <div class="col-12 col-md-6">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Phone</mat-label>
-                        <input formControlName="contact" matInput placeholder="Enter your phone number">
-                    </mat-form-field>
-                </div>
-                <div class="col-12">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Message</mat-label>
-                        <textarea formControlName="message" matInput placeholder="Enter your message"></textarea>
-                    </mat-form-field>
-                </div>
-                <div class="col-12">
-                    <button (click)="onClickSendEmail()" class="w-100" color="accent" mat-raised-button>Get Started with us</button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </section>
