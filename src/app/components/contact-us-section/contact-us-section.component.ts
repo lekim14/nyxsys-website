@@ -24,6 +24,6 @@ export class ContactUsSectionComponent {
   constructor(private utils: UtilityService) { }
 
   onClickSendEmail() {
-    this.utils.onSendEmail(this.contactUs.value)
+    this.utils.onSendEmail(this.contactUs);    
   }
 }
