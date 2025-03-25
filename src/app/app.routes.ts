@@ -51,14 +51,14 @@ export const routes: Routes = [
         title: 'Get in Touch • NYXSYS Philippines, Inc.',
         loadComponent: () => import('./pages/contacts/contacts.component').then(m => m.ContactsComponent)
     },
-    {
-        path: 'blog',
-        title: 'DOOH Insights, Trends & Strategies | NYXSYS Philippines, Inc.',
-        children: [
-            { path: '', loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent) },
-            { path: ':slug', loadComponent: () => import('./components/blog-details/blog-details.component').then(m => m.BlogDetailsComponent) },
-        ]
-    },
+    // {
+    //     path: 'blog',
+    //     title: 'DOOH Insights, Trends & Strategies | NYXSYS Philippines, Inc.',
+    //     children: [
+    //         { path: '', loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent) },
+    //         { path: ':slug', loadComponent: () => import('./components/blog-details/blog-details.component').then(m => m.BlogDetailsComponent) },
+    //     ]
+    // },
     {
         path: 'testimonials',
         title: 'Customer Testimonials & Success Stories | NYXSYS Philippines, Inc.',
