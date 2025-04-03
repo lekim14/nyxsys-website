@@ -50,26 +50,26 @@ export class TestimonialsComponent {
     });
     
 
-    this.utils.setPageTitle('Customer Testimonials & Success Stories | NYXSYS Philippines, Inc.');
+    this.utils.setPageTitle('What Our Clients Say | Nyxsys Philippines');
     
-    this.utils.setMetaUpdateTag('title', 'Customer Testimonials & Success Stories | NYXSYS Philippines, Inc.');
+    this.utils.setMetaUpdateTag('title', 'What Our Clients Say | Nyxsys Philippines');
     this.utils.setMetaUpdateTag(
       'description',
-      "Real stories from satisfied customers who have experienced the power of our digital signage solutions."
+      "Discover how businesses benefit from Nyxsys Philippines' advanced DOOH solutions, LED billboards, and audience measurement technology."
     )
     
     // OG Meta
-    this.utils.setMetaPropertyTag('og:title', 'Customer Testimonials & Success Stories | NYXSYS Philippines, Inc.');
+    this.utils.setMetaPropertyTag('og:title', 'What Our Clients Say | Nyxsys Philippines');
     this.utils.setMetaPropertyTag('og:description', 
-      "Real stories from satisfied customers who have experienced the power of our digital signage solutions."
+      "Discover how businesses benefit from Nyxsys Philippines' advanced DOOH solutions, LED billboards, and audience measurement technology."
     );
     this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/testimonials');
 
     // Twitter Meta
-    this.utils.setMetaUpdateTag('twitter:title', 'Customer Testimonials & Success Stories | NYXSYS Philippines, Inc.')
+    this.utils.setMetaUpdateTag('twitter:title', 'What Our Clients Say | Nyxsys Philippines')
     this.utils.setMetaUpdateTag(
       'twitter:description',
-      "Real stories from satisfied customers who have experienced the power of our digital signage solutions."
+      "Discover how businesses benefit from Nyxsys Philippines' advanced DOOH solutions, LED billboards, and audience measurement technology."
     )
 
     this.onLoadTestimonials();
