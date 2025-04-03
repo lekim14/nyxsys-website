@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 
 @Component({
@@ -6,7 +6,8 @@ import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
   standalone: true,
   imports: [ MaterialUiModule ],
   templateUrl: './call-to-action.component.html',
-  styleUrl: './call-to-action.component.scss'
+  styleUrl: './call-to-action.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CallToActionComponent {
 

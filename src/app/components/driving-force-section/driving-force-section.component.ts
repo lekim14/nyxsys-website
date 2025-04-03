@@ -1,10 +1,11 @@
-import { Component, HostListener } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 
 @Component({
   selector: 'app-driving-force-section',
   standalone: true,
-  imports: [],
+  imports: [ MaterialUiModule ],
   templateUrl: './driving-force-section.component.html',
   styleUrl: './driving-force-section.component.scss',
   animations: [
@@ -15,6 +16,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       // transition('visible => hidden', animate('600ms ease-in')),
     ]),
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DrivingForceSectionComponent {
 
@@ -54,5 +56,9 @@ export class DrivingForceSectionComponent {
         setTimeout(() => (this.isVisible[index] = true), index * 300); // 300ms delay for each div
       }
     })
+  }
+
+  trackByFn(index: number, item: any) {
+    return item.id; // Unique identifier
   }
 }

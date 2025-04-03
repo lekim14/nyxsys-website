@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { RouterLink, RouterModule } from '@angular/router';
@@ -17,6 +17,7 @@ import { RouterLink, RouterModule } from '@angular/router';
       // transition('visible => hidden', animate('600ms ease-in')),
     ]),
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutSectionComponent {
 

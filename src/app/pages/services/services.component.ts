@@ -40,13 +40,23 @@ export class ServicesComponent implements OnInit {
 
     this.utils.setPageTitle('Our Services | Nyxsys Philippines - Digital Advertising Experts')
 
-    this.utils.setMetaUpdateTag(
-      'title',
-      'Our Services | Nyxsys Philippines - Digital Advertising Experts',
-    )
-
+    this.utils.setMetaUpdateTag('title', 'Our Services | Nyxsys Philippines - Digital Advertising Experts',);
     this.utils.setMetaUpdateTag(
       'description',
+      "Explore Nyxsys Philippines' DOOH services, LED billboards, audience insights, and digital display management. Drive impact with cutting-edge solutions."
+    )
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'Our Services | Nyxsys Philippines - Digital Advertising Experts');
+    this.utils.setMetaPropertyTag('og:description', 
+      "Explore Nyxsys Philippines' DOOH services, LED billboards, audience insights, and digital display management. Drive impact with cutting-edge solutions."
+    );
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/services');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'Our Services | Nyxsys Philippines - Digital Advertising Experts',)
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
       "Explore Nyxsys Philippines' DOOH services, LED billboards, audience insights, and digital display management. Drive impact with cutting-edge solutions."
     )
   }

@@ -7,9 +7,11 @@
                 engages a wider audience, and delivers impactful advertising experiences. Explore our services below and discover 
                 how we can help you achieve your goals with dynamic, results-driven OOH advertising.</p>
             <div class="row g-3 align-items-center justify-content-between mt-5">
-                @for (item of services; track $index) {
-                <div class="col-12 col-md-6 position-relative">
-                    <div class="service-item" [@slideIn]="isVisible[$index] ? 'visible' : 'hidden'">
+                <!-- @for (item of services; track $index) {
+                
+                } -->
+                <div class="col-12 col-md-6 position-relative" *ngFor="let item of services; trackBy: trackByFn">
+                    <div class="service-item" [@slideIn]="isVisible[item.id] ? 'visible' : 'hidden'">
                         <img [src]="item.image" [alt]="item.alt">
                         <div class="service-item-overlay">
                             <h4>{{ item.title }}</h4>
@@ -19,7 +21,6 @@
                         </div>
                     </div>
                 </div>
-                }
             </div>
         </div>
     </div>

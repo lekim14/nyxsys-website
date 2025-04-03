@@ -91,14 +91,24 @@ export class AudienceMeasurementComponent implements OnInit {
     });
   
     this.utils.setPageTitle('Audience Measurement | Data-Driven Insights by Calton Datx');
-    
-    this.utils.setMetaUpdateTag(
-      'title',
-      'Audience Measurement | Data-Driven Insights by Calton Datx',
-    )
 
+    this.utils.setMetaUpdateTag('title', 'Audience Measurement | Data-Driven Insights by Calton Datx',)
     this.utils.setMetaUpdateTag(
       'description',
+      "Leverage Calton Datx's audience measurement for real-time insights, behavioral trends, and AI-driven analytics to optimize DOOH campaigns and engagement."
+    )
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'Audience Measurement | Data-Driven Insights by Calton Datx');
+    this.utils.setMetaPropertyTag('og:description', 
+      "Leverage Calton Datx's audience measurement for real-time insights, behavioral trends, and AI-driven analytics to optimize DOOH campaigns and engagement."
+    );
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/services/audience-measurement');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'Audience Measurement | Data-Driven Insights by Calton Datx',)
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
       "Leverage Calton Datx's audience measurement for real-time insights, behavioral trends, and AI-driven analytics to optimize DOOH campaigns and engagement."
     )
   }

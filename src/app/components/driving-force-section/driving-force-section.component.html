@@ -3,19 +3,19 @@
         <div class="feature-wrapper">
             <h3 class="fs-3 fw-semibold">Our Driving Force</h3>       
             <div class="row my-4 g-5">
-                @for (item of drivingForce; track $index) {
-                    <div class="col-12 col-md-4 text-center">
-                        <div class="driving-force-list">
-                            <div class="driving-force-item">
-                                <img [src]="item.image" [alt]="item.alt">
-                            </div>
-                            <div class="driving-force-text">
-                                <h4>{{ item.title }}</h4>
-                                <p>{{ item.details }}</p>
-                            </div>
-                        </div> 
-                    </div>
-                }
+                <!-- @for (item of drivingForce; track $index) {
+                } -->
+                <div class="col-12 col-md-4 text-center" *ngFor="let item of drivingForce; trackBy: trackByFn">
+                    <div class="driving-force-list">
+                        <div class="driving-force-item">
+                            <img [src]="item.image" [alt]="item.alt">
+                        </div>
+                        <div class="driving-force-text">
+                            <h4>{{ item.title }}</h4>
+                            <p>{{ item.details }}</p>
+                        </div>
+                    </div> 
+                </div>
             </div>
         </div>
     </div>

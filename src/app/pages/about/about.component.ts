@@ -71,13 +71,22 @@ export class AboutComponent implements OnInit {
 
     this.utils.setPageTitle('Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech'); 
     
-    this.utils.setMetaUpdateTag(
-      'title',
-      'Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech',
-    )
+    this.utils.setMetaUpdateTag('title', 'Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech',)
 
     this.utils.setMetaUpdateTag(
       'description',
+      "Since 2014, Nyxsys Philippines has pioneered digital media and tech, transforming OOH advertising into advanced, data-driven business solutions. Learn more."
+    )
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech');
+    this.utils.setMetaPropertyTag('og:description', "Since 2014, Nyxsys Philippines has pioneered digital media and tech, transforming OOH advertising into advanced, data-driven business solutions. Learn more.");
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/about');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech',)
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
       "Since 2014, Nyxsys Philippines has pioneered digital media and tech, transforming OOH advertising into advanced, data-driven business solutions. Learn more."
     )
   }

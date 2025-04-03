@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UtilityService } from '../../services/utility.service';
 import { NavigationEnd, Router } from '@angular/router';
+import { environment } from '../../../environments/environment.development';
+import { ReCaptchaV3Service } from 'ng-recaptcha';
 @Component({
   selector: 'app-contacts',
   standalone: true,
-  imports: [MaterialUiModule, ComponentsModule, ],
+  imports: [ MaterialUiModule, ComponentsModule, ],
   templateUrl: './contacts.component.html',
   styleUrl: './contacts.component.scss',
   animations: [
@@ -17,10 +19,13 @@ import { NavigationEnd, Router } from '@angular/router';
       state('visible', style({ opacity: 1, transform: 'translateY(0)' })),
       transition('hidden => visible', animate('600ms ease-out')),
     ]),
-  ]
+  ],
 })
 export class ContactsComponent implements OnInit {
+  
+  private recaptchaV3Service = inject(ReCaptchaV3Service);
 
+  siteKey: string = environment.siteKey;
   secureToken: string = '358cf574-eeb6-4522-9a42-8e332a6cacf9';
 
   isVisible: boolean[] = [false, false];
@@ -29,9 +34,10 @@ export class ContactsComponent implements OnInit {
     name: new FormControl(null, [Validators.required]),
     company: new FormControl(null, [Validators.required]),
     email: new FormControl(null, [Validators.required]),
-    contact: new FormControl(null, [Validators.required]),
+    phone: new FormControl(null, [Validators.required]),
     message: new FormControl(null, [Validators.required]),
-    to: new FormControl('info@caltondatx.com')
+    to: new FormControl('info@caltondatx.com'),
+    recaptchaToken: new FormControl(null),
   });
 
   emailAddress: string = 'inquire@nyxsys.ph';
@@ -62,18 +68,42 @@ export class ContactsComponent implements OnInit {
 
     this.utils.setPageTitle('Contact Nyxsys Philippines | Let’s Connect & Collaborate');
     
-    this.utils.setMetaUpdateTag(
-      'title',
-      'Contact Nyxsys Philippines | Let’s Connect & Collaborate',
-    )
-
+    this.utils.setMetaUpdateTag('title', 'Contact Nyxsys Philippines | Let’s Connect & Collaborate',);
     this.utils.setMetaUpdateTag(
       'description',
+      "Need digital advertising solutions? Contact Nyxsys Philippines for expert DOOH, LED, and business tech services. Let’s build something great! Connect with Us"
+    )
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'Contact Nyxsys Philippines | Let’s Connect & Collaborate');
+    this.utils.setMetaPropertyTag('og:description', 
+      "Need digital advertising solutions? Contact Nyxsys Philippines for expert DOOH, LED, and business tech services. Let’s build something great! Connect with Us"
+    );
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/contact');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'Contact Nyxsys Philippines | Let’s Connect & Collaborate',)
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
       "Need digital advertising solutions? Contact Nyxsys Philippines for expert DOOH, LED, and business tech services. Let’s build something great! Connect with Us"
     )
   }
 
   async onClickSendEmail() {
-    this.utils.onSendEmail(this.contactUs)
+    if (this.contactUs.invalid) return;
+    this.recaptchaV3Service.execute('contactUs').subscribe((token) => {
+      this.contactUs.patchValue({ recaptchaToken: token });      
+      this.utils.onSendEmail(this.contactUs).subscribe({
+        next: (result: any) => {
+          console.log(result);
+          this.contactUs.reset();
+          this.utils.showSnackbar('Email sent successfully!');
+        },
+        error: (error) => {
+          this.utils.showSnackbar('Failed to send email. Please try again later.');
+          console.error('Error sending email:', error);
+        }
+      })
+    });
   }
 }

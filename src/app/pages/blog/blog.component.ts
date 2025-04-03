@@ -54,7 +54,22 @@ export class BlogComponent {
 
     this.utils.setMetaUpdateTag(
       'description',
-      "stay updated with the latest trends, strategies, and innovations in Digital Out-of-Home (DOOH) advertising. Explore expert insights and industry news with NYXSYS Philippines, Inc."
+      "Stay updated with the latest trends, strategies, and innovations in Digital Out-of-Home (DOOH) advertising. Explore expert insights and industry news with NYXSYS Philippines, Inc."
+    )
+    
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'DOOH Insights, Trends & Strategies | NYXSYS Philippines, Inc.');
+    this.utils.setMetaPropertyTag('og:description', 
+      "Stay updated with the latest trends, strategies, and innovations in Digital Out-of-Home (DOOH) advertising. Explore expert insights and industry news with NYXSYS Philippines, Inc."
+    );
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/blog');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'DOOH Insights, Trends & Strategies | NYXSYS Philippines, Inc.',)
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
+      "Stay updated with the latest trends, strategies, and innovations in Digital Out-of-Home (DOOH) advertising. Explore expert insights and industry news with NYXSYS Philippines, Inc."
     )
 
     this.onGetBlogPosts();

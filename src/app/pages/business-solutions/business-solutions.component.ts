@@ -173,13 +173,23 @@ export class BusinessSolutionsComponent implements OnInit {
 
     this.utils.setPageTitle('Next-Level Digital Display Management | Effortless Control');
     
-    this.utils.setMetaUpdateTag(
-      'title',
-      'Next-Level Digital Display Management | Effortless Control',
-    )
-
+    this.utils.setMetaUpdateTag('title', 'Next-Level Digital Display Management | Effortless Control',)
     this.utils.setMetaUpdateTag(
       'description',
+      "Nyxsys provides advanced digital display management with real-time updates, seamless integration, and optimized audience engagement for impactful advertising."
+    )
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'Next-Level Digital Display Management | Effortless Control');
+    this.utils.setMetaPropertyTag('og:description', 
+      "Nyxsys provides advanced digital display management with real-time updates, seamless integration, and optimized audience engagement for impactful advertising."
+    );
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/services/digital-display-management-services');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'Next-Level Digital Display Management | Effortless Control',)
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
       "Nyxsys provides advanced digital display management with real-time updates, seamless integration, and optimized audience engagement for impactful advertising."
     )
   }

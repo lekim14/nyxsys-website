@@ -1,4 +1,4 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, inject } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { UtilityService } from '../../services/utility.service';
@@ -17,7 +17,8 @@ import { UtilityService } from '../../services/utility.service';
       // transition('visible => hidden', animate('600ms ease-in')),
     ]),
   ],
-  providers: [UtilityService]
+  providers: [UtilityService],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ServicesSectionComponent {
 
@@ -38,5 +39,9 @@ export class ServicesSectionComponent {
         setTimeout(() => (this.isVisible[index] = true), index * 200); // 300ms delay for each div
       }
     })
+  }
+  
+  trackByFn(index: number, item: any) {
+    return item.id; // Unique identifier
   }
 }

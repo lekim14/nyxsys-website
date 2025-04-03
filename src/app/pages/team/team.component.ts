@@ -73,13 +73,23 @@ export class TeamComponent implements OnInit {
 
     this.utils.setPageTitle('Meet the Nyxsys Team | Innovators in Digital Advertising');
     
-    this.utils.setMetaUpdateTag(
-      'title',
-      'Meet the Nyxsys Team | Innovators in Digital Advertising',
-    )
-
+    this.utils.setMetaUpdateTag('title', 'Meet the Nyxsys Team | Innovators in Digital Advertising');
     this.utils.setMetaUpdateTag(
       'description',
+      "Meet the experts at Nyxsys Philippines! Our team drives innovation in DOOH, LED advertising, and digital solutions for impactful brand experiences. Read More."
+    )
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'Meet the Nyxsys Team | Innovators in Digital Advertising');
+    this.utils.setMetaPropertyTag('og:description', 
+      "Meet the experts at Nyxsys Philippines! Our team drives innovation in DOOH, LED advertising, and digital solutions for impactful brand experiences. Read More."
+    );
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/team');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'Meet the Nyxsys Team | Innovators in Digital Advertising')
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
       "Meet the experts at Nyxsys Philippines! Our team drives innovation in DOOH, LED advertising, and digital solutions for impactful brand experiences. Read More."
     )
   }

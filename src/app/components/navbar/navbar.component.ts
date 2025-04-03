@@ -15,6 +15,7 @@ import { NgOptimizedImage } from '@angular/common';
 export class NavbarComponent implements OnDestroy {
   isMenuOpen: boolean = false;
   isScrolled: boolean = false;
+  isDropDown: boolean = false;
   
   destroyed = new Subject<void>();
 

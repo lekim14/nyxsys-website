@@ -217,13 +217,23 @@ export class LedComponent implements OnInit {
 
     this.utils.setPageTitle('LED Billboard Advertising | High-Impact Digital Displays');
 
-    this.utils.setMetaUpdateTag(
-      'title',
-      'LED Billboard Advertising | High-Impact Digital Displays',
-    )
-
+    this.utils.setMetaUpdateTag('title', 'LED Billboard Advertising | High-Impact Digital Displays',);
     this.utils.setMetaUpdateTag(
       'description',
+      "Capture attention with Nyxsys' LED billboards. Our HD digital displays deliver vibrant, engaging ads in prime spots like EDSA Orense and C5 Market Market."
+    )
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'LED Billboard Advertising | High-Impact Digital Displays');
+    this.utils.setMetaPropertyTag('og:description', 
+      "Capture attention with Nyxsys' LED billboards. Our HD digital displays deliver vibrant, engaging ads in prime spots like EDSA Orense and C5 Market Market."
+    );
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/services/led-media-inventories');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'LED Billboard Advertising | High-Impact Digital Displays',)
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
       "Capture attention with Nyxsys' LED billboards. Our HD digital displays deliver vibrant, engaging ads in prime spots like EDSA Orense and C5 Market Market."
     )
   }

@@ -19,7 +19,7 @@
             <div class="left-content">
                 <p>SEND US EMAIL</p>
                 <h2>Feel free to write</h2>
-                <form [formGroup]="contactUs" class="row">
+                <form [formGroup]="contactUs" class="row mb-2">
                     <div class="col-12 col-md-6">
                         <mat-form-field appearance="outline">
                             <mat-label>Name</mat-label>
@@ -41,7 +41,7 @@
                     <div class="col-12 col-md-6">
                         <mat-form-field appearance="outline">
                             <mat-label>Phone</mat-label>
-                            <input formControlName="contact" matInput placeholder="Enter your phone number">
+                            <input formControlName="phone" [min]="0" matInput placeholder="Enter your phone number">
                         </mat-form-field>
                     </div>
                     <div class="col-12">
@@ -87,5 +87,3 @@
 </section>
 
 <app-footer />
-
-<app-scroll-to-top-btn sectionName=".contact-section" />

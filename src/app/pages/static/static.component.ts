@@ -71,13 +71,23 @@ export class StaticComponent implements OnInit {
 
     this.utils.setPageTitle('Static Billboard Advertising | Long-Lasting Brand Visibility');
 
-    this.utils.setMetaUpdateTag(
-      'title',
-      'Static Billboard Advertising | Long-Lasting Brand Visibility',
-    )
-
+    this.utils.setMetaUpdateTag('title', 'Static Billboard Advertising | Long-Lasting Brand Visibility',);
     this.utils.setMetaUpdateTag(
       'description',
+      "Nyxsys’ static billboards offer durable, high-impact ads in strategic locations like EDSA Marcaleon & EDSA Orense, ensuring strong, lasting brand visibility."
+    )
+    
+    // OG Meta
+    this.utils.setMetaPropertyTag('og:title', 'Static Billboard Advertising | Long-Lasting Brand Visibility');
+    this.utils.setMetaPropertyTag('og:description', 
+      "Nyxsys’ static billboards offer durable, high-impact ads in strategic locations like EDSA Marcaleon & EDSA Orense, ensuring strong, lasting brand visibility."
+    );
+    this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/services/static-fixed-inventories');
+
+    // Twitter Meta
+    this.utils.setMetaUpdateTag('twitter:title', 'Static Billboard Advertising | Long-Lasting Brand Visibility')
+    this.utils.setMetaUpdateTag(
+      'twitter:description',
       "Nyxsys’ static billboards offer durable, high-impact ads in strategic locations like EDSA Marcaleon & EDSA Orense, ensuring strong, lasting brand visibility."
     )
   }

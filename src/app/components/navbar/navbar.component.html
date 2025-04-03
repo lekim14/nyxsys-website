@@ -11,10 +11,12 @@
     <ul class="navbar-menu" [class.active]="isMenuOpen">
         <li><a href="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
         <li><a class="nav-item" href="/about" routerLinkActive="active">About</a></li>
-        <!-- <li><a href="/services" routerLinkActive="active">Services</a></li> -->
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-            <ul class="dropdown-menu text-bg-dark">
+        <li class="nav-item dropdown" (mouseleave)="isDropDown = false">
+            <!-- data-bs-toggle="dropdown" -->
+            <a class="nav-link dropdown-toggle nav-item" href="/services" (click)="$event.stopPropagation()" (mouseenter)="isDropDown = true" role="button"  aria-expanded="false">
+                Services
+            </a>
+            <ul class="dropdown-menu text-bg-dark" [class.show]="isDropDown" (mouseleave)="isDropDown = false">
                 @for (item of utility.services; track $index) {
                     <li><a class="d-block w-100 text-nowrap fs-6 fw-light nav-item" [href]="item.routerLink">{{ item.title }}</a></li>
                 }

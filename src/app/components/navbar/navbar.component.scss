@@ -93,7 +93,7 @@
     font-size: 24px;
     cursor: pointer;
     display: none;
-  }
+  } 
   
   /* Responsive styles */
   @media (min-width: 767px) {
@@ -123,4 +123,19 @@
       display: block;
     }
   }
+}
+
+/* Ensure dropdown menu appears when .show is applied */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }

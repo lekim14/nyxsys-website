@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +16,11 @@ export class UtilityService {
   url: string = environment.wp;
   custom_url: string = environment.custom_url;
   css_url: string = environment.css_url;
+  api: string = environment.api;
 
   services: any[] = [
     {
+      id: 0,
       title: 'LED MEDIA INVENTORIES',
       description: 'High-performance LED displays delivering unmatched quality and versatility for all your marketing and advertising needs.',
       image: 'assets/images/led/led-services.png',
@@ -26,14 +29,16 @@ export class UtilityService {
       alt: 'Largest LED billboard along EDSA highway.'
     },
     {
+      id: 1,
       title: 'STATIC FIXED INVENTORIES',
       description: `Durable, high-quality static advertising solutions designed to deliver impactful, long-lasting brand messaging in high-traffic areas.`,
       image: 'assets/images/static/edsa northbound static billboard.jpg',
       routerLink: '/services/static-fixed-inventories',
-      buttonText: 'See Our Display Management Services',
+      buttonText: 'See Our Static Billboard Advertising',
       alt: 'EDSA northbound static billboard over busy traffic.'
     },
     {
+      id: 2,
       title: 'DIGITAL DISPLAY MANAGEMENT SERVICES',
       description: `Dynamic, high-definition displays designed for impactful advertising, real-time updates, and seamless engagement across diverse industries.`,
       image: 'assets/images/business solutions/globe.jpg',
@@ -42,6 +47,7 @@ export class UtilityService {
       alt: 'LED display screens at Globe store showcase vibrant visuals.'
     },
     {
+      id: 3,
       title: 'AUDIENCE MEASUREMENT',
       description: `An advanced data platform that transforms real-time monitoring into actionable insights, empowering businesses to optimize operations and drive growth.`,
       image: 'assets/images/audience measurement/indoor/indoor mall audience measurement 1.png',
@@ -57,6 +63,7 @@ export class UtilityService {
     private title: Title,
     private router: Router,
     private http: HttpClient,
+    private snackbar: MatSnackBar
   ) { }
 
   isMobile(destroyed: Subject<void>): Observable<boolean> {
@@ -88,6 +95,14 @@ export class UtilityService {
     }
   }
 
+  setMetaPropertyTag(property: string, content: string) {
+    if (this.meta.getTag(`property='${property}'`)) {
+      this.meta.updateTag({ property, content });
+    } else {
+      this.meta.addTag({ property, content });
+    }
+  }
+
   setCanonicalURL(url?: string) {
     let link: HTMLLinkElement = document.querySelector("link[rel='canonical']") || document.createElement("link");
     link.setAttribute("rel", "canonical");
@@ -108,13 +123,18 @@ export class UtilityService {
   }
   
 
-  async onSendEmail(contactForm: FormGroup) {
-    const emailAddress: string = 'inquire@nyxsys.ph';
-    const { name, company, email, contact, message }: any = contactForm.value;
+  onSendEmail(contactForm: FormGroup) {
+    const body = contactForm.value;
+    // const emailAddress: string = 'inquire@nyxsys.ph';
+    // const { name, company, email, contact, message }: any = contactForm.value;
     
-    const mailToLink = `mailto:${emailAddress}?subject=Inquiry: Digital Out-of-Home Advertising Solutions&body=${encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nContact: ${contact}\nMessage: ${message}`)}`;
-    window.open(mailToLink, '_blank');
-    contactForm.reset();
+    // const mailToLink = `mailto:${emailAddress}?subject=Inquiry: Digital Out-of-Home Advertising Solutions&body=${encodeURIComponent(`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nContact: ${contact}\nMessage: ${message}`)}`;
+    // window.open(mailToLink, '_blank');
+    return this.http.post(`${this.api}/company-website/inquiry-send-email`, body)
+  }
+
+  showSnackbar(message: string) {
+    this.snackbar.open(message, 'Close', { duration: 3000 });
   }
 
   getWPStyleSheet() {
