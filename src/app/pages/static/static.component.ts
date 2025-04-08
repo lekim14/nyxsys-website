@@ -30,13 +30,15 @@ export class StaticComponent implements OnInit {
       size: '90ft (H) x 70ft (W)',
       image: 'assets/images/static/edsa northbound static billboard.jpg',
       alt: 'Static Parallel Billboard located at Edsa Northbound',
+      why: 'Peak retention for all possible leads',
     },
     { 
       text: 'EDSA ORENSE PARALLEL NORTHBOUND STATIC BILLBOARD',
       address: 'EDSA corner Orense St., Makati City',
-      size: '',
+      size: 'N/A',
       image: 'assets/images/static/edsa orense parallel.jpg',
       alt: 'Static Billboard located at Edsa Northbound',
+      why: 'Peak retention for all possible leads.',
     },
     { 
       text: 'EDSA MARCALEON (DOUBLE-FACED, SOUTHBOUND)',
@@ -44,6 +46,7 @@ export class StaticComponent implements OnInit {
       size: '80FT (H) x 70FT (W)',
       image: 'assets/images/static/edsa marcaleon double-faced southbound.jpg',
       alt: 'Static Billboard located at Edsa Marcaleon Southbound',
+      why: 'Engagement that actually sticks.',
     },
     { 
       text: 'EDSA MARCALEON (DOUBLE-FACED, NORTHBOUND)',
@@ -51,6 +54,35 @@ export class StaticComponent implements OnInit {
       size: '80FT (H) x 70FT (W)',
       image: 'assets/images/static/edsa marcaleon double-faced northbound.jpg',
       alt: 'Static Billboard located at Edsa Marcaleon Northbound',
+      why: 'Retention that surely pays back.',
+    },
+  ]
+
+  whyChooseUs: any[] = [
+    {
+      title: 'High Visibility',
+      text: 'Always on, reaching thousands of people in great areas.',
+      icon: 'groups',
+    },
+    {
+      title: 'Cost-effective',
+      text: 'Fixed rental prices with no electricity expenditures.',
+      icon: 'paid',
+    },
+    {
+      title: 'Mass Market Reach',
+      text: 'Concentrates on commuters, cars, and pedestrians.',
+      icon: 'directions_run',
+    },
+    {
+      title: 'Weatherproof and dependable',
+      text: 'Exposed 24/7, unaffected by power disruptions.',
+      icon: 'cloud',
+    },
+    {
+      title: 'Builds Trust',
+      text: 'Physical presence increases brand credibility.',
+      icon: 'thumb_up',
     },
   ]
 

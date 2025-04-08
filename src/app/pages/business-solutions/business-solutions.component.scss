@@ -59,7 +59,7 @@ h4 {
 
             .business-solution-header {
                 font-family: 'Poppins', Arial, sans-serif !important;
-                font-size: clamp(0.8rem, 5vw + 1rem, 4rem);
+                font-size: clamp(0.8rem, 4vw + 1rem, 3rem);
                 /* Responsive font size */
                 font-weight: bold;
                 line-height: 1.2;
@@ -99,7 +99,7 @@ h4 {
     position: relative;
 
     .business-solution-carousel {
-        margin-top: 5%;
+        margin-top: 15%;
         margin-bottom: 10%;
 
         .business-solution-item {

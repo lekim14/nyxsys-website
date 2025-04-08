@@ -13,20 +13,27 @@
                 [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Digital Display Management Services</h1>
             <p class="business-solution-subheader business-solution-item"
                 [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
-                We empower your business with innovative business-to-business solutions to drive growth, enhance
-                efficiency, and gain a competitive edge. From advanced technologies to tailored strategies, we
-                provide the tools and expertise to optimize performance, expand reach, and adapt to market demands,
-                ensuring sustained success in a changing landscape.
+                Manage Your Displays with Ease.
             </p>
+            <p class="business-solution-subheader business-solution-item"
+                [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                We empower your business with innovative business-to-business solutions to drive growth, enhance efficiency, 
+                and gain a competitive edge. From advanced technologies to tailored strategies, we provide the tools and expertise to optimize performance, 
+                expand reach, and adapt to market demands, ensuring sustained success in a changing landscape.
+            </p>
+            <div class="mt-5" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                <button (click)="onClickScrollSection('businessSolution')" mat-raised-button color="accent">Keep Exploring… More Insights Ahead!</button>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="section-container business-solution-contents">
+<section id="businessSolution" class="section-container business-solution-contents">
     <div class="gradient-bg-top-right"></div>
     <div class="business-solution-container">
         <div class="business-solution-wrapper">
             <h2>VCastplay</h2>
+            <p>Smart Digital Signage for Seamless Advertising</p>
             <div class="vcastplay-info">
                 <div class="vcastplay-description">
                     <p>In today's fast-paced retail and commercial environment, capturing customer attention is more challenging than ever. 
@@ -73,22 +80,58 @@
                 </div>
             </div>
         </div>
-        <div class="mt-5">
+    </div>
+</section>
+
+<app-testimonials />
+
+<section class="section-container business-solution-contents" style="background-color: #002868; color: #fff;">
+    <div class="business-solution-container">
+        <div class="business-solution-wrapper">
+            <h3 class="fs-2 fw-semibold p-0 m-0"><span style="color: #fff;">&mdash; Next Up:</span> Apply Their Game-Changing Strategies</h3>
+        </div>
+    </div>
+</section>
+
+<section class="section-container business-solution-contents">
+    <div class="gradient-bg-top-right"></div>
+    <div class="business-solution-container">
+        <div class="business-solution-wrapper">
             <h2>Digital Signage B2B Case Studies</h2>
-            <p class="mt-5">Successful businesses leverage digital signage to achieve various objectives, enhancing
-                customer
-                engagement and improving operational efficiency. These versatile platforms deliver dynamic, targeted
-                content that captures attention and drives meaningful interactions, supporting lead generation and
-                acquisition. This approach ensures the right message reaches the right audience, boosting brand
-                visibility and business growth. By streamlining operations and automating content delivery, businesses
-                stay agile and competitive.
-            </p>
-            <p>Outsourcing content management, charting, and digital content creation allows companies to focus on core
-                operations while ensuring high-quality, professional content. These services offer expertise in creating
-                compelling visual experiences and managing content flow, maximizing the impact of digital signage
-                campaigns. </p>
+
+            <div class="mt-5">
+                <p>Why Choose Digital Signage B2B Case Studies?</p>
+                <h4 class="fs-4">Why Choose NYXSYS to Leverage your Advertising?</h4>
+                <div class="row g-5 mt-3">
+                    <div class="col-12 col-md-6">
+                        <p>Key Benefits from Successful businesses who uses digital signage:</p>
+                        <div class="mt-5">
+                            @for (item of keyBenefits; track $index) {
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="material-icons me-3" style="color: #F58F20;">check_circle</span>
+                                    <p class="m-0 p-0">{{item}}</p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p>Enabling them to:</p>
+                        <div class="mt-5">
+                            @for (item of enableList; track $index) {
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="material-icons me-3" style="color: #F58F20;">arrow_forward</span>
+                                    <p class="m-0 p-0">{{item}}</p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="business-solution-carousel">
-                <div class="row g-3">
+                <h2>Success Stories / Testimonials / Reviews</h2>
+                <p>Real Results from Our Clients </p>
+                <div class="row g-3 mt-3">
                     @for (item of caseStudies; track $index) {
                     <div class="col-12 col-xl-6">
                         <div class="business-solution-item">
@@ -96,7 +139,18 @@
                             <div class="business-solution-item-overlay">
                                 <div class="business-solution-item-text">
                                     <h4>{{ item.text }}</h4>
-                                    <p>{{ item.details }}</p>
+                                    <div class="d-flex mt-3">
+                                        <span class="material-icons me-3 fs-3" style="color: #F58F20;">ads_click</span>
+                                        <p class="m-0 p-0">{{item.challenge}}</p>
+                                    </div>
+                                    <div class="d-flex mt-3">
+                                        <span class="material-icons me-3 fs-3" style="color: #F58F20;">lightbulb</span>
+                                        <p class="m-0 p-0">{{item.solution}}</p>
+                                    </div>
+                                    <div class="d-flex mt-3">
+                                        <span class="material-icons me-3 fs-3" style="color: #F58F20;">emoji_events</span>
+                                        <p class="m-0 p-0">{{item.results}}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +166,7 @@
     <div class="business-solution-container">
         <div class="business-solution-wrapper">
             <h2>Content Management System</h2>
-            <div class="post-service-impact mt-5">
+            <div class="post-service-impact my-5 py-5">
                 <div class="row g-5">
                     <div class="col-12">
                         <div class="row g-3 align-items-center">
@@ -128,16 +182,21 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <p>Fueled by advancements in technology, enhanced user experiences, and the growing integration
-                            of artificial intelligence and data analytics, NYXSYS will make your brand fully embrace the
-                            promising future of digital display management.
-                            NYXSYS will simplify the process and make it cost-effective together with our team of
-                            experts supporting you from setup to daily operations, ensuring your playlists and content
-                            are effortlessly managed with cutting-edge cloud tech.
-                            With NYXSYS, you can easily upload, manage, and schedule your media across unlimited screens
-                            from one central location and enjoy the operational costs savings.</p>
+                        <p>What is CMS?</p>
+                        <h2>Why Does It Matter For Your Brand?</h2>
+                        <p>
+                            Fueled by advancements in technology, enhanced user experiences, and the growing integration of artificial intelligence and 
+                            data analytics, NYXSYS will make your brand fully embrace the promising future of digital display management. NYXSYS will 
+                            simplify the process and make it cost-effective together with our team of experts supporting you from setup to daily operations, 
+                            ensuring your playlists and content are effortlessly managed with cutting-edge cloud tech. With NYXSYS, you can easily upload, manage, 
+                            and schedule your media across unlimited screens from one central location and enjoy the operational costs savings.</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="my-5">
+                <p>Why Partner With Us?</p>
+                <h2>Why Avail CMS for Your Advertising?</h2>
             </div>
             <div class="row justify-content-center my-4 g-5">
                 @for (item of postServices; track $index) {
@@ -149,17 +208,19 @@
                         <div class="post-service-text">
                             <h4>{{ item.text }}</h4>
                             <p>{{ item.details }}</p>
-                            @if (item.link) {
-                            <!-- <p>For more details, visit <a [href]="item.link" target="_blank">vCastPlay's packages
-                                    page.</a></p> -->
-                            }
                         </div>
                     </div>
                 </div>
                 }
             </div>
-            <!-- <hr> -->
+        </div>
+    </div>
+</section>
 
+<section class="section-container business-solution-contents">
+    <div class="business-solution-container">
+        <div class="business-solution-wrapper">
+            <h3 class="fs-2 fw-semibold p-0 m-0">&mdash; Schedule a Demo</h3>
         </div>
     </div>
 </section>
@@ -168,16 +229,18 @@
     <div class="business-solution-container">
         <div class="business-solution-wrapper">
             <h2>B2B Verticals</h2>
-            <p>Nyxsys Philippines is a leading provider of innovative and customizable software solutions, catering to a
-                wide range of B2B industries. The company focuses on delivering cutting-edge technology that helps
-                businesses optimize operations, enhance customer experiences, and drive growth. With expertise in
-                sectors such as retail, hospitality, transport hubs, healthcare, education, and food services, Nyxsys
-                provides tailored solutions that address the unique challenges of each industry. Their offerings include
-                advanced point-of-sale systems, inventory management, data analytics, and process automation, all
-                designed to streamline operations, improve efficiency, and ensure seamless integration across business
-                functions. By prioritizing customer satisfaction and operational excellence, Nyxsys has become a trusted
-                partner for businesses looking to modernize and scale their operations in today’s competitive market.
-            </p>
+            <div class="my-5">
+                <p>Why Choose Software Solutions?</p>
+                <h4 class="fst-4 mb-4">Why Choose To Avail Nyxsys Customizable Software Solutions For Your Brand?</h4>
+                <p>We provide smart, tailored solutions to help businesses tackle their biggest industry challenges. Whether you're in retail, 
+                    hospitality, healthcare, or any other B2B sector, our expertise is designed to meet your unique needs.  </p>
+            </div>
+
+
+            <div class="my-5">
+                <h6 class="fs-6 fw-semibold">Who We Work With</h6>
+                <p>We specialize in supporting a variety of industries, including:  </p>
+            </div>
             <div class="row justify-content-center g-3 mt-4">
                 @for (item of b2bIndustries; track $index) {
                 <div class="col-12 col-md-6 col-xl-4">
@@ -197,5 +260,3 @@
 <app-see-more-services-section />
 
 <app-footer />
-
-<!-- <app-scroll-to-top-btn sectionName=".business-solution-section" /> -->

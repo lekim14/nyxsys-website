@@ -31,30 +31,41 @@ export class BusinessSolutionsComponent implements OnInit {
   caseStudies: any[] = [
     {
       text: 'Globe Telecom',
-      details: `Nyxsys Philippines provided Globe with a complete digital
-        signage solution, from installing high-definition screens
-        to seamless software integration and content
-        management. Globe’s branches and public spaces were
-        transformed with dynamic displays, delivering real-time
-        information and interactive experiences, powered by
-        Nyxsys' advanced technology.`,
       image: 'assets/images/business solutions/case studies/globe.jpg',
+      challenge: "Seamless software integration and  content management through all Globe'sbranches and public spaces",
+      solution: "Providing complete digital signage solution powered by Nyxsys' advanced technology.",
+      results: "Dynamic displays, delivering real-time information and interactive experiences.",
       alt: 'A Globe store with a bright LED display.',
     },
     {
       text: 'Dunkin Menu Boards',
-      details: `Nyxsys Philippines facilitated the supply and delivery of
-        Vcastplay for Dunkin', enhancing their in-store digital
-        signage system. With Vcastplay, Dunkin' can now
-        seamlessly manage and update content across
-        multiple screens, ensuring vibrant and engaging
-        displays for customers. This solution has streamlined
-        Dunkin’s digital content delivery, reinforcing their brand
-        presence while enhancing the customer experience.`,
       image: 'assets/images/business solutions/case studies/dunkin.jpg',
+      challenge: "Seamless management and content update across multiple screens.",
+      solution: "Enhancing their in-store digital signage system.",
+      results: "Streamlined Dunkin's digital content delivery, reinforcing their brand presence while enhancing the customer experience.",
       alt: "A Dunkin' store with bright digital menu boards above shelves of pastries.",
     },
   ];
+
+  keyBenefits: string[] = [
+    "Enhance customer engagement",
+    "Improve operational efficiency",
+    "Deliver dynamic, targeted content",
+    "Capture attention and drive meaningful interactions",
+    "Support lead generation and acquisition",
+    "Ensure the right message reaches the right audience",
+    "Boost brand visibility and business growth",
+    "Streamline operations and automate content delivery",
+    "Maintain agility and competitiveness",
+  ];
+
+  enableList: string[] = [
+    "Focus on core operations",
+    "Ensure high-quality, professional content",
+    "Benefit from expert visual content creation",
+    "Effectively manage content flow",
+    "Maximize the impact of digital signage campaigns",
+  ]
 
   e2eSolutions: any[] = [
     {
@@ -206,5 +217,11 @@ export class BusinessSolutionsComponent implements OnInit {
     const video: any = document.getElementById('vcastplay');
     video.play();
     this.isVcastPlaying = true;
+  }
+
+  
+  onClickScrollSection(id: string) {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior:'smooth', block: 'start' });
   }
 }

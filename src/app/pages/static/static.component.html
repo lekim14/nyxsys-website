@@ -7,12 +7,13 @@
     </video>
     <div class="static-container">
         <div class="static-wrapper">
-            <h1 class="static-header static-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Static Fixed
-                Inventories</h1>
+            <h1 class="static-header static-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Maximizing Impact: The Power of Static Fixed Billboard Inventories</h1>
             <p class="static-subheader static-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
-                Achieve consistent brand exposure with Nyxsys Static Fixed Inventories, strategically placed in
-                high-traffic locations. These high-quality, non-digital ads offer timeless, cost-effective visibility,
-                ensuring your message resonates day after day with clarity and professionalism.
+                Stand Out. Be Seen. Build Your Brand.
+            </p>
+            <p class="static-subheader static-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                With Nyxsys' Static Billboard Advertising placed thoughtfully in busy locations, you can guarantee steady brand awareness. 
+                These high-end, non-digital billboards offer classic, affordable advertising that consistently conveys your message with professionalism and clarity.
             </p>
         </div>
     </div>
@@ -20,8 +21,37 @@
 
 <section class="section-container static-gallery">
     <div class="static-container">
+        <div class="static-wrapper text-center" style="margin-bottom: 10%;">
+            <div class="mb-5">
+                <h2 class="mb-4 fw-bold">Why Consider Advertising On Static Billboards?</h2>
+            </div>
+            <div class="row justify-content-center my-5 g-3 g-md-4">
+                @for (item of whyChooseUs; track $index) {
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="p-4 border rounded-4 shadow-sm h-100 text-center">
+                            <span class="material-icons fs-1 mb-4" style="color: #F58F20;">{{ item.icon }}</span>
+                            <h5 class="fw-semibold">{{ item.title }}</h5>
+                            <p class="text-muted small mt-3">{{ item.text }}</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container static-gallery" style="background-color: #002868; color: #fff;">
+    <div class="static-container">
         <div class="static-wrapper" style="margin-bottom: 10%;">
-            <h3 class="fs-3 fw-semibold">Static Inventories</h3>
+            <h2 class="fs-1 fw-semibold">&mdash; Ready to Boost Your ROI? Read On!</h2>
+        </div>
+    </div>
+</section>
+
+<section class="section-container static-gallery">
+    <div class="static-container">
+        <div class="static-wrapper" style="margin-bottom: 10%;">
+            <h3 class="fs-3 fw-semibold">Our Static Billboard Locations</h3>
             <div class="row g-3 mt-2">
                 @for (item of staticInvetories; track $index) {
                 <div class="col-12 col-md-6">
@@ -30,19 +60,28 @@
                         <div class="static-content-overlay">
                             <div class="static-content-text">
                                 <h6 class="fs-6 fw-semibold">{{ item.text }}</h6>
-                                <p>{{ item.address }}</p>
-                                <p>{{ item.size }}</p>
+                                <p>Location: {{ item.address }}</p>
+                                <p>Size: {{ item.size }}</p>
                             </div>
+                            <mat-divider></mat-divider>
+                            <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Why Advertise Here?</p>
+                            <p>{{ item.why }}</p>
                         </div>
                     </div>
                 </div>
                 }
+            </div>
+            
+            <div class="mt-5 text-center">
+                <a href="/contact" color="accent" mat-raised-button>Get Started Today!</a>
             </div>
         </div>
     </div>
 </section>
 
 <app-see-more-services-section />
+
+<app-contact-us-section />
 
 <app-footer />
 
