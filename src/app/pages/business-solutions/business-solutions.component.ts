@@ -87,7 +87,7 @@ export class BusinessSolutionsComponent implements OnInit {
   postServices: any[] = [
     {
       text: 'Software Subscription of vcastplay',
-      details: `vcastplay offers flexible subscription options, including a Free Trial for 15 days with 5GB cloud storage, and the Cloud Subscription, which provides a per-player license, 1GB cloud storage, unlimited playlists, and custom templates. For businesses requiring more robust storage, the On-Premises package offers a lifetime license, up to 2TB of server storage, and similar features. All packages include email support and useful reports, providing scalable solutions for digital signage needs.`,
+      details: `vcastplay offers flexible subscription options, including a Free Trial for 15 days with 5GB cloud storage, and the Cloud Subscription, which provides a per-player license, 1GB cloud storage, unlimited playlists, and custom templates. For businesses requiring more robust storage, the On-Premises package offers a license with up to 2TB of server storage and comparable features. All packages include email support and useful reports, providing scalable solutions for digital signage needs.`,
       image: 'assets/images/business solutions/post services/vcastplay subscription.png',
       link: 'https://vcastplay.com/packages',
       alt: 'Logo of vcastplay',

@@ -7,12 +7,12 @@
     </video>
     <div class="led-container">
         <div class="led-wrapper">
-            <h1 class="led-header led-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">LED Media Inventories</h1>
+            <h1 class="led-header led-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">LED Billboard Advertising with Nyxsys</h1>
             <p class="led-subheader led-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
-                Maximize your brand’s visibility with Nyxsys’ high-impact LED media, strategically placed in prime
-                locations for optimal exposure. Our dynamic displays captivate audiences, providing unmatched reach and
-                lasting impressions in urban centers, highways, and commercial hubs, helping your brand stand out in a
-                competitive landscape.
+                Maximize Visibility, Amplify Your Brand. 
+                Dominate the advertising landscape with NYXSYS’ High-Impact LED Billboard Advertising, 
+                positioned in high-traffic locations, ensuring your brand stands out and reaches the right audience at the perfect moment. 
+                Elevate your brand visibility with dynamic digital advertising solutions today!
             </p>
         </div>
     </div>
@@ -20,27 +20,89 @@
 
 <section class="section-container led-services">
     <div class="led-container">
-        <div class="led-wrapper" style="margin-bottom: 10%;">
-            <h3 class="fs-3 fw-semibold">LED Inventories</h3>
-            <div class="row g-3 mt-2">
+        <div class="led-wrapper text-center">
+            <div class="gradient-bg-top-right"></div>
+            <div class="container">
+                <h2 class="mb-4 fw-bold">Why Choose LED Billboard Advertising?</h2>
+                <div class="row justify-content-center my-5 g-3 g-md-4">
+                    @for (item of whyChooseLED; track $index) {
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="p-4 border rounded-4 shadow-sm h-100 text-center">
+                                <span class="material-icons fs-1 mb-4" style="color: #F58F20;">{{ item.icon }}</span>
+                                <h5 class="fw-semibold">{{ item.title }}</h5>
+                                <p class="text-muted small mt-3">{{ item.text }}</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            
+                <div class="mt-5">
+                    <a href="/contact" color="accent" mat-raised-button>Get Started Today!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container led-services">
+    <div class="led-container">
+        <div class="led-wrapper">
+            <h3 class="fs-3 fw-semibold">Premium LED Billboard Locations</h3>
+            <div class="row g-3 mt-2 justify-content-center">
                 @for (item of ledInventories; track $index) {
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="led-content">
                         <img [src]="item.image" [alt]="item.alt" loading="lazy">
                         <div class="led-content-overlay">
                             <div class="led-content-text">
                                 <h6 class="fs-6 fw-semibold">{{ item.text }}</h6>
-                                <p>{{ item.address }}</p>
-                                <p>{{ item.size }}</p>
+                                <p>Location: {{ item.address }}</p>
+                                <p>Size: {{ item.size }}</p>
                             </div>
+                            <mat-divider></mat-divider>
+                            <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Why Advertise Here?</p>
+                            <p>{{ item.why }}</p>
                         </div>
                     </div>
                 </div>
                 }
             </div>
         </div>
+        <div class="led-wrapper" style="margin-top: 10%;">
+            <div class="container">
+                <h6 class="mb-5 fs-6 fst-italic">Who Can Benefit from LED Billboard Advertising?</h6>
+                <div class="row justify-content-center mb-5 g-3 g-md-4">
+                    @for (item of whoBenefits; track $index) {
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="p-4 border rounded-4 shadow-sm h-100 text-center">
+                                <h5 class="fw-semibold">{{ item.title }}</h5>
+                                <p class="text-muted small mt-3">{{ item.text }}</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container led-services" style="background-color: #002868; color: #fff;">
+    <div class="led-container">
         <div class="led-wrapper">
-            <h3 class="fs-3 fw-semibold">Mall Posterboxes</h3>
+            <h2 class="fs-1 fw-semibold">&mdash; Want More Conversions? Keep Reading!</h2>
+        </div>
+    </div>
+</section>
+
+<section class="section-container led-services">
+    <div class="led-container">
+        <div class="led-wrapper">
+            <div class="mb-5">
+                <h3 class="mb-4">Not Just Billboards | Amplify Your Reach with <span class="fs-3 fw-semibold">Mall Posterboxes</span></h3>
+                <p class="mt-3">Malls are bustling hubs of consumer activity, making mall advertising a 
+                    powerful marketing tool to complement your LED billboard advertising campaigns.</p>
+                <p class="fw-semibold my-5">Available Mall Locations:</p>
+            </div>
             <mat-tab-group color="accent" [dynamicHeight]="true" mat-stretch-tabs>
                 @for (item of mallPosterboxes; track $index) {
                 <mat-tab [label]="item.text">
@@ -65,7 +127,41 @@
     </div>
 </section>
 
+
+<section class="section-container led-services" style="background-color: #002868; color: #fff;">
+    <div class="led-container">
+        <div class="led-wrapper">
+            <div class="row g-md-5 g-3 justify-content-center">
+                <div class="col-12 col-md-6">
+                    <h2 class="mb-4 fw-bold">Let’s Get Your Brand on the Big Screen!</h2>
+                    <p class="mb-5">Boost brand awareness, attract more customers, and dominate your industry with our LED billboard advertising solutions. 
+                        Whether you're launching a new product, running a promotional campaign, or reinforcing brand presence, our LED billboards and mall poster 
+                        boxes provide the perfect high-impact advertising solution.</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row g-5 justify-content-between">
+                        <div class="col-12 d-flex align-items-center border-bottom pb-3">
+                            <span class="material-icons fs-1 me-3" style="color: #F58F20;">check_circle</span>
+                            <h5 class="fw-semibold">Strategic Locations</h5>
+                        </div>
+                        <div class="col-12 d-flex align-items-center border-bottom pb-3">
+                            <span class="material-icons fs-1 me-3" style="color: #F58F20;">check_circle</span>
+                            <h5 class="fw-semibold">High-Traffic Exposure</h5>
+                        </div>
+                        <div class="col-12 d-flex align-items-center border-bottom pb-3">
+                            <span class="material-icons fs-1 me-3"  style="color: #F58F20;">check_circle</span>
+                            <h5 class="fw-semibold">Customizable Advertising Solutions</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <app-see-more-services-section />
+
+<app-contact-us-section />
 
 <app-footer />
 

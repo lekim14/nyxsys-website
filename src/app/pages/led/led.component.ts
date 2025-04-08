@@ -30,6 +30,7 @@ export class LedComponent implements OnInit {
       size: "80FT (H) x 140FT (W)",
       image: "assets/images/led/led inventories/iconic-2.png",
       alt: "Iconic LED Billboard along EDSA Orense Southbound",
+      why: 'High-visibility LED billboard along EDSA Southbound, ensuring massive daily foot and vehicle traffic.',
     },
     { 
       text: "EDSA PARAGON LED (NORTHBOUND)",
@@ -37,6 +38,7 @@ export class LedComponent implements OnInit {
       size: "70FT (H) x 60FT (W)",
       image: "assets/images/led/led inventories/paragon.png",
       alt: "Paragon LED Billboard along EDSA Northbound",
+      why: 'A highly prominent, high-visibility LED billboard strategically located along EDSA Northbound, guaranteeing exposure to a massive volume of daily foot and vehicle traffic, making it an ideal platform for maximum brand visibility and engagement.',
     },
     { 
       text: "C5 MARKET MARKET LED (NORTHBOUND)",
@@ -44,6 +46,48 @@ export class LedComponent implements OnInit {
       size: "30FT (H) x 80FT (W)",
       image: "assets/images/led/led inventories/market market.png",
       alt: "C5 Market Market Billboard Northbound",
+      why: 'Positioned in a prime location along C5 at Market! Market!, this dynamic LED billboard attracts massive daily foot and vehicle traffic, maximizing brand reach.',
+    },
+  ]
+
+  whyChooseLED: any[] = [
+    { title: 'Eye-Catching & Dynamic', text: "Motion graphics, vivid colors, and stunning visuals make your brand unforgettable.", icon: 'visibility', },
+    { title: 'Strategic Locations', text: "Our LED billboards are positioned in high-traffic areas, guaranteeing maximum brand visibility", icon: 'location_on' },
+    { title: '24/7 Brand Exposure', text: "Unlike traditional billboards, LED advertising runs day and night, continuously engaging your audience.", icon: 'schedule' },
+    { title: 'High ROI & Cost-Effective', text: "Get better reach and engagement than traditional print ads at a competitive price.", icon: 'paid' },
+    { title: 'Fast & Flexible Campaigns', text: "Update your ads instantly, run multiple creatives, and launch time-sensitive campaigns effortlessly.", icon: 'rocket_launch' },
+  ]
+
+  whoBenefits: any[] = [
+    {
+      title: 'Corporate Brands',
+      text: 'Build brand authority with high-visibility campaigns.',
+      image: 'Denstu'
+    },
+    {
+      title: 'Retail & E-Commerce',
+      text: 'Drive foot traffic and online conversions.',
+      image: 'Lazada'
+    },
+    {
+      title: 'Restaurants & Food Chains',
+      text: 'Promote new menus, discounts, and store locations',
+      image: 'JFC'
+    },
+    {
+      title: 'Events & Concerts',
+      text: 'Create buzz and attract attendees..',
+      image: 'Wanderland'
+    },
+    {
+      title: 'Hotels & Travel Agencies',
+      text: 'Showcase your destinations to potential travelers.',
+      image: 'Solaire'
+    },
+    {
+      title: 'Tech & Telecom',
+      text: 'Announce product launches and exclusive offers.',
+      image: 'Vivo'
     },
   ]
 
