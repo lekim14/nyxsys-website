@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { GraphsComponent } from "../../components/graphs/graphs.component";
 import { UtilityService } from '../../services/utility.service';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-audience-measurement',
   standalone: true,
-  imports: [MaterialUiModule, ComponentsModule, GraphsComponent],
+  imports: [MaterialUiModule, ComponentsModule ],
   templateUrl: './audience-measurement.component.html',
   styleUrl: './audience-measurement.component.scss',
   animations: [
@@ -74,6 +73,14 @@ export class AudienceMeasurementComponent implements OnInit {
       alt: 'Graph of Dwell time for LED Billboards from CaltonDatx',
     },
   ];
+
+  caltonDatxKeyPoints: any[] = [
+    { title: 'Smarter Decisions', text: 'It helps businesses make smarter decisions by turning raw data into clear, actionable insights.' },
+    { title: 'Unlocking Hidden Insights', text: 'CaltonDatx digs deep into all the data coollected to uncover trends and opportunities that businesses might otherwise miss.' },
+    { title: 'Driving Growth', text: 'By using AI to guide strategy, it empowers businesses to grow and stay ahead of the competition through utilizing the hidden insights.' },
+    { title: 'State-of-the-Art Technology', text: 'CaltonDatx fixes on being the cutting-edge tech designed to help businesses adapt and thrive in an ever-shifting landscape.' },
+    { title: 'Built for Business Success', text: "Whether you're a small company or a large enterprise, CaltonDatx helps you get the most out of your data to drive success." },
+  ]
   
   constructor(private utils: UtilityService, private router: Router) {
     this.router.events.subscribe(event => {
@@ -111,5 +118,10 @@ export class AudienceMeasurementComponent implements OnInit {
       'twitter:description',
       "Leverage Calton Datx's audience measurement for real-time insights, behavioral trends, and AI-driven analytics to optimize DOOH campaigns and engagement."
     )
+  }
+  
+  onClickScrollSection(id: string) {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior:'smooth', block: 'start' });
   }
 }

@@ -11,23 +11,22 @@
                 Audience Measurement Enabled by Calton Datx
             </h1>
             <p class="audience-subheader audience-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
-                <!-- Unlock the power of data-driven insights to better understand your audience. Our advanced analytics
-                capture real-time engagement, uncover behavioral patterns, and reveal audience preferences, enabling
-                highly targeted campaigns. Optimize strategies, enhance effectiveness, and stay ahead in a data-driven
-                world. -->
-                Gain a deeper understanding of your audience with Calton Datx's cutting-edge audience measurement technology. 
-                Leverage real-time data analytics to track engagement, identify behavioral trends, and uncover actionable 
-                insights that drive impactful decisions. Our platform empowers you to segment audiences effectively, personalize 
-                messaging, and deliver highly targeted campaigns that resonate. With advanced metrics and predictive analysis, 
-                you can optimize marketing strategies, measure performance accurately, and ensure maximum return on investment.
-                Stay competitive in today's data-driven landscape by transforming insights into smarter strategies and stronger 
-                connections with your audience.
+                "Understand Your Audience Better and Create Marketing That Truly Connects."
             </p>
+            <p class="audience-subheader audience-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                Understand your audience like never before with CaltonDatx’s powerful measurement technology and real-time analytics. 
+                Spot trends, track engagement, and use predictive insights to fine-tune your marketing and boost ROI. Turn data into smarter 
+                decisions by maximizing the results, more personalized messaging, and deeper connections with your audience.
+            </p>
+            <div class="mt-5 d-flex text-white align-items-center" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                <p class="p-0 m-0">Unlock powerful audience insights &mdash;</p>
+                <button class="mx-1" (click)="onClickScrollSection('audienceDescription')" mat-raised-button color="accent">Request a product showcase</button>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="section-container description-section">
+<section id="audienceDescription" class="section-container description-section">
     <div class="gradient-bg-top-right"></div>
     <div class="description-container">
         <div class="description-wrapper">
@@ -63,19 +62,33 @@
             </div>
         </div>
     </div>
+</section>
+
+
+<section class="section-container description-section" style="background-color: #002868; color: #fff;">
+    <div class="description-container">
+        <div class="description-wrapper">
+            <div class="description-content">
+                <h3 class="fs-2 fw-semibold p-0 m-0">&mdash; Keep Exploring… More Insights Ahead!</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container description-section">
+    <div class="gradient-bg-top-left"></div>
     <div class="indoor-outdoor-container">
         <div class="indoor-outdoor-wrapper">
-            <h2>Indoor Mall Audience Measurement</h2>
-            <p class="mt-2">Discover better understanding of customer patterns, preferences, and interactions within the
-                mall. By
-                analyzing foot traffic, dwell times, and
-                engagement with different areas, mall owners, tenants, and marketers can better understand customer
-                patterns. The result is a more efficient,
-                personalized environment that boosts satisfaction, increases foot traffic, and drives sales, fostering
-                stronger brand loyalty and growth for both retailers
-                and the mall.</p>
-            <div class="row g-3 mt-3">
-                <div class="row g-3 col-12 align-items-center justify-content-center">
+            <p>What is Indoor Mall Audience Measurement?</p>
+            <h3 class="fs-3 fw-semibold mb-4">Optimizing Marketing Strategies with Indoor Mall Data</h3>
+            <p class="mt-2">Discover better understanding of customer patterns, preferences, and interactions within the mall. 
+                By analyzing foot traffic, dwell times, and engagement with different areas, mall owners, tenants, and marketers can 
+                better understand customer patterns. The result is a more efficient, personalized environment that boosts satisfaction, 
+                increases foot traffic, and drives sales, fostering stronger brand loyalty and growth for both retailers and the mall.</p>
+            <div class="row g-3 mt-3 position-relative">
+
+                <div class="gradient-bg-bottom-right"></div>
+                <div class="row g-3 col-12 justify-content-center">
                     <div class="col-12 col-md-6">
                         <div class="indoor-outdoor-content m-3">
                             <ngx-slick-carousel [config]="slideConfig">
@@ -89,13 +102,27 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <h4>Data Analytics</h4>
-                        <p>CaltonDatx, the AI-powered platform developed by Nyxsys Philippines, represents a
-                            cutting-edge advancement in business intelligence and data-driven decision-making.
-                            Leveraging artificial intelligence, CaltonDatx is designed to help businesses harness the
-                            full potential of their data, unlocking insights that drive smarter strategies and growth.
-                        </p>
-                        <h4 class="mt-4">How It Works</h4>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <h4 class="fs-4 mb-5">CaltonDatx, the AI-powered platform developed by Nyxsys Philippines uses advanced AI to take 
+                                    data analytics to the next level.</h4>
+                                @for (item of caltonDatxKeyPoints; track $index) {
+                                    <div class="d-flex mb-4">
+                                        <span class="material-icons me-3" style="color: #F58F20;">check_circle</span>
+                                        <div class="d-flex flex-column">
+                                            <h6 class="fs-6 fw-semibold">{{ item.title }}</h6>
+                                            <p class="m-0 p-0">{{item.text}}</p>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 border rounded-3 shadow-sm p-4 position-relative">
+                        <div class="d-flex align-items-center mb-4">
+                            <span class="material-icons fs-4 me-2" style="color: #F58F20;">help</span>
+                            <h4 class="fs-4 m-0">How It Works</h4>
+                        </div>
                         <p>At the core of CaltonDatx is an advanced AI engine that analyzes large volumes of data in
                             real-time, transforming raw information into actionable insights. The platform uses machine
                             learning algorithms to identify patterns, trends, and correlations within data, enabling
@@ -107,19 +134,87 @@
                 </div>
             </div>
         </div>
+        
+        <h3 class="fs-3 fw-semibold">Data Analytics</h3>
+        <div class="row g-3 g-md-5">
+            <div class="my-5 row g-3 g-md-5 justify-content-between align-items-center position-relative">
+                <div class="gradient-bg-bottom-left"></div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
+                    <img src="https://nyxsys.ph/assets/images/audience measurement/indoor/graph 1.png" style="object-fit: contain;" 
+                        width="100%" height="500" alt="Graph of Dwell time for Posterbox from CaltonDatx">
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column">
+                    <h4 class="fst-4 mb-4">Graph of dwell time</h4>
+                    <p>
+                        Dwell time, the duration shoppers spend viewing advertisements, is a crucial metric for assessing engagement and 
+                        effectiveness in Nyxsys Mall Posterboxes. Longer dwell times indicate higher audience interest, helping advertisers 
+                        optimize content with captivating visuals, targeted messaging, and strategic placement in high-traffic areas like food 
+                        courts or escalators. By leveraging advanced tracking technologies such as motion sensors and audience analytics, 
+                        Nyxsys provides real-time insights into viewer behavior, enabling data-driven adjustments to boost ad visibility and ROI. 
+                        This makes Nyxsys Mall Posterboxes a powerful tool for delivering impactful and results-oriented campaigns in bustling mall environments.
+                    </p>
+                </div>
+            </div>
+            <div class="my-5 row g-3 g-md-5 flex-column-reverse flex-md-row justify-content-between align-items-center position-relative">
+                <div class="gradient-bg-bottom-right"></div>
+                <div class="col-12 col-md-6 d-flex flex-column">
+                    <h4 class="fst-4 mb-4">Graph of Demographics</h4>
+                    <p>
+                        Demographics are key to maximizing the impact of Nyxsys Mall Posterboxes, as they allow advertisers to tailor messages 
+                        based on audience characteristics like age, gender, income, and lifestyle. Using advanced analytics, Nyxsys gathers real-time data 
+                        on who interacts with ads, enabling precise targeting and content customization. Malls attract diverse groups, from young professionals 
+                        and families to students and seniors, making them ideal for reaching multiple market segments. Advertisers can strategically place ads—like 
+                        tech-focused campaigns near cafes or family-oriented messages near play areas—ensuring higher engagement, better recall, and stronger conversions.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
+                    <img src="https://nyxsys.ph/assets/images/audience measurement/indoor/graph 2.png" style="object-fit: contain;" 
+                        width="100%" height="500" alt="Graph of Demographics for Posterbox from CaltonDatx">
+                </div>
+            </div>
+            <div class="my-5 row g-3 g-md-5 justify-content-between align-items-center position-relative">
+                <div class="gradient-bg-bottom-left"></div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
+                    <img src="https://nyxsys.ph/assets/images/audience measurement/indoor/graph of impression.png" style="object-fit: contain;" 
+                        width="100%" height="500" alt="Graph of Impression Count for Posterbox from CaltonDatx">
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column">
+                    <h4 class="fst-4 mb-4">Graph of dwell time</h4>
+                    <p>
+                        Impression count refers to the number of times content, such as an ad or post, is displayed or viewed, making it a 
+                        crucial metric for building brand awareness. High impressions signify successful visibility, keeping your brand top-of-mind and 
+                        aiding in evaluating campaign performance. Paired with engagement metrics, impression data offers insights into audience reach and 
+                        targeting effectiveness, guiding better strategies. For instance, Nyxsys Philippines, Inc. maximizes impressions with its Iconic LED Billboards 
+                        in EDSA Guadalupe, ensuring millions of daily views that enhance brand recall and visibility. By leveraging impression counts, businesses 
+                        create a foundation for awareness, influence, and growth.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <app-graphs class="indoor-outdoor-wrapper" [carouselItemList]="indoorAudienceMeasurement"></app-graphs>
+<section class="section-container description-section" style="background-color: #002868; color: #fff;">
+    <div class="description-container">
+        <div class="description-wrapper">
+            <div class="description-content">
+                <h3 class="fs-2 fw-semibold p-0 m-0">&mdash; Swipe for More Success Stories</h3>
+            </div>
+        </div>
+    </div>
+</section>
 
-
+<section class="section-container description-section">
+    <div class="gradient-bg-top-right"></div>
+    <div class="indoor-outdoor-container">
         <div class="indoor-outdoor-wrapper">
-            <h2>Vehicle Audience Measurement</h2>
-            <p>Get valuable insights into the effectiveness of vehicle-based advertising by tracking how these ads are
-                seen, engaged with,
-                and how they influence customer behavior while people are in or around moving vehicles. This data helps
-                advertisers refine their messaging,
-                optimize ad placement, and measure the true impact of vehicle-based campaigns, ultimately driving more
-                meaningful customer engagement
-                and improving the ROI of mobile advertising efforts.</p>
+            <p>What is Vehicle Audience Measurement?</p>
+            <h3 class="fs-3 fw-semibold mb-4">Maximize Impact with Data-Driven Vehicle Advertising</h3>
+            <p class="mt-2">Get valuable insights into the effectiveness of vehicle-based advertising by tracking how these ads are seen, 
+                engaged with, and how they influence customer behavior while people are in or around moving vehicles. This data helps advertisers 
+                refine their messaging, optimize ad placement, and measure the true impact of vehicle-based campaigns, 
+                ultimately driving more meaningful customer engagement and improving the ROI of mobile advertising efforts.
+            </p>
             <div class="row g-3 mt-3">
                 <div class="col-12">
                     <div class="indoor-outdoor-content">
@@ -133,14 +228,85 @@
             </div>
         </div>
 
-        <app-graphs class="indoor-outdoor-wrapper" [carouselItemList]="outdoorAudienceMeasurement"></app-graphs>
+        <div class="row g-3 g-md-5">
+            <div class="my-5 row g-3 g-md-5 justify-content-between align-items-center position-relative">
+                <div class="gradient-bg-bottom-left"></div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
+                    <img src="https://nyxsys.ph/assets/images/audience measurement/outdoor/Vehicle Count.png" style="object-fit: contain;" 
+                        width="100%" height="500" alt="Graph of Vehicle Count for LED Billboards from CaltonDatx">
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column">
+                    <div class="mb-3">
+                        <p>What is Vehicle Count?</p>
+                        <h4 class="fst-4 mb-4">Boost Ad Visibility with High-Traffic Vehicle Count Data</h4>
+                    </div>
+                    <p>
+                        Vehicle count measures the number of vehicles passing a location within a specific timeframe, making it essential for 
+                        evaluating the reach of outdoor ads like billboards. High vehicle counts indicate greater visibility and more opportunities for 
+                        impressions, enhancing brand awareness and recall. For example, ads along high-traffic roads like EDSA Guadalupe can reach millions 
+                        of commuters daily, maximizing exposure and ROI. Using vehicle count data, businesses can strategically place ads to effectively 
+                        reach their target audience and ensure campaign success.
+                    </p>
+                </div>
+            </div>
+            <div class="my-5 row g-3 g-md-5 flex-column-reverse flex-md-row justify-content-between align-items-center position-relative">
+                <div class="gradient-bg-bottom-right"></div>
+                <div class="col-12 col-md-6 d-flex flex-column">
+                    <div class="mb-3">
+                        <p>What is Audience Impressions?</p>
+                        <h4 class="fst-4 mb-4">Maximize Brand Exposure with Audience Impressions Data</h4>
+                    </div>
+                    <p>
+                        Audience impressions measure how often an advertisement is seen by people, indicating its overall reach and visibility. 
+                        This metric is crucial for evaluating the effectiveness of marketing campaigns, as higher impressions mean more opportunities for 
+                        brand exposure and recall. Whether through digital platforms or outdoor advertising like billboards, audience impressions help 
+                        businesses understand their reach and optimize placements. For example, ads in high-traffic areas like EDSA Guadalupe can generate 
+                        millions of impressions daily, ensuring maximum audience engagement and campaign impact.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
+                    <img src="https://nyxsys.ph/assets/images/audience measurement/outdoor/Vehicle Impression.png" style="object-fit: contain;" 
+                        width="100%" height="500" alt="Graph of Audience Impressions for LED Billboards from CaltonDatx">
+                </div>
+            </div>
+            <div class="my-5 row g-3 g-md-5 justify-content-between align-items-center position-relative">
+                <div class="gradient-bg-bottom-left"></div>
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
+                    <img src="https://nyxsys.ph/assets/images/audience measurement/outdoor/Vehicle Dwell Time.png" style="object-fit: contain;" 
+                        width="100%" height="500" alt="Graph of Dwell time for LED Billboards from CaltonDatx">
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column">
+                    <div class="mb-3">
+                        <p>What is Dwell Time?</p>
+                        <h4 class="fst-4 mb-4">Increase Ad Engagement with Vehicle Dwell Time Insights</h4>
+                    </div>
+                    <p>
+                        Vehicle dwell time measures how long vehicles remain in front of a location, such as at stoplights or in traffic, 
+                        making it a vital metric for outdoor advertising. Longer dwell times mean drivers and passengers have more time to 
+                        notice and engage with ads, boosting brand recall and effectiveness. For example, billboards at high-traffic intersections 
+                        ensure prolonged visibility, creating a captive audience for advertisers. Leveraging dwell time data helps businesses 
+                        strategically place ads for maximum engagement and impact.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<app-audience-testimonials></app-audience-testimonials>
+<section class="section-container description-section" style="background-color: #002868; color: #fff;">
+    <div class="description-container">
+        <div class="description-wrapper">
+            <div class="description-content">
+                <h3 class="fs-2 fw-semibold p-0 m-0">&mdash; Swipe for More Success Stories</h3>
+            </div>
+        </div>
+    </div>
+</section>
 
-<app-see-more-services-section></app-see-more-services-section>
+<app-audience-testimonials />
+
+<app-see-more-services-section />
+
+<app-contact-us-section />
 
 <app-footer></app-footer>
-
-<!-- <app-scroll-to-top-btn sectionName=".audience-section" /> -->
