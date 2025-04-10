@@ -230,6 +230,10 @@ footer {
   }
 }
 
+.page-break-icon {
+  font-size: 25rem;
+}
+
 /* Media Queries */
 /* Mobile Styles (max-width: 767px) */
 @media (max-width: 767px) {
@@ -280,6 +284,10 @@ footer {
   .img-top-left-corner {
     width: 100px;
   }
+  
+  .page-break-icon {
+    font-size: 10rem;
+  }
 }
 
 /* Tablet Styles (min-width: 768px and max-width: 1024px) */
@@ -306,6 +314,10 @@ footer {
 
   .hero-subheadline {
     font-size: 1.25rem; 
+  }
+  
+  .page-break-icon {
+    font-size: 15rem;
   }
 
   /* Title */
