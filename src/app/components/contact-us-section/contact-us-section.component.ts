@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input, signal } from '@angular/core';
 import { UtilityService } from '../../services/utility.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
@@ -14,6 +14,10 @@ import { ReCaptchaV3Service } from 'ng-recaptcha';
 })
 export class ContactUsSectionComponent {
 
+  @Input() services: string = '';
+
+  isSending = signal<boolean>(false);
+
   private recaptchaV3Service = inject(ReCaptchaV3Service);
 
   contactUs: FormGroup = new FormGroup({
@@ -23,6 +27,7 @@ export class ContactUsSectionComponent {
     phone: new FormControl(null, [Validators.required]),
     message: new FormControl(null, [Validators.required]),
     to: new FormControl('info@caltondatx.com'),
+    services: new FormControl(this.services),
     recaptchaToken: new FormControl(null),
   });
 
@@ -30,16 +35,19 @@ export class ContactUsSectionComponent {
 
   onClickSendEmail() {
     if (this.contactUs.invalid) return;
+    this.isSending.set(true);
     this.recaptchaV3Service.execute('contactUs').subscribe((token) => {
       this.contactUs.patchValue({ recaptchaToken: token });
       this.utils.onSendEmail(this.contactUs).subscribe({
         next: (result: any) => {
           this.contactUs.reset();
           this.utils.showSnackbar('Email sent successfully!');
+          this.isSending.set(false);
         },
         error: (error) => {
           this.utils.showSnackbar('Failed to send email. Please try again later.');
           console.error('Error sending email:', error);
+          this.isSending.set(false);
         }
       })
     });   

@@ -28,6 +28,12 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <mat-form-field appearance="outline">
+                            <mat-label>Contact Number</mat-label>
+                            <input formControlName="phone" [min]="0" matInput placeholder="Enter your phone number">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <mat-form-field appearance="outline">
                             <mat-label>Company</mat-label>
                             <input formControlName="company" matInput placeholder="Enter your company name">
                         </mat-form-field>
@@ -38,10 +44,14 @@
                             <input formControlName="email" matInput placeholder="Enter your email address">
                         </mat-form-field>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div>
                         <mat-form-field appearance="outline">
-                            <mat-label>Phone</mat-label>
-                            <input formControlName="phone" [min]="0" matInput placeholder="Enter your phone number">
+                            <mat-label>Services</mat-label>
+                            <mat-select formControlName="services">
+                              @for (item of services(); track $index) {
+                                <mat-option [value]="item">{{ item }}</mat-option>
+                              }
+                            </mat-select>
                         </mat-form-field>
                     </div>
                     <div class="col-12">
@@ -51,7 +61,7 @@
                         </mat-form-field>
                     </div>
                 </form>
-                <button (click)="onClickSendEmail()" class="w-100" color="accent" mat-raised-button>Get Started with us</button>
+                <button (click)="onClickSendEmail()" class="w-100" color="accent" [disabled]="isSending()" mat-raised-button>Get Started with us</button>
             </div>
             <div class="right-content">
                 <p>NEED ANY HELP?</p>

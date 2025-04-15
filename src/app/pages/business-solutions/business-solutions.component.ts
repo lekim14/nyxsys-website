@@ -111,7 +111,7 @@ export class BusinessSolutionsComponent implements OnInit {
     },
     {
       text: 'Creative Content Creation',
-      details: 'Creates original, superior design and content to help businesses stand out, communicate clearly, and engage with their target consumers. To enable organizations to create aesthetically beautiful, strategically matched content that appeals to their target market and propels business growth.',
+      details: "Creates original, superior design and content to help businesses stand out, communicate clearly, and engage with their target consumers. To enable organizations to create aesthetically beautiful, strategically matched content that appeals to their target market and propels business growth.",
       image: 'assets/images/business solutions/post services/creative creation.jpg',
       alt: ' A Professional creating content using an editing application',
     },

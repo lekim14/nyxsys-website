@@ -49,6 +49,7 @@ h2, h3 {
                 letter-spacing: 0.5px;
                 margin: 0;
                 color: #F58F20;
+                width: 80%;
                 /* Adjust color as needed */
             }
 
@@ -59,6 +60,8 @@ h2, h3 {
                 line-height: 1.5;
                 margin-top: 1.05rem;
                 color: #fafafa;
+                width: 80%;
+                text-align: justify;
                 /* Adjust color as needed */
             }
         }
@@ -133,6 +136,10 @@ h2, h3 {
 
     .led-section {
         height: 100vh;
+    }
+
+    .led-header, .led-subheader {
+        width: 100% !important;
     }
 
     h2 {

@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -26,7 +26,13 @@ export class ContactsComponent implements OnInit {
   private recaptchaV3Service = inject(ReCaptchaV3Service);
 
   siteKey: string = environment.siteKey;
+  isSending = signal<boolean>(false);
   secureToken: string = '358cf574-eeb6-4522-9a42-8e332a6cacf9';
+
+  services = computed(() => {
+    const services: any = this.utils.services;
+    return services.map((data: any) => data.title)
+  })
 
   isVisible: boolean[] = [false, false];
 
@@ -37,6 +43,7 @@ export class ContactsComponent implements OnInit {
     phone: new FormControl(null, [Validators.required]),
     message: new FormControl(null, [Validators.required]),
     to: new FormControl('info@caltondatx.com'),
+    services: new FormControl(null, [Validators.required]),
     recaptchaToken: new FormControl(null),
   });
 
@@ -91,6 +98,7 @@ export class ContactsComponent implements OnInit {
 
   async onClickSendEmail() {
     if (this.contactUs.invalid) return;
+    this.isSending.set(true);
     this.recaptchaV3Service.execute('contactUs').subscribe((token) => {
       this.contactUs.patchValue({ recaptchaToken: token });      
       this.utils.onSendEmail(this.contactUs).subscribe({
@@ -98,10 +106,12 @@ export class ContactsComponent implements OnInit {
           console.log(result);
           this.contactUs.reset();
           this.utils.showSnackbar('Email sent successfully!');
+          this.isSending.set(false);
         },
         error: (error) => {
           this.utils.showSnackbar('Failed to send email. Please try again later.');
           console.error('Error sending email:', error);
+          this.isSending.set(false);
         }
       })
     });

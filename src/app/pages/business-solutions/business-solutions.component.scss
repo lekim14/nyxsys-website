@@ -66,6 +66,7 @@ h4 {
                 letter-spacing: 0.5px;
                 margin: 0;
                 color: #F58F20;
+                width: 80%;
                 /* Adjust color as needed */
             }
 
@@ -76,6 +77,8 @@ h4 {
                 line-height: 1.5;
                 margin-top: 1.25rem;
                 color: #fafafa;
+                width: 77%;
+                text-align: justify;
                 /* Adjust color as needed */
             }
         }
@@ -385,6 +388,10 @@ hr {
         height: 100vh;
     }
 
+    .business-solution-header, .business-solution-subheader {
+        width: 100% !important;
+    }
+
     h2 {
         font-size: 1.5rem !important;
     }
@@ -417,11 +424,22 @@ hr {
     }
 }
 
+.key-offering {
+    img {
+        // border-radius: 50%;
+        object-fit: contain;
+    }
+}
+
 /* Tablet Styles (min-width: 768px and max-width: 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
 
     .business-solution-section {
         height: 100vh;
+    }
+
+    .business-solution-header, .business-solution-subheader {
+        width: 100% !important;
     }
 
     h2 {

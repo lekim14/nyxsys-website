@@ -11,6 +11,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDividerModule } from '@angular/material/divider'
+import { MatSelectModule } from '@angular/material/select';
 import { RecaptchaFormsModule, RecaptchaModule, RecaptchaV3Module } from 'ng-recaptcha';
 
 const MATERIAL_UI_MODULES = [
@@ -30,6 +31,7 @@ const MATERIAL_UI_MODULES = [
   RecaptchaFormsModule,
   RecaptchaV3Module,
   MatDividerModule,
+  MatSelectModule,
 ]
 
 @NgModule({

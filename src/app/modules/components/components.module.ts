@@ -17,6 +17,7 @@ import { BlogCardComponent } from '../../components/blog-card/blog-card.componen
 import { AudienceTestimonialsComponent } from '../../components/audience-testimonials/audience-testimonials.component';
 import { TestimonialsCardComponent } from '../../components/testimonials-card/testimonials-card.component';
 import { ScrollToTopBtnComponent } from '../../components/scroll-to-top-btn/scroll-to-top-btn.component';
+import { GraphsComponent } from '../../components/graphs/graphs.component';
 
 const COMPONENT_MODULES = [
   CommonModule,
@@ -37,6 +38,7 @@ const COMPONENT_MODULES = [
   ContactUsSectionComponent,
   BlogCardComponent,
   ScrollToTopBtnComponent,
+  GraphsComponent,
 ]
 @NgModule({
   declarations: [],

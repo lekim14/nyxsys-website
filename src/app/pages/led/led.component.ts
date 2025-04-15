@@ -62,32 +62,38 @@ export class LedComponent implements OnInit {
     {
       title: 'Corporate Brands',
       text: 'Build brand authority with high-visibility campaigns.',
-      image: 'Denstu'
+      image: 'Denstu',
+      icon: 'corporate_fare',
     },
     {
       title: 'Retail & E-Commerce',
       text: 'Drive foot traffic and online conversions.',
-      image: 'Lazada'
+      image: 'Lazada',
+      icon: 'storefront',
     },
     {
       title: 'Restaurants & Food Chains',
       text: 'Promote new menus, discounts, and store locations',
-      image: 'JFC'
+      image: 'JFC',
+      icon: 'lunch_dining',
     },
     {
       title: 'Events & Concerts',
       text: 'Create buzz and attract attendees..',
-      image: 'Wanderland'
+      image: 'Wanderland',
+      icon: 'festival',
     },
     {
       title: 'Hotels & Travel Agencies',
       text: 'Showcase your destinations to potential travelers.',
-      image: 'Solaire'
+      image: 'Solaire',
+      icon: 'flight',
     },
     {
       title: 'Tech & Telecom',
       text: 'Announce product launches and exclusive offers.',
-      image: 'Vivo'
+      image: 'Vivo',
+      icon: 'phone_iphone',
     },
   ]
 

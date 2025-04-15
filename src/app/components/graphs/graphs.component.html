@@ -9,13 +9,21 @@
                             [src]="image" [alt]="alt" loading="lazy">
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-start">
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start">
                     <div class="testimonial-text">
-                        <!-- <img class="testimonial-quote" src="assets/icons/quote.png" alt="quote.png" loading="lazy"> -->
-                        <h4 [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{
-                            name }}</h4>
-                        <p [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{ text }}
-                        </p>
+                        @if (subheader != '') {
+                            <p [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{ name }}
+                            </p>
+                            <h4 [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{
+                                subheader }}</h4>
+                            <p [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{ text }}
+                            </p>
+                        } @else {
+                            <h4 [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{
+                                name }}</h4>
+                            <p [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{ text }}
+                            </p>
+                        }
                     </div>
                     <div class="testimonial-buttons">
                         <button (click)="onClickChangeCarouselItemList(-1)" [disabled]="currentIndex == 0"

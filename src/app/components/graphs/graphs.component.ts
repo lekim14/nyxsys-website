@@ -24,11 +24,11 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
     trigger('animateImage', [
       state('hidden', style({
         opacity: 0,
-        transform: 'translateY(-100%)' // Slide out to the left
+        transform: 'translateX(-100%)' // Slide out to the left
       })),
       state('visible', style({
         opacity: 1,
-        transform: 'translateY(0)' // Slide into position
+        transform: 'translateX(0)' // Slide into position
       })),
       transition('hidden <=> visible', [
         animate('500ms ease-in-out') // Adjust duration as needed
@@ -76,6 +76,7 @@ export class GraphsComponent implements OnInit {
   name: string = '';
   image: string = '';
   alt: string = '';
+  subheader: string = '';
 
   currentValue: any;
 
@@ -84,6 +85,7 @@ export class GraphsComponent implements OnInit {
     this.name = this.carouselItemList[this.currentIndex].name;
     this.image = this.carouselItemList[this.currentIndex].image;
     this.alt = this.carouselItemList[this.currentIndex].alt;
+    this.subheader = this.carouselItemList[this.currentIndex]?.subheader;
 
     this.currentValue = this.carouselItemList[this.currentIndex];
   }

@@ -35,10 +35,10 @@ export class StaticComponent implements OnInit {
     { 
       text: 'EDSA ORENSE PARALLEL NORTHBOUND STATIC BILLBOARD',
       address: 'EDSA corner Orense St., Makati City',
-      size: 'N/A',
+      size: '30FT (H) x 75FT (W)',
       image: 'assets/images/static/edsa orense parallel.jpg',
       alt: 'Static Billboard located at Edsa Northbound',
-      why: 'Peak retention for all possible leads.',
+      why: 'Retention built to convert.',
     },
     { 
       text: 'EDSA MARCALEON (DOUBLE-FACED, SOUTHBOUND)',

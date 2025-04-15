@@ -295,6 +295,14 @@ footer {
   }
 }
 
+.demo-link {
+  color: #002868;
+
+  &:hover {
+    color: rgba($color: #002868, $alpha: 0.5);
+  }
+}
+
 /* Tablet Styles (min-width: 768px and max-width: 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .navbar {

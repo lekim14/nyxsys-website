@@ -38,8 +38,9 @@
                     }
                 </div>
             
-                <div class="mt-5">
-                    <a href="/contact" color="accent" mat-raised-button>Get Started Today!</a>
+                <div class="mt-5 d-flex flex-column flex-sm-row justify-content-center align-items-center">
+                    <p class="p-0 m-0">Boost Your Brand Visibility &mdash;</p>
+                    <a class="mx-2" href="/contact" color="accent" mat-raised-button>Get Started Today!</a>
                 </div>
             </div>
         </div>
@@ -71,12 +72,13 @@
             </div>
         </div>
         <div class="led-wrapper" style="margin-top: 10%;">
-            <div class="container">
+            <div class="container text-center">
                 <h6 class="mb-5 fs-6 fst-italic">Who Can Benefit from LED Billboard Advertising?</h6>
                 <div class="row justify-content-center mb-5 g-3 g-md-4">
                     @for (item of whoBenefits; track $index) {
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="p-4 border rounded-4 shadow-sm h-100 text-center">
+                                <span class="material-icons fs-1 mb-4" style="color: #F58F20;">{{ item.icon }}</span>
                                 <h5 class="fw-semibold">{{ item.title }}</h5>
                                 <p class="text-muted small mt-3">{{ item.text }}</p>
                             </div>
@@ -163,7 +165,7 @@
 
 <app-see-more-services-section />
 
-<app-contact-us-section />
+<app-contact-us-section [services]="'LED MEDIA INVENTORIES PAGE'" />
 
 <app-footer />
 
