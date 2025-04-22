@@ -2,7 +2,7 @@
 
 <section class="section-container audience-section">
     <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" class="audience-video" preload="auto">
-        <source src="assets/videos/audience.mp4" type="video/mp4">
+        <source src="https://nyxsys.ph/assets/videos/audience.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div class="audience-container">
@@ -10,6 +10,9 @@
             <h1 class="audience-header audience-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">
                 Audience Measurement Enabled by Calton Datx
             </h1>
+            <p class="audience-subheader audience-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+                Understand Your Audience Better and Create Marketing That Truly Connects.
+            </p>
             <p class="audience-subheader audience-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
                 Understand your audience like never before with CaltonDatx’s powerful measurement technology and real-time analytics. 
                 Spot trends, track engagement, and use predictive insights to fine-tune your marketing and boost ROI. Turn data into smarter 
@@ -72,7 +75,7 @@
     <div class="gradient-bg-top-left"></div>
     <div class="indoor-outdoor-container">
         <div class="indoor-outdoor-wrapper">
-            <!-- <p>What is Indoor Mall Audience Measurement?</p> -->
+            <p>Indoor Mall Audience Measurement</p>
             <h3 class="fs-3 fw-semibold mb-4">Optimizing Marketing Strategies with Indoor Mall Data</h3>
             <p class="mt-2">Discover better understanding of customer patterns, preferences, and interactions within the mall. 
                 By analyzing foot traffic, dwell times, and engagement with different areas, mall owners, tenants, and marketers can 
@@ -87,7 +90,7 @@
                             <ngx-slick-carousel [config]="slideConfig">
                                 @for (item of [ 2 ]; track $index) {
                                 <div ngxSlickItem>
-                                    <img [src]="'assets/images/audience measurement/indoor/image' + item + '.png'"
+                                    <img [src]="'https://nyxsys.ph/assets/images/audience measurement/indoor/image' + item + '.png'"
                                         alt="Four shoppers viewing a posterbox showcasing audience measurement analytics in action." loading="lazy">
                                 </div>
                                 }
@@ -192,7 +195,7 @@
     <div class="gradient-bg-top-right"></div>
     <div class="indoor-outdoor-container">
         <div class="indoor-outdoor-wrapper">
-            <!-- <p>What is Vehicle Audience Measurement?</p> -->
+            <p>Vehicle Audience Measurement</p>
             <h3 class="fs-3 fw-semibold mb-4">Maximize Impact with Data-Driven Vehicle Advertising</h3>
             <p class="mt-2">Get valuable insights into the effectiveness of vehicle-based advertising by tracking how these ads are seen, 
                 engaged with, and how they influence customer behavior while people are in or around moving vehicles. This data helps advertisers 
@@ -204,7 +207,7 @@
                     <div class="indoor-outdoor-content">
                         <video id="vcastplay" [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true"
                             preload="auto">
-                            <source src="assets/videos/vehicle tracking.mp4" type="video/mp4">
+                            <source src="https://nyxsys.ph/assets/videos/vehicle tracking.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
