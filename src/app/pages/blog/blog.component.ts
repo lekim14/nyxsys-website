@@ -79,7 +79,7 @@ export class BlogComponent {
     this.utils.getBlogPosts().subscribe({
       next: (result: any) => {
         result.forEach((data: any) => {
-          const { _embedded, ...info } = data;
+          const { _embedded, ...info } = data;          
           const media = _embedded['wp:featuredmedia'] ? _embedded['wp:featuredmedia'][0]?.source_url : 'https://placehold.co/600x400';
           const author = _embedded['author'] ? _embedded['author'][0] : null;          
           this.blogLists.push({

@@ -30,6 +30,14 @@ export class BusinessSolutionsComponent implements OnInit {
 
   caseStudies: any[] = [
     {
+      text: 'DHL Supply Chain Philippines inc. / Logistics',
+      image: 'assets/images/business solutions/case studies/dhl outdoor led.jpg',
+      challenge: "Seamless operational ability while maintaining being energy efficient and environmentally sustainable which enables DHL to offer more options for outdoor advertising campaigns.",
+      solution: "Building a fixed outdoor LED billboard with Tie-grid type PV solar renewable energy system equipped with Nyxsys' VCast --- content management system.",
+      results: "Saved DHL's electrical consumption up to 70% and allowed easy management of videos displayed on the LED billboard.",
+      alt: 'DHL Outdoor LED display.',
+    },
+    {
       text: 'Globe Telecom',
       image: 'assets/images/business solutions/case studies/globe.jpg',
       challenge: "Seamless software integration and  content management through all Globe'sbranches and public spaces",

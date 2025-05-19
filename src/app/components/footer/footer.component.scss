@@ -1,6 +1,13 @@
 footer {
+
+    font-size: 14px;
+
     h3 {
         font-family: 'Poppins', Arial, sans-serif !important;
+    }
+    
+    h5 {
+      color: #F58F20 !important;
     }
 
     .wrapper {
@@ -77,9 +84,14 @@ footer {
         }
 
         .footer-socials {
-            margin: 24px 0;
+            margin: 64px 0;
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+
+            .footer-social-items {
+                display: flex;
+                gap: 20px;
+            }
 
             a {
                 color: white;
@@ -90,6 +102,13 @@ footer {
                     filter: brightness(0) invert(1);
                     height: 20px;
                 }
+            }
+        }
+
+        .google-review-btn {
+            img {
+                width: 150px;
+                height: auto;
             }
         }
     }
