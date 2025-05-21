@@ -7,14 +7,12 @@
     </video>
     <div class="led-container">
         <div class="led-wrapper">
-            <h1 class="led-header led-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">LED Billboard Advertising with Nyxsys</h1>
+            <h1 class="led-header led-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">{{ selectedMeta().header }}</h1>
             <p class="led-subheader led-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
                 Maximize Visibility, Amplify Your Brand. 
             </p>
             <p class="led-subheader led-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
-                Dominate the advertising landscape with NYXSYS’ High-Impact LED Billboard Advertising, 
-                positioned in high-traffic locations, ensuring your brand stands out and reaches the right audience at the perfect moment. 
-                Elevate your brand visibility with dynamic digital advertising solutions today!
+                {{ selectedMeta().intro }}
             </p>
         </div>
     </div>
@@ -25,9 +23,9 @@
         <div class="led-wrapper text-center">
             <div class="gradient-bg-top-right"></div>
             <div class="container">
-                <h2 class="mb-4 fw-bold">Why Choose LED Billboard Advertising?</h2>
+                <h2 class="mb-4 fw-bold">{{ selectedAds().title }}</h2>
                 <div class="row justify-content-center my-5 g-3 g-md-4">
-                    @for (item of whyChooseLED; track $index) {
+                    @for (item of selectedAds().items; track $index) {
                         <div class="col-12 col-md-6 col-lg-4">
                             <div class="p-4 border rounded-4 shadow-sm h-100 text-center">
                                 <span class="material-icons fs-1 mb-4" style="color: #F58F20;">{{ item.icon }}</span>
@@ -47,51 +45,122 @@
     </div>
 </section>
 
-<section class="section-container led-services">
-    <div class="led-container">
-        <div class="led-wrapper">
-            <h3 class="fs-3 fw-semibold">Premium LED Billboard Locations</h3>
-            <div class="row g-3 mt-2 justify-content-center">
-                @for (item of ledInventories; track $index) {
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="led-content led-content-hover">
-                        <img [src]="item.image" [alt]="item.alt" loading="lazy">
-                        <div class="led-content-overlay">
-                            <div class="led-content-text">
-                                <h6 class="fs-6 fw-semibold">{{ item.text }}</h6>
-                                <p>Location: {{ item.address }}</p>
-                                <div class="d-flex justify-content-between mb-1" style="align-items: center;">
-                                    <span>Size: {{ item.size }}</span>
-                                    <a color="accent" [routerLink]="item.link" routerLinkActive="router-link-active"  mat-raised-button>Read more</a>
-                                </div>
-                            </div>
-                            <mat-divider></mat-divider>
-                            <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Why Advertise Here?</p>
-                            <p>{{ item.why }}</p>
-                        </div>
+<section class="section-container row">
+    <div class="col-md-6">
+        <div class="grid-center">
+            <div class="grid-container">
+                <div>
+                    <h3 class="mb-4 fw-bold" style="color: #F58F20;">
+                    Ideal for These Brands and Campaigns
+                    </h3>
+                </div>
+                <p class="text-muted" [innerHTML]="selectedIdealBrands().title"></p>
+                @for (item of selectedIdealBrands().objects; track $index) {
+                <div class="d-flex mb-4">
+                    <span class="material-icons me-3" style="color: #F58F20;">check_circle</span>
+                    <div class="d-flex flex-column">
+                        <h6 class="fs-6 fw-semibold">{{ item.title }}</h6>
+                        <span class="m-0 p-0">{{item.description}}</span>
                     </div>
                 </div>
                 }
             </div>
         </div>
-        <div class="led-wrapper" style="margin-top: 10%;">
-            <div class="container text-center">
-                <h6 class="mb-5 fs-6 fst-italic">Who Can Benefit from LED Billboard Advertising?</h6>
-                <div class="row justify-content-center mb-5 g-3 g-md-4">
-                    @for (item of whoBenefits; track $index) {
-                        <div class="col-12 col-md-6 col-lg-4">
-                            <div class="p-4 border rounded-4 shadow-sm h-100 text-center">
-                                <span class="material-icons fs-1 mb-4" style="color: #F58F20;">{{ item.icon }}</span>
-                                <h5 class="fw-semibold">{{ item.title }}</h5>
-                                <p class="text-muted small mt-3">{{ item.text }}</p>
-                            </div>
-                        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="grid-center">
+            <div class="grid-container">
+                <h3 class="mb-4 fw-bold" style="color: #F58F20;">Nearby Landmarks <span class="material-icons me-3" style="color: #F58F20;">location_on</span></h3>
+                <p class="text-muted">{{ selectedLandMarks().title }}</p>
+                <ul>
+                    @for (location of selectedLandMarks().locations; track $index) {
+                    <li>
+                        <h6 class="fs-6 fw-semibold">{{ location }}</h6>
+                    </li>
                     }
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section-container row">
+    <div class="col-md-6">
+        <div class="grid-center">
+            <div class="grid-container">
+                <h3 class="mb-4 fw-bold" style="color: #F58F20;">Booking and Rates</h3>
+                <p [innerHTML]="selectedBooking().description"></p>
+                <p [innerHTML]="selectedBooking().contactUs"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="grid-center">
+            <div class="grid-container">
+                <h3 class="mb-4 fw-bold" style="color: #F58F20;">Start Your Billboard Campaign Here</h3>
+                <p class="fw-bold">{{ selectedBooking()?.startCampaign ? selectedBooking()?.startCampaign : 'Bold visuals, Massive reach, High-impact branding.'}}</p>
+                <div>
+                    <div class="d-flex">
+                        <span class="material-icons me-3" style="color: #F58F20;">check_circle</span>
+                        <p class="fw-bold">Request a Proposal</p>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <span class="material-icons me-3" style="color: #F58F20;">check_circle</span>
+                        <p class="fw-bold">Talk to Our Media Planner</p>
+                    </div>
+                </div>
+                <a color="accent" routerLinkActive="router-link-active" href="/contact" mat-raised-button>REQUEST A PROPOSAL</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-container">
+    <div class="col-lg-12">
+        <div style="display: grid; place-items: center;">
+            <div class="grid-container">
+                <div>
+                    <h2 class="mb-4 fw-bold" style="color: #F58F20;">
+                        <span class="material-icons" style="color: #F58F20;">question_answer</span>
+                        Frequently Asked Questions (FAQ)
+                    </h2>
+                    
+                    <div class="col-12 m-0">
+                        @for (item of selectedFaqs().faqs; track $index) {
+                            <p class="fw-semibold">Q: {{ item.question }}</p>
+                            <p class="text-muted" [innerHTML]="'A: ' + item.answer"></p>
+                        }
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<section class="section-container row">
+    <div class="col-md-6">
+        <div class="grid-center">
+            <img class="map" [src]="selectedMap().fileName" alt="EDSA Guadalupe, across Guadalupe MRT Station (Southbound)" loading="lazy">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="grid-center">
+            <div class="grid-container">
+                <h2 class="fs-1 mb-4 fw-semibold text-center">Location Details and Billboard Specification</h2>
+                <ul>
+                    <li><h6 class="fs-6 fw-semibold">Exact Address: {{ selectedSpecs().specs.exactAddress }}</h6></li>
+                    <li><h6 class="fs-6 fw-semibold">Billboard Size: {{ selectedSpecs().specs.size }}</h6></li>
+                    <li><h6 class="fs-6 fw-semibold" [innerHTML]="'Orientation: ' + selectedSpecs().specs.orientation"></h6></li>
+                    <li><h6 class="fs-6 fw-semibold">Average Monthly Traffic Count: {{ selectedSpecs().specs.aveMonthlyCount }}</h6></li>
+                    <li><h6 class="fs-6 fw-semibold">Source: {{ selectedSpecs().specs.source }}</h6></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
 
 <section class="section-container led-services" style="background-color: #002868; color: #fff;">
     <div class="led-container">

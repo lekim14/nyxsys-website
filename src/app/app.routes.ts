@@ -27,12 +27,58 @@ export const routes: Routes = [
             {
                 path: 'led-media-inventories',
                 title: 'LED Media Inventories • NYXSYS Philippines, Inc.',
-                loadComponent: () => import('./pages/led/led.component').then(m => m.LedComponent)
+                children: [
+                    {
+                        path: '',
+                        loadComponent: () => import('./pages/led/led.component').then(m => m.LedComponent),
+                    },
+                    {
+                        path: 'iconic-edsa-orense-led',
+                        title: 'Advertise on EDSA ORENSE Northbound Static Billboard in Makati',
+                        loadComponent: () => import('./pages/led/locations/locations.component').then(m => m.LocationsComponent)
+                    },
+                    {
+                        path: 'edsa-paragon-led',
+                        title: 'Advertise on EDSA PARAGON LED Billboard | Pioneer LED Billboard in Mandaluyong City',
+                        loadComponent: () => import('./pages/led/locations/locations.component').then(m => m.LocationsComponent)
+                    },
+                    {
+                        path: 'c5-market-market-led',
+                        title: 'Advertise on C5 MARKET! MARKET! LED Billboard | Free Standing LED Billboard in Mckinley',
+                        loadComponent: () => import('./pages/led/locations/locations.component').then(m => m.LocationsComponent)
+                    }
+                ]
             },
             {
                 path: 'static-fixed-inventories',
                 title: 'Static Fixed Inventories • NYXSYS Philippines, Inc.',
-                loadComponent: () => import('./pages/static/static.component').then(m => m.StaticComponent)
+                children: [
+                    {
+                        path: '',
+                        loadComponent: () => import('./pages/static/static.component').then(m => m.StaticComponent)
+                    },
+                    {
+                        path: 'edsa-northbound-static-billboard',
+                        title: 'Advertise on EDSA ORENSE Northbound Static Billboard in Makati',
+                        loadComponent: () => import('./pages/led/locations/locations.component').then(m => m.LocationsComponent)
+                    },
+                    {
+                        path: 'edsa-marcaleon-northbound-static-billboard',
+                        title: 'Advertise on EDSA MARCALEON (DOUBLE-FACED, NORTHBOUND) Static Billboard in Mandaluyong',
+                        loadComponent: () => import('./pages/led/locations/locations.component').then(m => m.LocationsComponent)
+                    },
+                    {
+                        path: 'edsa-marcaleon-southbound-static-billboard',
+                        title: 'Advertise on EDSA MARCALEON (DOUBLE-FACED, SOUTHBOUND) Static Billboard in Mandaluyong',
+                        loadComponent: () => import('./pages/led/locations/locations.component').then(m => m.LocationsComponent)
+                    },
+                    {
+                        path: 'edsa-orense-parallel-northbound-static-billboard',
+                        title: 'Advertise on EDSA ORENSE Parallel Northbound Static Billboard – Nyxsys Philippines',
+                        loadComponent: () => import('./pages/led/locations/locations.component').then(m => m.LocationsComponent)
+                    }
+                ],
+                
             },
             {
                 path: 'digital-display-management-services',

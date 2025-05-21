@@ -3,12 +3,12 @@ import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { UtilityService } from '../../services/utility.service';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-static',
   standalone: true,
-  imports: [ MaterialUiModule, ComponentsModule ],
+  imports: [ MaterialUiModule, ComponentsModule, RouterLink ],
   templateUrl: './static.component.html',
   styleUrl: './static.component.scss',
   animations: [
@@ -31,6 +31,7 @@ export class StaticComponent implements OnInit {
       image: 'assets/images/static/edsa northbound static billboard.jpg',
       alt: 'Static Parallel Billboard located at Edsa Northbound',
       why: 'Peak retention for all possible leads',
+      link: '/services/static-fixed-inventories/edsa-northbound-static-billboard'
     },
     { 
       text: 'EDSA ORENSE PARALLEL NORTHBOUND STATIC BILLBOARD',
@@ -39,6 +40,7 @@ export class StaticComponent implements OnInit {
       image: 'assets/images/static/edsa orense parallel.jpg',
       alt: 'Static Billboard located at Edsa Northbound',
       why: 'Retention built to convert.',
+      link: '/services/static-fixed-inventories/edsa-orense-parallel-northbound-static-billboard'
     },
     { 
       text: 'EDSA MARCALEON (DOUBLE-FACED, SOUTHBOUND)',
@@ -47,6 +49,7 @@ export class StaticComponent implements OnInit {
       image: 'assets/images/static/edsa marcaleon double-faced southbound.jpg',
       alt: 'Static Billboard located at Edsa Marcaleon Southbound',
       why: 'Engagement that actually sticks.',
+      link: '/services/static-fixed-inventories/edsa-marcaleon-southbound-static-billboard'
     },
     { 
       text: 'EDSA MARCALEON (DOUBLE-FACED, NORTHBOUND)',
@@ -55,6 +58,7 @@ export class StaticComponent implements OnInit {
       image: 'assets/images/static/edsa marcaleon double-faced northbound.jpg',
       alt: 'Static Billboard located at Edsa Marcaleon Northbound',
       why: 'Retention that surely pays back.',
+      link: '/services/static-fixed-inventories/edsa-marcaleon-northbound-static-billboard'
     },
   ]
 

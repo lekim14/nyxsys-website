@@ -3,12 +3,12 @@ import { MaterialUiModule } from "../../modules/material-ui/material-ui.module";
 import { ComponentsModule } from "../../modules/components/components.module";
 import { trigger, state, style, transition, animate } from "@angular/animations";
 import { UtilityService } from "../../services/utility.service";
-import { NavigationEnd, Router } from "@angular/router";
+import { NavigationEnd, Router, RouterLink } from "@angular/router";
 
 @Component({
   selector: "app-led",
   standalone: true,
-  imports: [ MaterialUiModule, ComponentsModule ],
+  imports: [ MaterialUiModule, ComponentsModule, RouterLink ],
   templateUrl: "./led.component.html",
   styleUrl: "./led.component.scss",
   animations: [
@@ -31,6 +31,7 @@ export class LedComponent implements OnInit {
       image: "assets/images/led/led inventories/iconic-2.png",
       alt: "Iconic LED Billboard along EDSA Orense Southbound",
       why: 'High-visibility LED billboard along EDSA Southbound, ensuring massive daily foot and vehicle traffic.',
+      link: '/services/led-media-inventories/iconic-edsa-orense-led'
     },
     { 
       text: "EDSA PARAGON LED (NORTHBOUND)",
@@ -39,6 +40,7 @@ export class LedComponent implements OnInit {
       image: "assets/images/led/led inventories/paragon.png",
       alt: "Paragon LED Billboard along EDSA Northbound",
       why: 'A highly prominent, high-visibility LED billboard strategically located along EDSA Northbound, guaranteeing exposure to a massive volume of daily foot and vehicle traffic, making it an ideal platform for maximum brand visibility and engagement.',
+      link: '/services/led-media-inventories/edsa-paragon-led'
     },
     { 
       text: "C5 MARKET MARKET LED (NORTHBOUND)",
@@ -47,6 +49,7 @@ export class LedComponent implements OnInit {
       image: "assets/images/led/led inventories/market market.png",
       alt: "C5 Market Market Billboard Northbound",
       why: 'Positioned in a prime location along C5 at Market! Market!, this dynamic LED billboard attracts massive daily foot and vehicle traffic, maximizing brand reach.',
+      link: '/services/led-media-inventories/c5-market-market-led'
     },
   ]
 
