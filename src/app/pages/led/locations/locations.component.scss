@@ -139,28 +139,34 @@ h2, h3 {
 }
 
 .map{
-    // width: 100%;
-    // height: auto;
-    // object-fit: fill;
-    border-radius: 6px;
+    width: auto;
     height: 400px;
-    width: 100%;
-    max-width: 100%;
+    object-fit: fill;
+    border-radius: 6px;
+    // height: 400px;
+    // width: 100%;
+    // max-width: 100%;
 }
 
 .grid-container{
     padding-left: 10%;
     padding-right: 10%;
+
+    
 }
 
 .grid-center{
     display: grid;
-    place-items: start;
+    place-items: center;
 }
 
 .grid-end{
     display: grid;
     place-items: end;
+}
+
+.anchor{
+    color: #fff !important;
 }
 
 /* Media Queries */

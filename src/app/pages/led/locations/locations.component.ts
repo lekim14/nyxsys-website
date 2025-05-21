@@ -3,6 +3,7 @@ import { MaterialUiModule } from '../../../modules/material-ui/material-ui.modul
 import { ComponentsModule } from '../../../modules/components/components.module';
 import { UtilityService } from '../../../services/utility.service';
 import { NavigationEnd, Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-locations',
@@ -860,45 +861,45 @@ export class LocationsComponent {
     {
       link: '/services/led-media-inventories/iconic-edsa-orense-led',
       description: `Get competitive advertising rates for the <b>EDSA ICONIC LED</b> today. Whether you're a startup or a major brand, we offer flexible packages to meet your campaign goals and budget.`,
-      contactUs: `<a href="/contact">Contact Us</a> or <a href="/contact">Request a Qoute</a> to get started.`
+      contactUs: this.sanitizer.bypassSecurityTrustHtml('<a style="color: #fff;" href="/contact">Contact Us</a> or <a style="color: #fff;" href="/contact">Request a Qoute</a> to get started.')
     },
     {
       link: '/services/led-media-inventories/edsa-paragon-led',
       description: 'Get affordable, flexible advertising packages for the <b>EDSA Paragon LED Billboard</b>. Whether you’re a startup or a multinational brand, we can customize a solution that suits your budget and campaign timeline. ',
-      contactUs: `<a href="/contact">Contact Us</a> or <a href="/contact">Request a Qoute</a> to get started.`
+      contactUs: this.sanitizer.bypassSecurityTrustHtml(`<a style="color: #fff;" href="/contact">Contact Us</a> or <a style="color: #fff;" href="/contact">Request a Qoute</a> to get started.`)
     },
     {
       link: '/services/led-media-inventories/c5-market-market-led',
       description: `Whether you're a startup aiming for regional presence or a national brand looking to dominate, we offer <b>flexible packages</b> for short- or long-term runs.`,
-      contactUs: `<a href="/contact">Contact Us</a> today for customized rates and media planning.`
+      contactUs: this.sanitizer.bypassSecurityTrustHtml(`<a style="color: #fff;" href="/contact">Contact Us</a> today for customized rates and media planning.`)
     },
     {
       link: '/services/static-fixed-inventories/edsa-northbound-static-billboard',
       description: 'Take advantage of affordable prices for sustained exposure with this static billboard. We provide numerous scheduling choices to fit your campaign goals and budget, regardless of your size.',
-      contactUs: `<a href="/contact">Contact Us</a> today for pricing and availability.`,
+      contactUs: this.sanitizer.bypassSecurityTrustHtml(`<a style="color: #fff;" href="/contact">Contact Us</a> today for pricing and availability.`),
       startCampaign: 'Bold message. 24/7 visibility. Prime commuter location'
     },
     {
       link: '/services/static-fixed-inventories/edsa-marcaleon-southbound-static-billboard',
       description: 'Secure your billboard space on this <b>prime double-faced static site</b>. Nyxsys Philippines offers competitive rates, long-term value, and flexible package options for all types of brands and advertisers.',
-      contactUs: `<a href="/contact">Contact Nyxsys Philippines</a> today to get a tailored quote and campaign plan.`,
+      contactUs: this.sanitizer.bypassSecurityTrustHtml(`<a style="color: #fff;" href="/contact">Contact Nyxsys Philippines</a> today to get a tailored quote and campaign plan.`),
       startCampaign: 'Two faces. One strategic location. Endless branding opportunities.'
     },
     {
       link: '/services/static-fixed-inventories/edsa-marcaleon-northbound-static-billboard',
       description: 'Secure your billboard space on this <b>prime double-faced static site</b>. Nyxsys Philippines offers competitive rates, long-term value, and flexible package options for all types of brands and advertisers.',
-      contactUs: `<a href="/contact">Contact Nyxsys Philippines</a> today to get a tailored quote and campaign plan.`,
+      contactUs: this.sanitizer.bypassSecurityTrustHtml(`<a style="color: #fff;" href="/contact">Contact Nyxsys Philippines</a> today to get a tailored quote and campaign plan.`),
       startCampaign: 'Two faces. One strategic location. Endless branding opportunities.'
     },
     {
       link: '/services/static-fixed-inventories/edsa-orense-parallel-northbound-static-billboard',
       description: 'Nyxsys Philippines offers flexible advertising packages to suit both emerging and established brands. Enjoy high-return exposure in one of EDSA’s most effective northbound static placements.',
-      contactUs: `<a href="/contact">Contact Nyxsys Philippines</a> today to get a tailored rate and availability.`,
+      contactUs: this.sanitizer.bypassSecurityTrustHtml(`<a style="color: #fff;" href="/contact">Contact Nyxsys Philippines</a> today to get a tailored rate and availability.`),
       startCampaign: 'Long exposure. Daily traffic. High-recall value.'
     }
-  ]
+  ];
   
-  constructor(private utils: UtilityService, private router: Router) {
+  constructor(private utils: UtilityService, private router: Router, private sanitizer: DomSanitizer) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         utils.setCanonicalURL()
