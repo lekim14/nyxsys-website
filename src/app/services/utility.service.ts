@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable, Subject, takeUntil } from 'rxjs';
-import { Meta, Title } from '@angular/platform-browser';
+import { DomSanitizer, Meta, SafeResourceUrl, Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { FormGroup } from '@angular/forms';
 import { environment } from '../../environments/environment.development';
@@ -63,7 +63,8 @@ export class UtilityService {
     private title: Title,
     private router: Router,
     private http: HttpClient,
-    private snackbar: MatSnackBar
+    private snackbar: MatSnackBar,
+    private sanitizer: DomSanitizer
   ) { }
 
   isMobile(destroyed: Subject<void>): Observable<boolean> {
@@ -85,6 +86,10 @@ export class UtilityService {
 
   setPageTitle(value: string) {
     this.title.setTitle(value);
+  }
+  
+  sanitizeUrl(url: string): SafeResourceUrl {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
   setMetaUpdateTag(name: string, content: string) {

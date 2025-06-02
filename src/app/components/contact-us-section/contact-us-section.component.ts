@@ -3,6 +3,7 @@ import { UtilityService } from '../../services/utility.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-contact-us-section',
@@ -17,6 +18,8 @@ export class ContactUsSectionComponent {
   @Input() services: string = '';
 
   isSending = signal<boolean>(false);
+
+  mapURL = this.utils.sanitizeUrl(environment.mapURL);
 
   private recaptchaV3Service = inject(ReCaptchaV3Service);
 
