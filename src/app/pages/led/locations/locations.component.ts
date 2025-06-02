@@ -188,47 +188,47 @@ export class LocationsComponent {
         items: [
           { 
             text: "Glorietta, Entrance in front of Landmark", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta, Entrance in front of Landmark.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta, Entrance in front of Landmark.png",
             alt: "Glorietta Mall Posterbox Located at Entrance in front of Landmark",
           },
           { 
             text: "Glorietta 1 Entrance in front of SM", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta 1, Entrance in front of SM.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 1, Entrance in front of SM.jpg",
             alt: "Glorietta 1 Mall Posterbox Located at Entrance in front of SM",
           },
           { 
             text: "Glorietta 1, Near True Value", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta 1, Near True Value.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 1, Near True Value.png",
             alt: "Glorietta 1 Mall Posterbox Located near True Value",
           },
           { 
             text: "Glorietta 2, Ground fl. Entrance near Holiday Inn", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta 2, Ground fl. Entrance near Holiday Inn.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 2, Ground fl. Entrance near Holiday Inn.png",
             alt: "Glorietta 2 Mall Posterbox Located at Ground flr. Entrance near Holiday Inn",
           },
           { 
             text: "Glorietta 3 Drop-off, in front of Steel Parking", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta 3 Drop-off, in front of Steel Parking.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 3 Drop-off, in front of Steel Parking.png",
             alt: "Glorietta 3 Mall Posterbox Located at Drop-off, in front of Steel Parking",
           },
           { 
             text: "Glorietta 4, Drop-off Entrance", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta 4, Drop-off Entrance.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 4, Drop-off Entrance.png",
             alt: "Glorietta 4 Mall Posterbox Located at Drop-off Entrance",
           },
           { 
             text: "Glorietta 4, Near Activity Center", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta 4, Near Activity Center.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 4, Near Activity Center.png",
             alt: "Glorietta 4 Mall Posterbox Located Near Activity Center",
           },
           { 
             text: "Glorietta 4, 2nd fl. beside Havaianas", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta 4, 2nd fl. beside Havaianas.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 4, 2nd fl. beside Havaianas.jpg",
             alt: "Glorietta 4 Mall Posterbox Located at 2nd flr. beside Havaianas",
           },
           { 
             text: "Glorietta 4, Activity Center, Beside Mcdonalds", 
-            image: "assets/images/led/mall posterboxes/glorietta/Glorietta 4, Activity Center, Beside Mcdonalds.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 4, Activity Center, Beside Mcdonalds.jpg",
             alt: "Glorietta 4 Mall Posterbox Located at Activity Center beside Mcdonalds",
           },
         ]
@@ -238,32 +238,32 @@ export class LocationsComponent {
         items: [
           { 
             text: "Phase 1 Building in front of Mercado Supermarket", 
-            image: "assets/images/led/mall posterboxes/uptown center/Phase 1 Building in front of Mercado Supermarket.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 1 Building in front of Mercado Supermarket.png",
             alt: "UP Town Center Mall Posterbox Located at Phase 1 Building in front of Mercado Supermarket "
           },
           { 
             text: "Phase 1 Building in front of National Bookstore", 
-            image: "assets/images/led/mall posterboxes/uptown center/Phase 1 Building in front of National Bookstore.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 1 Building in front of National Bookstore.jpg",
             alt: "UP Town Center Mall Posterbox Located at Phase 1 Building in front of National Bookstore"
           },
           { 
             text: "Phase 1 Building exit beside Pepper Lunch", 
-            image: "assets/images/led/mall posterboxes/uptown center/Phase 1 Building exit beside Pepper Lunch.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 1 Building exit beside Pepper Lunch.png",
             alt: "UP Town Center Mall Posterbox Located at Phase 1 Building exit beside Pepper Lunch"
           },
           { 
             text: "Phase 1 Building, 2nd flr. beside Sbarro", 
-            image: "assets/images/led/mall posterboxes/uptown center/Phase 1 Building, 2nd flr. beside Sbarro.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 1 Building, 2nd flr. beside Sbarro.png",
             alt: "UP Town Center Mall Posterbox Located at Phase 1 Building, 2nd flr. beside Sbarro"
           },
           { 
             text: "Phase 2 Building 2F in front of Dotonbori", 
-            image: "assets/images/led/mall posterboxes/uptown center/Phase 2 Building 2F in front of Dotonbori.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 2 Building 2F in front of Dotonbori.jpg",
             alt: "UP Town Center Mall Posterbox Located at Phase 2 Building 2F in front of Dotonbori"
           },
           { 
             text: "Phase 2 Building entrance near Uniqlo", 
-            image: "assets/images/led/mall posterboxes/uptown center/Phase 2 Building entrance near Uniqlo.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 2 Building entrance near Uniqlo.png",
             alt: "UP Town Center Mall Posterbox Located at Phase 2 Building entrance near Uniqlo"
           },
         ]
@@ -273,37 +273,37 @@ export class LocationsComponent {
         items: [
           { 
             text: "Ground Level, North Car Park Drop Off", 
-            image: "assets/images/led/mall posterboxes/trinoma/Ground Level, North Car Park Drop Off.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Ground Level, North Car Park Drop Off.jpg",
             alt: "Trinoma Mall Posterbox at Ground Level, North Car Park Drop Off"
           },
           { 
             text: "Level 1, Activity Center near Mister Donut", 
-            image: "assets/images/led/mall posterboxes/trinoma/Level 1, Activity Center near Mister Donut.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 1, Activity Center near Mister Donut.jpg",
             alt: "Trinoma Mall Posterbox at Level 1, Activity Center near Mister Donut"
           },
           { 
             text: "Level 2, Near Shoe Salon", 
-            image: "assets/images/led/mall posterboxes/trinoma/Level 2, Near Shoe Salon.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 2, Near Shoe Salon.png",
             alt: "Trinoma Mall Posterbox at Level 2, Near Shoe Salon"
           },
           { 
             text: "Level 2, Entrance near Bench Fix", 
-            image: "assets/images/led/mall posterboxes/trinoma/Level 2, Entrance near Bench Fix.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 2, Entrance near Bench Fix.jpg",
             alt: "Trinoma Mall Posterbox at Level 2, Entrance near Bench Fix"
           },
           { 
             text: "Level 2, Food Choices 1", 
-            image: "assets/images/led/mall posterboxes/trinoma/Level 2, Food Choices 1.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 2, Food Choices 1.jpg",
             alt: "Trinoma Mall Posterbox at Level 2, Food Choices 1"
           },
           { 
             text: "Level 2, Food Choices 2", 
-            image: "assets/images/led/mall posterboxes/trinoma/Level 2, Food Choices 2.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 2, Food Choices 2.jpg",
             alt: "Trinoma Mall Posterbox at Level 2, Food Choices 2"
           },
           { 
             text: "Level 3, Near Irvins", 
-            image: "assets/images/led/mall posterboxes/trinoma/Level 3, Near Irvins.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 3, Near Irvins.jpg",
             alt: "Trinoma Mall Posterbox at Level 3, Near Irvins"
           },
         ]
@@ -313,22 +313,22 @@ export class LocationsComponent {
         items: [
           { 
             text: "Ground Floor beside elevator in front of National Bookstore", 
-            image: "assets/images/led/mall posterboxes/market market/Ground Flr. beside elevator in front of National Bookstore.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/market market/Ground Flr. beside elevator in front of National Bookstore.png",
             alt: "Market Market Mall Posterbox at Ground Floor beside elevator in front of National Bookstore"
           },
           { 
             text: "1st floor Activity Center in front of Levi's", 
-            image: "assets/images/led/mall posterboxes/market market/1st floor Activity Center in front of Levi's.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/market market/1st floor Activity Center in front of Levi's.jpg",
             alt: "Market Market Mall Posterbox at 1st floor Activity Center in front of Levi's"
           },
           { 
             text: "2nd Floor in front of MoshiKoshi", 
-            image: "assets/images/led/mall posterboxes/market market/2nd Floor in front of MoshiKoshi.jpg",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/market market/2nd Floor in front of MoshiKoshi.jpg",
             alt: "Market Market Mall Posterbox at 2nd Floor in front of MoshiKoshi"
           },
           { 
             text: "Drop-off, Entrance from Terminal", 
-            image: "assets/images/led/mall posterboxes/market market/Drop-off Entrance from Terminal.png",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/market market/Drop-off Entrance from Terminal.png",
             alt: "Market Market Mall Posterbox at Drop-off, Entrance from Terminal"
           },
         ]
