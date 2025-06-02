@@ -7,16 +7,21 @@
                     <p>Contact Us</p>
                     <!-- <h3 class="fs-3 fw-semibold">Contact Us</h3>   
                     <p class="lh-base">Have a question, feedback, or need assistance? We’re here to help! Reach out to us via phone, email, or visit our office.</p> -->
-                    <div class="py-2">
+                    <div class="pb-2">
                         <h2 class="fs-2 fw-semibold">Let’s Connect & Innovate!</h2>
                         <p class="lh-base">Have a question, need support, or want to collaborate? Fill out the form, and we’ll get back to you soon!</p>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 h-100">
+                        <div class="d-flex flex-column">
+                            <p class="p-0 m-0"><span style="color: #F58F20;">OR</span> visit our office and talk to us in person.</p>
+                            <p>We’d love to meet you and discuss how we can help.</p>
+                        </div>
+                        <h6>Our Location:</h6>
                         <iframe [src]="mapURL" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="col-12 col-md-7">
-                    <form [formGroup]="contactUs" class="row ">
+                <div class="col-12 col-md-7 d-flex flex-column">
+                    <form [formGroup]="contactUs" class="row">
                         <div class="col-12 col-md-6">
                             <mat-form-field appearance="outline">
                                 <mat-label>Name</mat-label>
@@ -47,10 +52,10 @@
                                 <textarea formControlName="message" matInput placeholder="Enter your message"></textarea>
                             </mat-form-field>
                         </div>
-                        <div class="col-12">
-                            <button (click)="onClickSendEmail()" [disabled]="isSending()" color="accent" mat-raised-button>Get Started with us</button>
-                        </div>
                     </form>
+                    <div class="mt-auto">
+                        <button (click)="onClickSendEmail()" [disabled]="isSending()" color="accent" mat-raised-button>Get Started with us</button>
+                    </div>
                 </div>
             </div>
         </div>

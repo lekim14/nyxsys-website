@@ -57,18 +57,20 @@
                 <div class="col-12 col-md-6">
                     <div class="static-content">
                         <img [src]="item.image" [alt]="item.alt">
-                        <div class="static-content-overlay">
+                        <div class="static-content-overlay d-flex flex-column">
                             <div class="static-content-text">
                                 <h6 class="fs-6 fw-semibold">{{ item.text }}</h6>
                                 <p>Location: {{ item.address }}</p>
                                 <div class="d-flex justify-content-between mb-1" style="align-items: center;">
                                     <span>Size: {{ item.size }}</span>
-                                    <a color="accent" [routerLink]="item.link" routerLinkActive="router-link-active"  mat-raised-button>Read more</a>
                                 </div>
                             </div>
                             <mat-divider></mat-divider>
                             <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Why Advertise Here?</p>
                             <p>{{ item.why }}</p>
+                            <div class="mt-auto">
+                                <a color="accent" [routerLink]="item.link" routerLinkActive="router-link-active"  mat-raised-button>Read more</a>
+                            </div>
                         </div>
                     </div>
                 </div>
