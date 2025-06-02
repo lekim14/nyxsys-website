@@ -735,37 +735,37 @@ export class LocationsComponent {
   maps: any[] = [
     {
       link: '/services/led-media-inventories/iconic-edsa-orense-led',
-      fileName: '/assets/images/led/led inventories/iconic.png',
+      fileName: 'https://nyxsys.ph/assets/images/led/led inventories/iconic.png',
       location: 'EDSA Guadalupe, across Guadalupe MRT Station (Southbound)'
     },
     {
       link: '/services/led-media-inventories/edsa-paragon-led',
-      fileName: '/assets/images/led/led inventories/iconic-2.png',
+      fileName: 'https://nyxsys.ph/assets/images/led/led inventories/iconic-2.png',
       location: 'EDSA Guadalupe, directly across Guadalupe MRT Station (Northbound)'
     },
     {
       link: '/services/led-media-inventories/c5-market-market-led',
-      fileName: '/assets/images/led/led inventories/market market.png',
+      fileName: 'https://nyxsys.ph/assets/images/led/led inventories/market market.png',
       location: 'Along C5 Road, beside Market! Market!, Taguig City - Highly visible to both northbound and southbound traffic.'
     },
     {
       link: '/services/static-fixed-inventories/edsa-northbound-static-billboard',
-      fileName: '/assets/images/static/edsa northbound static billboard.jpg',
+      fileName: 'https://nyxsys.ph/assets/images/static/edsa northbound static billboard.jpg',
       location: 'EDSA corner Orense Street, Makati City — facing northbound traffic before Guadalupe Bridge.'
     },
     {
       link: '/services/static-fixed-inventories/edsa-marcaleon-southbound-static-billboard',
-      fileName: '/assets/images/static/edsa marcaleon double-faced southbound.jpg',
+      fileName: 'https://nyxsys.ph/assets/images/static/edsa marcaleon double-faced southbound.jpg',
       location: 'EDSA Marcaleon, Mandaluyong City – Near Boni MRT Station (Visible on both sides of EDSA)'
     },
     {
       link: '/services/static-fixed-inventories/edsa-marcaleon-northbound-static-billboard',
-      fileName: '/assets/images/static/edsa marcaleon double-faced northbound.jpg',
+      fileName: 'https://nyxsys.ph/assets/images/static/edsa marcaleon double-faced northbound.jpg',
       location: 'EDSA Marcaleon, Mandaluyong City – Near Boni MRT Station (Visible on both sides of EDSA)'
     },
     {
       link: '/services/static-fixed-inventories/edsa-orense-parallel-northbound-static-billboard',
-      fileName: '/assets/images/static/edsa orense parallel.jpg',
+      fileName: 'https://nyxsys.ph/assets/images/static/edsa orense parallel.jpg',
       location: 'EDSA corner Orense Street, Makati City – Northbound, parallel to traffic heading to Ortigas and QC'
     }
   ];
