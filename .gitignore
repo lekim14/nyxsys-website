@@ -4,8 +4,8 @@
 /dist
 /tmp
 /out-tsc
-/bazel-out
-/docss
+/bazel-output
+/docs
 assets/
 
 # Node
