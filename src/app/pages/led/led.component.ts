@@ -28,7 +28,7 @@ export class LedComponent implements OnInit {
       text: "ICONIC - EDSA ORENSE LED (SOUTH BOUND)",
       address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
       size: "80FT (H) x 140FT (W)",
-      image: "assets/images/led/led inventories/iconic-2.png",
+      image: "https://nyxsys.ph/assets/images/led/led inventories/iconic-2.png",
       alt: "Iconic LED Billboard along EDSA Orense Southbound",
       why: 'High-visibility LED billboard along EDSA Southbound, ensuring massive daily foot and vehicle traffic.',
       link: '/services/led-media-inventories/iconic-edsa-orense-led'
@@ -37,7 +37,7 @@ export class LedComponent implements OnInit {
       text: "EDSA PARAGON LED (NORTHBOUND)",
       address: "Ad wall of Paragon Plaza Bldg, 162 EDSA corner Reliance St., Mandaluyong City",
       size: "70FT (H) x 60FT (W)",
-      image: "assets/images/led/led inventories/paragon.png",
+      image: "https://nyxsys.ph/assets/images/led/led inventories/paragon.png",
       alt: "Paragon LED Billboard along EDSA Northbound",
       why: 'A highly prominent, high-visibility LED billboard strategically located along EDSA Northbound, guaranteeing exposure to a massive volume of daily foot and vehicle traffic, making it an ideal platform for maximum brand visibility and engagement.',
       link: '/services/led-media-inventories/edsa-paragon-led'
@@ -46,7 +46,7 @@ export class LedComponent implements OnInit {
       text: "C5 MARKET MARKET LED (NORTHBOUND)",
       address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
       size: "30FT (H) x 80FT (W)",
-      image: "assets/images/led/led inventories/market market.png",
+      image: "https://nyxsys.ph/assets/images/led/led inventories/market market.png",
       alt: "C5 Market Market Billboard Northbound",
       why: 'Positioned in a prime location along C5 at Market! Market!, this dynamic LED billboard attracts massive daily foot and vehicle traffic, maximizing brand reach.',
       link: '/services/led-media-inventories/c5-market-market-led'
