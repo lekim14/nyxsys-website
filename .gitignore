@@ -6,7 +6,10 @@
 /out-tsc
 /bazel-output
 /docs
-assets/
+/src/assets/images/
+/src/assets/videos/
+/src/assets/icons/
+.gitkeep
 
 # Node
 /node_modules
