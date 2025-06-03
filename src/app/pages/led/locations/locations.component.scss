@@ -139,13 +139,13 @@ h2, h3 {
 }
 
 .map{
-    width: auto;
+    // width: auto;
     height: 400px;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 6px;
     // height: 400px;
     // width: 100%;
-    // max-width: 100%;
+    max-width: 100%;
 }
 
 .grid-container{
@@ -167,6 +167,14 @@ h2, h3 {
 
 .anchor{
     color: #fff !important;
+}
+
+.bg-red{
+    background-color: red;
+}
+
+.bg-green{
+    background-color: green;
 }
 
 /* Media Queries */
@@ -193,6 +201,10 @@ h2, h3 {
 
     .map {
         object-fit: cover;
+    }
+    
+    .specs{
+        margin-top: 10px;
     }
 }
 

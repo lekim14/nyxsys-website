@@ -141,12 +141,12 @@
 <section class="section-container row">
     <div class="col-md-6">
         <div class="grid-center">
-            <img class="map" [src]="selectedMap().fileName" alt="EDSA Guadalupe, across Guadalupe MRT Station (Southbound)" loading="lazy">
+            <img class="map" [src]="selectedMap().fileName" [alt]="selectedMap().location" loading="lazy">
         </div>
     </div>
     <div class="col-md-6">
         <div class="grid-center">
-            <div class="grid-container">
+            <div class="grid-container specs">
                 <h2 class="fs-1 mb-4 fw-semibold text-center">Location Details and Billboard Specification</h2>
                 <ul>
                     <li><h6 class="fs-6 fw-semibold">Exact Address: {{ selectedSpecs().specs.exactAddress }}</h6></li>
