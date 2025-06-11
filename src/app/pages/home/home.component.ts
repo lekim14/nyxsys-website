@@ -24,23 +24,23 @@ export class HomeComponent {
   }
 
   ngOnInit(): void {
-    this.utils.setPageTitle('Digital Out of Home Advertising Philippines | NYXSYS PH')
+    this.utils.setPageTitle('NYXSYS Philippines Inc. | Official Site | DOOH Advertising')
 
-    this.utils.setMetaUpdateTag('title', 'Digital Out of Home Advertising Philippines | NYXSYS PH',)
+    this.utils.setMetaUpdateTag('title', 'NYXSYS Philippines Inc. | Official Site | DOOH Advertising',)
     this.utils.setMetaUpdateTag(
       'description',
       'Nyxsys Philippines is a premier provider of Digital Out-of-Home (DOOH) media and business technology solutions. From LED billboards to audience measurement.'
     )
 
     // OG Meta
-    this.utils.setMetaPropertyTag('og:title', 'Digital Out-of-Home Advertising Philippines | NYXSYS PH');
+    this.utils.setMetaPropertyTag('og:title', 'NYXSYS Philippines Inc. | Official Site | DOOH Advertising');
     this.utils.setMetaPropertyTag('og:description', 
       'Nyxsys Philippines is a premier provider of Digital Out-of-Home (DOOH) media and business technology solutions. From LED billboards to audience measurement.'
     );
     this.utils.setMetaPropertyTag('og:url', 'https://nyxsys.ph/');
 
     // Twitter Meta
-    this.utils.setMetaUpdateTag('twitter:title', 'Digital Out of Home Advertising Philippines | NYXSYS PH',)
+    this.utils.setMetaUpdateTag('twitter:title', 'NYXSYS Philippines Inc. | Official Site | DOOH Advertising',)
     this.utils.setMetaUpdateTag(
       'twitter:description',
       'Nyxsys Philippines is a premier provider of Digital Out-of-Home (DOOH) media and business technology solutions. From LED billboards to audience measurement.'
