@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     { 
         path: '', 
-        title: 'Digital Out of Home Advertising Philippines | NYXSYS PH',
+        title: 'NYXSYS Philippines Inc. | Official Site | DOOH Advertising',
         loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent) 
     },
     {
