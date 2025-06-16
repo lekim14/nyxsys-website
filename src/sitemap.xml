@@ -35,9 +35,51 @@
         <priority>1.0</priority>
     </url>
 
+    <url>
+        <loc>https://nyxsys.ph/services/led-media-inventories/iconic-edsa-orense-led</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://nyxsys.ph/services/led-media-inventories/edsa-paragon-led</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://nyxsys.ph/services/led-media-inventories/c5-market-market-led</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
     <!-- Static -->
     <url>
         <loc>https://nyxsys.ph/services/static-fixed-inventories</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://nyxsys.ph/services/static-fixed-inventories/edsa-northbound-static-billboard</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://nyxsys.ph/services/static-fixed-inventories/edsa-marcaleon-northbound-static-billboard</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://nyxsys.ph/services/static-fixed-inventories/edsa-marcaleon-southbound-static-billboard</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://nyxsys.ph/services/static-fixed-inventories/edsa-orense-parallel-northbound-static-billboard</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
