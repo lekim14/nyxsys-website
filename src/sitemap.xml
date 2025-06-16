@@ -58,7 +58,7 @@
 
     <!-- Contacts -->
     <url>
-        <loc>https://nyxsys.ph/services/contacts</loc>
+        <loc>https://nyxsys.ph/contact</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
