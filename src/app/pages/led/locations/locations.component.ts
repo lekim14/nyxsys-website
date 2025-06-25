@@ -341,7 +341,7 @@ export class LocationsComponent {
       metaTitle: 'Advertise on ICONIC EDSA Orense LED Billboard | Premium LED Billboard in Makati',
       metaDescription: 'Advertise at the ICONIC EDSA Orense LED Billboard in Makati City. Capture thousands of daily commuters on EDSA Southbound with high-impact, high-visibility LED advertising.',
       header: 'Advertise on ICONIC EDSA Orense LED Billboard in Makati City',
-      intro: `The high visibility LED billboard along EDSA Southbound, which guarantees a lot of foot and vehicle traffic every day, is this billboard's strategic benefit. Broadly visible to viewers travelling from Makati, Manila, Calabarzon, Ortigas CBD, and Quezon City. 1,800,962 cars pass by this LED billboard on a monthly average.`,
+      intro: `The Largest LED Billboard in the Philippines along EDSA Southbound, which guarantees a lot of foot and vehicle traffic every day, is this billboard's strategic benefit. Broadly visible to viewers travelling from Makati, Manila, Calabarzon, Ortigas CBD, and Quezon City. 1,800,962 cars pass by this LED billboard on a monthly average.`,
     },
     {
       link: '/services/led-media-inventories/edsa-paragon-led',
@@ -575,7 +575,7 @@ export class LocationsComponent {
   nearbyLandMarks: any[] = [
     {
       link: '/services/led-media-inventories/iconic-edsa-orense-led',
-      title: 'Help audiences locate the billboard easily. The EDSA ICONIC LED is visible near:',
+      title: 'Help audiences locate the biggest led billboard in the Philippines easily. The EDSA ICONIC LED is visible near:',
       locations: ['Guadalupe MRT Station', 'Our Lady of Guadalupe Church', 'Rockwell Center', 'Makati City Hall', 'Estrella-Pantaleon Bridge', 'San Carlos Seminary', 'Power Plant Mall (within 5 mins driving distance)']
     },
     {
@@ -860,7 +860,7 @@ export class LocationsComponent {
   booking: any[] = [
     {
       link: '/services/led-media-inventories/iconic-edsa-orense-led',
-      description: `Get competitive advertising rates for the <b>EDSA ICONIC LED</b> today. Whether you're a startup or a major brand, we offer flexible packages to meet your campaign goals and budget.`,
+      description: `Get competitive advertising rates for the largest LED billboard: <b>EDSA ICONIC</b> today. Whether you're a startup or a major brand, we offer flexible packages to meet your campaign goals and budget.`,
       contactUs: this.sanitizer.bypassSecurityTrustHtml('<a style="color: #fff;" href="/contact">Contact Us</a> or <a style="color: #fff;" href="/contact">Request a Qoute</a> to get started.')
     },
     {
