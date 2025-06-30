@@ -111,6 +111,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/testimonials/testimonials.component').then(m => m.TestimonialsComponent)
     },
     {
+        path: 'thank-you',
+        title: '',
+        loadComponent: () => import('./pages/thank-you/thank-you.component').then(m => m.ThankYouComponent)
+    },
+    {
         path: "**", redirectTo: 'https://www.nyxsys.ph/404.shtml'
     }
 ];

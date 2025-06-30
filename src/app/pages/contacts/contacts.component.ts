@@ -107,6 +107,7 @@ export class ContactsComponent implements OnInit {
           this.contactUs.reset();
           this.utils.showSnackbar('Email sent successfully!');
           this.isSending.set(false);
+          this.router.navigate(['/thank-you'])
         },
         error: (error) => {
           this.utils.showSnackbar('Failed to send email. Please try again later.');

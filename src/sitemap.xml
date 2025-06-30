@@ -105,6 +105,13 @@
         <priority>1.0</priority>
     </url>
 
+    <!-- Thank You Page-->
+    <url>
+        <loc>https://nyxsys.ph/thank-you</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
     <!-- Testimonials -->
     <url>
         <loc>https://nyxsys.ph/testimonials</loc>
