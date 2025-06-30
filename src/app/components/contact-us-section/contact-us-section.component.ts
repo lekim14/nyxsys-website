@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
 import { environment } from '../../../environments/environment.development';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-us-section',
@@ -34,7 +35,7 @@ export class ContactUsSectionComponent {
     recaptchaToken: new FormControl(null),
   });
 
-  constructor(private utils: UtilityService) { }
+  constructor(private utils: UtilityService, private router: Router) { }
 
   onClickSendEmail() {
     if (this.contactUs.invalid) return;
@@ -46,6 +47,7 @@ export class ContactUsSectionComponent {
           this.contactUs.reset();
           this.utils.showSnackbar('Email sent successfully!');
           this.isSending.set(false);
+          this.router.navigate(['/thank-you'])
         },
         error: (error) => {
           this.utils.showSnackbar('Failed to send email. Please try again later.');
