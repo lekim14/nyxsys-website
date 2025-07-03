@@ -332,6 +332,36 @@ export class LocationsComponent {
             alt: "Market Market Mall Posterbox at Drop-off, Entrance from Terminal"
           },
         ]
+      },
+      {
+        text: "Ever Commonwealth",
+        items: [
+          {
+            text: "GF Entrance near Shakey's",
+            image: "https://nyxsys.ph/assets/images/led/ever commonwealth/GF Entrance near Shakey's.jpg",
+            alt: "Ever Commonwealth Mall Posterbox at Entrance near Shakey's"
+          },
+          {
+            text: "GF Main Entrance",
+            image: "https://nyxsys.ph/assets/images/led/ever commonwealth/GF Main Entrance.heic",
+            alt: "Ever Commonwealth Mall Posterbox at Main Entrance"
+          },
+          {
+            text: "LGF near Activity Center Left Side",
+            image: "https://nyxsys.ph/assets/images/led/ever commonwealth/LGF near Activity Center Left Side.heic",
+            alt: "Ever Commonwealth Mall Posterbox at near activity center left side"
+          },
+          {
+            text: "LGF near Activity Center Right Side",
+            image: "https://nyxsys.ph/assets/images/led/ever commonwealth/LGF near Activity Center Right Side.heic",
+            alt: "Ever Commonwealth Mall Posterbox at near activity center right side"
+          },
+          {
+            text: "UGF near Escalator Going Up",
+            image: "https://nyxsys.ph/assets/images/led/ever commonwealth/UGF near Escalator Going Up.heic",
+            alt: "Ever Commonwealth Mall Posterbox at near Escalator"
+          }
+        ]
       }
     ];
   

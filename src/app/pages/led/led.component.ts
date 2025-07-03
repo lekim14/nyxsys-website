@@ -250,7 +250,37 @@ export class LedComponent implements OnInit {
           alt: "Market Market Mall Posterbox at Drop-off, Entrance from Terminal"
         },
       ]
-    }
+    },
+    {
+        text: "Ever Commonwealth",
+        items: [
+          {
+            text: "GF Entrance near Shakey's",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/GF Entrance near Shakey's.jpg",
+            alt: "Ever Commonwealth Mall Posterbox at Entrance near Shakey's"
+          },
+          {
+            text: "GF Main Entrance",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/GF Main Entrance.jpg",
+            alt: "Ever Commonwealth Mall Posterbox at Main Entrance"
+          },
+          {
+            text: "LGF near Activity Center Left Side",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/LGF near Activity Center Left Side.jpg",
+            alt: "Ever Commonwealth Mall Posterbox at near activity center left side"
+          },
+          {
+            text: "LGF near Activity Center Right Side",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/LGF near Activity Center Right Side.jpg",
+            alt: "Ever Commonwealth Mall Posterbox at near activity center right side"
+          },
+          {
+            text: "UGF near Escalator Going Up",
+            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/UGF near Escalator Going Up.jpg",
+            alt: "Ever Commonwealth Mall Posterbox at near Escalator"
+          }
+        ]
+      }
   ]
 
   constructor(private utils: UtilityService, private router: Router) {
