@@ -14,6 +14,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class HomeComponent {
 
   showButton = signal<boolean>(false);
+  isVideoLoading: boolean = true;
 
   constructor(private utils: UtilityService, private router: Router) {
     this.router.events.subscribe(event => {
@@ -52,5 +53,9 @@ export class HomeComponent {
   onClickScrollSection() {
     const element = document.getElementById('about');
     element?.scrollIntoView({ behavior:'smooth', block: 'start' });
+  }
+
+  onVideoLoaded(){
+    this.isVideoLoading = false;
   }
 }
