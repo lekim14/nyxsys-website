@@ -22,6 +22,7 @@ import { NavigationEnd, Router, RouterLink } from '@angular/router';
 export class StaticComponent implements OnInit {
 
   isVisible: boolean[] = [ false, false ];
+  isVideoLoading: boolean = true;
 
   staticInvetories: any[] = [
     { 
@@ -126,5 +127,9 @@ export class StaticComponent implements OnInit {
       'twitter:description',
       "Nyxsys’ static billboards offer durable, high-impact ads in strategic locations like EDSA Marcaleon & EDSA Orense, ensuring strong, lasting brand visibility."
     )
+  }
+
+  onVideoLoaded(){
+    this.isVideoLoading = false;
   }
 }

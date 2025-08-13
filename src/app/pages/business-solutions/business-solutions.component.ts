@@ -27,6 +27,7 @@ export class BusinessSolutionsComponent implements OnInit {
 
   isVcastPlaying: boolean = false;
   isVisible: boolean[] = [false, false];
+  isVideoLoading: boolean = true;
 
   caseStudies: any[] = [
     {
@@ -231,5 +232,9 @@ export class BusinessSolutionsComponent implements OnInit {
   onClickScrollSection(id: string) {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior:'smooth', block: 'start' });
+  }
+
+  onVideoLoaded(){
+    this.isVideoLoading = false;
   }
 }

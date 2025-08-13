@@ -22,6 +22,7 @@ import { NavigationEnd, Router, RouterLink } from "@angular/router";
 export class LedComponent implements OnInit {
 
   isVisible: boolean[] = [ false, false ];
+  isVideoLoading: boolean = true;
 
   ledInventories: any[] = [
     { 
@@ -319,5 +320,9 @@ export class LedComponent implements OnInit {
       'twitter:description',
       "Capture attention with Nyxsys' LED billboards. Our HD digital displays deliver vibrant, engaging ads in prime spots like EDSA Orense and C5 Market Market."
     )
+  }
+
+  onVideoLoaded(){
+    this.isVideoLoading = false;
   }
 }

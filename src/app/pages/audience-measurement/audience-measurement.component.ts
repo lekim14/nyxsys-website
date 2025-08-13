@@ -22,6 +22,7 @@ import { NavigationEnd, Router } from '@angular/router';
 export class AudienceMeasurementComponent implements OnInit {
 
   isVisible: boolean[] = [false, false];
+  isVideoLoading: boolean = true;
 
   slideConfig = {
     slidesToShow: 1,
@@ -129,5 +130,9 @@ export class AudienceMeasurementComponent implements OnInit {
   onClickScrollSection(id: string) {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior:'smooth', block: 'start' });
+  }
+
+  onVideoLoaded(){
+    this.isVideoLoading = false;
   }
 }

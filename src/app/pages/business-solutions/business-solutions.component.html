@@ -3,10 +3,11 @@
 <section class="section-container business-solution-section">
     <!-- <img class="business-solution-image" src="assets/images/cta.jpg" alt="business-solution" loading="lazy"> -->
     <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" class="business-solution-video"
-        preload="auto">
+        preload="auto" (loadeddata)="onVideoLoaded()">
         <source src="https://nyxsys.ph/assets/videos/business-solutions.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <img *ngIf="isVideoLoading" src="/assets/images/static.jpg" alt="" class="hero-video">
     <div class="business-solution-container">
         <div class="business-solution-wrapper">
             <h1 class="business-solution-header business-solution-item"

@@ -21,8 +21,11 @@ export class AppComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         this.viewportScroller.scrollToPosition([0, 0]);
         const isHome = event.urlAfterRedirects === '/' || event.url === '/';
+        const isLED = event.urlAfterRedirects === '/services/led-media-inventories' || event.url === '/services/led-media-inventories';
         if(isHome){
           this.addScript();
+        }else if(isLED){
+          this.addLEDScript();
         }else{
           this.removeScript();
         }
@@ -112,6 +115,85 @@ export class AppComponent implements OnInit {
         }
       ]
     }
+    this.script = this.renderer.createElement('script');
+    this.script.type = 'application/ld+json';
+    this.script.text = JSON.stringify(schema);
+    this.renderer.appendChild(document.head, this.script);
+  }
+
+  private addLEDScript(){
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "LED Billboard Advertising",
+      "serviceType": "LED Billboard Advertising",
+      "url": "https://nyxsys.ph/services/led-media-inventories",
+      "description": "High-impact LED billboard advertising in premium, high-traffic locations across Metro Manila.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Nyxsys",
+        "url": "https://nyxsys.ph",
+        "email": "inquire@nyxsys.ph",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "(02) 8687 0503 loc. 310",
+          "contactType": "customer service",
+          "areaServed": "PH",
+          "availableLanguage": ["English", "Filipino"]
+        }
+      },
+      "serviceArea": [
+        {
+          "@type": "Place",
+          "name": "ICONIC - EDSA ORENSE LED (Southbound)",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "447 Magsaysay Avenue, Guadalupe Nuevo",
+            "addressLocality": "Makati City",
+            "addressRegion": "Metro Manila",
+            "addressCountry": "PH"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 14.56165993430734,
+            "longitude": 121.04345272107649
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "EDSA PARAGON LED (Northbound)",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Paragon Plaza Bldg, 162 EDSA corner Reliance St.",
+            "addressLocality": "Mandaluyong City",
+            "addressRegion": "Metro Manila",
+            "addressCountry": "PH"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 14.57604418827174,
+            "longitude": 121.05024570900122
+          }
+        },
+        {
+          "@type": "Place",
+          "name": "C5 MARKET MARKET LED (Northbound)",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Market Market, Taguig City",
+            "addressLocality": "Taguig City",
+            "addressRegion": "Metro Manila",
+            "addressCountry": "PH"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 14.550340579192035,
+            "longitude": 121.05763857712964
+          }
+        }
+      ]
+    }
+
     this.script = this.renderer.createElement('script');
     this.script.type = 'application/ld+json';
     this.script.text = JSON.stringify(schema);
