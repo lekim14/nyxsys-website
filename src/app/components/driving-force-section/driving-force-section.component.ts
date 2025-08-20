@@ -26,19 +26,19 @@ export class DrivingForceSectionComponent {
     { 
       title: 'INNOVATION', 
       details: 'Pioneering cutting-edge technology in digital media, such as iconic LED billboards and advanced advertising solutions, making Nyxsys a leader in outdoor media.' ,
-      image: 'https://nyxsys.ph/assets/images/innovation.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/innovation.webp',
       alt: 'Businessman holds glowing bulb with tech icons.'
     },
     { 
       title: 'CLIENT-CENTRIC APPROACH', 
       details: `Focusing on delivering tailored solutions that meet the dynamic needs of advertisers and businesses.`, 
-      image: 'https://nyxsys.ph/assets/images/client.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/client.webp',
       alt: 'Businessman using mouse with digital client network icons.'
     },
     { 
       title: 'VISIONARY LEADERSHIP', 
       details: `Empowered by strong leadership that inspires growth, collaboration, and service excellence, driving both innovation and company culture forward.` ,
-      image: 'https://nyxsys.ph/assets/images/visionary.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/visionary.webp',
       alt: 'Businessman holding digital human network hologram.'
     },
   ]

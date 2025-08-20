@@ -26,32 +26,32 @@ export class TeamComponent implements OnInit {
   teams: any[] = [
     {
       id: 1,
-      path: 'assets/images/team/1.jpg',
+      path: 'https://nyxsys.ph/assets/webp-images/team/1.webp',
       alt: 'Nyxsys Team in a conference room displaying the mantra "Breaking Barriers, Exceeding Limits"'
     },
     {
       id: 2,
-      path: 'assets/images/team/2.jpg',
+      path: 'https://nyxsys.ph/assets/webp-images/team/2.webp',
       alt: 'Nyxsys team posing in a cozy, modern office lounge.'
     },
     {
       id: 3,
-      path: 'assets/images/team/3.jpg',
+      path: 'https://nyxsys.ph/assets/webp-images/team/3.webp',
       alt: 'Nyxsys team wearing matching shirts, posing together at a company event.'
     },
     {
       id: 4,
-      path: 'assets/images/team/4.jpg',
+      path: 'https://nyxsys.ph/assets/webp-images/team/4.webp',
       alt: 'Nyxsys team dressed in formal attirewith a futuristic LED backdrop.'
     },
     {
       id: 5,
-      path: 'assets/images/team/5.jpg',
+      path: 'https://nyxsys.ph/assets/webp-images/team/5.webp',
       alt: 'Nyxsys team at a festive Christmas celebration.'
     },
     {
       id: 6,
-      path: 'assets/images/team/6.jpg',
+      path: 'https://nyxsys.ph/assets/webp-images/team/6.webp',
       alt: 'Nyxsys team enjoying a traditional boodle fight feast.'
     },
   ]

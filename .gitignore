@@ -7,6 +7,9 @@
 /bazel-output
 /docs
 /src/assets/images/
+/src/assets/images-original/
+/src/assets/converted/
+/src/assets/webp/
 /src/assets/videos/
 .gitkeep
 

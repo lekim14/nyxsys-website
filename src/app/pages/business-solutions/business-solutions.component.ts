@@ -32,7 +32,7 @@ export class BusinessSolutionsComponent implements OnInit {
   caseStudies: any[] = [
     {
       text: 'DHL Supply Chain Philippines inc. / Logistics',
-      image: 'assets/images/business solutions/case studies/dhl outdoor led.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/business solutions/case studies/dhl outdoor led.webp',
       challenge: "Seamless operational ability while maintaining being energy efficient and environmentally sustainable which enables DHL to offer more options for outdoor advertising campaigns.",
       solution: "Building a fixed outdoor LED billboard with Tie-grid type PV solar renewable energy system equipped with Nyxsys' VCast --- content management system.",
       results: "Saved DHL's electrical consumption up to 70% and allowed easy management of videos displayed on the LED billboard.",
@@ -40,7 +40,7 @@ export class BusinessSolutionsComponent implements OnInit {
     },
     {
       text: 'Globe Telecom',
-      image: 'assets/images/business solutions/case studies/globe.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/business solutions/case studies/globe.webp',
       challenge: "Seamless software integration and  content management through all Globe'sbranches and public spaces",
       solution: "Providing complete digital signage solution powered by Nyxsys' advanced technology.",
       results: "Dynamic displays, delivering real-time information and interactive experiences.",
@@ -48,7 +48,7 @@ export class BusinessSolutionsComponent implements OnInit {
     },
     {
       text: 'Dunkin Menu Boards',
-      image: 'assets/images/business solutions/case studies/dunkin.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/business solutions/case studies/dunkin.webp',
       challenge: "Seamless management and content update across multiple screens.",
       solution: "Enhancing their in-store digital signage system.",
       results: "Streamlined Dunkin's digital content delivery, reinforcing their brand presence while enhancing the customer experience.",
@@ -80,27 +80,27 @@ export class BusinessSolutionsComponent implements OnInit {
     {
       text: 'Versatile Digital Signage System',
       details: 'With vcastplay, business owners can creatively display multimedia content like images, videos and websites dynamic marketing',
-      image: 'assets/icons/versatile.png'
+      image: 'https://nyxsys.ph/assets/webp-icons/versatile.webp'
     },
     {
       text: 'Content Management Made Efficient',
       details: 'Vcastplay lets business owners create ad template, schedule airing and customize digital singnage to fit their business needs.',
-      image: 'assets/icons/cms.png'
+      image: 'https://nyxsys.ph/assets/webp-icons/cms.webp'
     },
     {
       text: 'Accessible Easy To Access',
       details: 'Vcastplay is a cloud-based digital signage system that lets business owners manage multiple players remotely with internet access, anytime, anywhere',
-      image: 'assets/icons/access.png'
+      image: 'https://nyxsys.ph/assets/webp-icons/access.webp'
     },
     {
       text: 'Support Customer Service',
       details: 'Customer satisfaction is our priority. Our expert technical team is always available to assist with any digital signage issues',
-      image: 'assets/icons/support.png'
+      image: 'https://nyxsys.ph/assets/webp-icons/support.webp'
     },
     {
       text: 'Timely Reports',
       details: 'Vcastplay offers real-time tracking and monitoring reports to ensure your digital signage is running smoothly.',
-      image: 'assets/icons/timely.png'
+      image: 'https://nyxsys.ph/assets/webp-icons/timely.webp'
     },
   ];
 
@@ -108,44 +108,44 @@ export class BusinessSolutionsComponent implements OnInit {
     {
       text: 'Software Subscription of vcastplay',
       details: `vcastplay offers flexible subscription options, including a Free Trial for 15 days with 5GB cloud storage, and the Cloud Subscription, which provides a per-player license, 1GB cloud storage, unlimited playlists, and custom templates. For businesses requiring more robust storage, the On-Premises package offers a license with up to 2TB of server storage and comparable features. All packages include email support and useful reports, providing scalable solutions for digital signage needs.`,
-      image: 'assets/images/business solutions/post services/vcastplay subscription.png',
+      image: 'https://nyxsys.ph/assets/webp-images/business solutions/post services/vcastplay subscription.webp',
       link: 'https://vcastplay.com/packages',
       alt: 'Logo of vcastplay',
     },
     {
       text: 'Content Playlist & Charting Management',
       details: `We ensure that your digital signage always displays the latest audiovisual content by providing real-time updates, keeping your messaging fresh and relevant. With seamless playlist management, you can easily schedule, update, and customize content to engage your audience and meet your marketing goals effortlessly.`,
-      image: 'assets/images/business solutions/post services/playlist uploading.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/business solutions/post services/playlist uploading.webp',
       alt: 'Managing digital content on a laptop with floating folder icons.',
     },
     {
       text: 'Creative Content Creation',
       details: "Creates original, superior design and content to help businesses stand out, communicate clearly, and engage with their target consumers. To enable organizations to create aesthetically beautiful, strategically matched content that appeals to their target market and propels business growth.",
-      image: 'assets/images/business solutions/post services/creative creation.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/business solutions/post services/creative creation.webp',
       alt: ' A Professional creating content using an editing application',
     },
     {
       text: 'Helpdesk Support',
       details: `Customer support service available 24 hours a day, 7 days a week, without any interruptions. This means that users or customers can access assistance or resolve issues at any time, including nights, weekends, and holidays. It ensures continuous support for resolving technical problems, answering queries, or providing guidance whenever needed.`,
-      image: 'assets/images/business solutions/post services/247 helpdesk.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/business solutions/post services/247 helpdesk.webp',
       alt: 'An agent providing 24/7 customer assistance.',
     },
     {
       text: 'Audience Measurement Report',
       details: `Empowers businesses with real-time insights into audience behavior and demographics, utilizing advanced video analytics to track foot traffic, engagement levels, and profiles such as age and gender. This data-driven approach optimizes marketing strategies, enhances Digital Out-of-Home (DOOH) campaigns, improves retail layouts, and provides valuable event analytics. By delivering interactive reports and actionable insights, Nyxsys helps businesses maximize ROI, strengthen audience connections, and stay ahead in a competitive market.`,
-      image: 'assets/images/business solutions/post services/audience measurement report.png',
+      image: 'https://nyxsys.ph/assets/webp-images/business solutions/post services/audience measurement report.webp',
       alt: 'Analyzing data on a laptop with colorful visual metrics.',
     },
   ]
 
   b2bIndustries: any[] = [
-    { text: 'Retail', image: 'assets/images/business solutions/b2bindustries/retail.jpg', alt: ' A customer and sales associate use a digital screen in a clothing store.', },
-    { text: 'Hospitality', image: 'assets/images/business solutions/b2bindustries/hospitality.jpg', alt: 'Digital screens in a hotel lobby display travel imagery.', },
-    { text: 'Transport Hub', image: 'assets/images/business solutions/b2bindustries/transport hub.jpg', alt: 'Interactive digital kiosks line a city street at night.' },
-    { text: 'Health Care', image: 'assets/images/business solutions/b2bindustries/healthcare.jpg', alt: 'A digital screen at a medical reception displays health content.', },
-    { text: 'Education', image: 'assets/images/business solutions/b2bindustries/education.jpg', alt: 'A teacher presents a lesson using a digital screen.', },
-    { text: 'Food Services', image: 'assets/images/business solutions/b2bindustries/food services.jpg', alt: 'Digital menu boards showcase food and drink options in a donut shop.', },
-    { text: 'Digital Media Owners', image: 'assets/images/business solutions/b2bindustries/digital media owners.png', alt: ' A large LED screen displays a "Black Friday Sale" ad in a busy city.', },
+    { text: 'Retail', image: 'https://nyxsys.ph/assets/webp-images/business solutions/b2bindustries/retail.webp', alt: ' A customer and sales associate use a digital screen in a clothing store.', },
+    { text: 'Hospitality', image: 'https://nyxsys.ph/assets/webp-images/business solutions/b2bindustries/hospitality.webp', alt: 'Digital screens in a hotel lobby display travel imagery.', },
+    { text: 'Transport Hub', image: 'https://nyxsys.ph/assets/webp-images/business solutions/b2bindustries/transport hub.webp', alt: 'Interactive digital kiosks line a city street at night.' },
+    { text: 'Health Care', image: 'https://nyxsys.ph/assets/webp-images/business solutions/b2bindustries/healthcare.webp', alt: 'A digital screen at a medical reception displays health content.', },
+    { text: 'Education', image: 'https://nyxsys.ph/assets/webp-images/business solutions/b2bindustries/education.webp', alt: 'A teacher presents a lesson using a digital screen.', },
+    { text: 'Food Services', image: 'https://nyxsys.ph/assets/webp-images/business solutions/b2bindustries/food services.webp', alt: 'Digital menu boards showcase food and drink options in a donut shop.', },
+    { text: 'Digital Media Owners', image: 'https://nyxsys.ph/assets/webp-images/business solutions/b2bindustries/digital media owners.webp', alt: ' A large LED screen displays a "Black Friday Sale" ad in a busy city.', },
   ]
 
   config: any = {

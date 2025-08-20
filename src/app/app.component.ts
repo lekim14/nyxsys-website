@@ -1,6 +1,8 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { filter } from 'rxjs';
+import { SeoService } from './services/seo.service';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,6 +13,7 @@ import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit { 
   script: any;
   constructor(
+    private seoService: SeoService,
     private router: Router,
     private renderer: Renderer2,
     private viewportScroller: ViewportScroller
@@ -30,6 +33,12 @@ export class AppComponent implements OnInit {
           this.removeScript();
         }
       }
+
+      this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+      ).subscribe(() => {
+        this.seoService.setCanonicalURL();
+      });
     });
     
     // const schema = {
@@ -37,7 +46,7 @@ export class AppComponent implements OnInit {
     //   "@type": "Article",
     //   "headline": "Forefront Of Innovation For Digital Media And Industry Solutions",
     //   "description": "Transform business growth with Digital Out-of-Home (DOOH) media and innovative technology solutions.",
-    //   "image": "https://nyxsys.ph/assets/images/nyxsys-logo-loading.png",
+    //   "image": "https://nyxsys.ph/assets/webp-images/nyxsys-logo-loading.webp",
     //   "author": {
     //     "@type": "Person",
     //     "name": "NYXSYS Philippines, Inc."
@@ -47,7 +56,7 @@ export class AppComponent implements OnInit {
     //     "name": "NYXSYS Philippines, Inc.",
     //     "logo": {
     //       "@type": "ImageObject",
-    //       "url": "https://nyxsys.ph/assets/images/nyxsys-logo-loading.png"
+    //       "url": "https://nyxsys.ph/assets/webp-images/nyxsys-logo-loading.webp"
     //     }
     //   },
     //   "datePublished": "2025-01-23",
@@ -83,7 +92,7 @@ export class AppComponent implements OnInit {
           "url": "https://nyxsys.ph",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://nyxsys.ph/assets/images/logo%20white.png"
+            "url": "https://nyxsys.ph/assets/webp-images/logo%20white.webp"
           },
           "contactPoint": {
             "@type": "ContactPoint",
@@ -110,7 +119,7 @@ export class AppComponent implements OnInit {
           },
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://nyxsys.ph/assets/images/about.png"
+            "url": "https://nyxsys.ph/assets/webp-images/about.webp"
           }
         }
       ]

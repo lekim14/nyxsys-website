@@ -29,7 +29,7 @@ export class StaticComponent implements OnInit {
       text: 'EDSA NORTHBOUND STATIC BILLBOARD',
       address: 'EDSA corner Orense St. Makati City',
       size: '90ft (H) x 70ft (W)',
-      image: 'assets/images/static/edsa northbound static billboard.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/static/edsa northbound static billboard.webp',
       alt: 'Static Parallel Billboard located at Edsa Northbound',
       why: 'Peak retention for all possible leads',
       link: '/services/static-fixed-inventories/edsa-northbound-static-billboard'
@@ -38,7 +38,7 @@ export class StaticComponent implements OnInit {
       text: 'EDSA ORENSE PARALLEL NORTHBOUND STATIC BILLBOARD',
       address: 'EDSA corner Orense St., Makati City',
       size: '30FT (H) x 75FT (W)',
-      image: 'assets/images/static/edsa orense parallel.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/static/edsa orense parallel.webp',
       alt: 'Static Billboard located at Edsa Northbound',
       why: 'Retention built to convert.',
       link: '/services/static-fixed-inventories/edsa-orense-parallel-northbound-static-billboard'
@@ -47,7 +47,7 @@ export class StaticComponent implements OnInit {
       text: 'EDSA MARCALEON (DOUBLE-FACED, SOUTHBOUND)',
       address: 'EDSA Mandaluyong - Marcaleon Site, next to Petron and Shell Gasoline stations, Mandaluyong City',
       size: '80FT (H) x 70FT (W)',
-      image: 'assets/images/static/edsa marcaleon double-faced southbound.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/static/edsa marcaleon double-faced southbound.webp',
       alt: 'Static Billboard located at Edsa Marcaleon Southbound',
       why: 'Engagement that actually sticks.',
       link: '/services/static-fixed-inventories/edsa-marcaleon-southbound-static-billboard'
@@ -56,7 +56,7 @@ export class StaticComponent implements OnInit {
       text: 'EDSA MARCALEON (DOUBLE-FACED, NORTHBOUND)',
       address: 'EDSA Mandaluyong - Marcaleon Site, next to Petron and Shell Gasoline stations, Mandaluyong City',
       size: '80FT (H) x 70FT (W)',
-      image: 'assets/images/static/edsa marcaleon double-faced northbound.jpg',
+      image: 'https://nyxsys.ph/assets/webp-images/static/edsa marcaleon double-faced northbound.webp',
       alt: 'Static Billboard located at Edsa Marcaleon Northbound',
       why: 'Retention that surely pays back.',
       link: '/services/static-fixed-inventories/edsa-marcaleon-northbound-static-billboard'

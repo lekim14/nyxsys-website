@@ -29,7 +29,7 @@ export class LedComponent implements OnInit {
       text: "ICONIC - EDSA ORENSE LED (SOUTH BOUND)",
       address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
       size: "80FT (H) x 140FT (W)",
-      image: "https://nyxsys.ph/assets/images/led/led inventories/iconic-2.png",
+      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/iconic-2.webp",
       alt: "Iconic LED Billboard along EDSA Orense Southbound",
       why: 'High-visibility LED billboard along EDSA Southbound, ensuring massive daily foot and vehicle traffic.',
       link: '/services/led-media-inventories/iconic-edsa-orense-led'
@@ -38,7 +38,7 @@ export class LedComponent implements OnInit {
       text: "EDSA PARAGON LED (NORTHBOUND)",
       address: "Ad wall of Paragon Plaza Bldg, 162 EDSA corner Reliance St., Mandaluyong City",
       size: "70FT (H) x 60FT (W)",
-      image: "https://nyxsys.ph/assets/images/led/led inventories/paragon.png",
+      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/paragon.webp",
       alt: "Paragon LED Billboard along EDSA Northbound",
       why: 'A highly prominent, high-visibility LED billboard strategically located along EDSA Northbound, guaranteeing exposure to a massive volume of daily foot and vehicle traffic, making it an ideal platform for maximum brand visibility and engagement.',
       link: '/services/led-media-inventories/edsa-paragon-led'
@@ -47,7 +47,7 @@ export class LedComponent implements OnInit {
       text: "C5 MARKET MARKET LED (NORTHBOUND)",
       address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
       size: "30FT (H) x 80FT (W)",
-      image: "https://nyxsys.ph/assets/images/led/led inventories/market market.png",
+      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/market market.webp",
       alt: "C5 Market Market Billboard Northbound",
       why: 'Positioned in a prime location along C5 at Market! Market!, this dynamic LED billboard attracts massive daily foot and vehicle traffic, maximizing brand reach.',
       link: '/services/led-media-inventories/c5-market-market-led'
@@ -107,47 +107,47 @@ export class LedComponent implements OnInit {
       items: [
         { 
           text: "Glorietta, Entrance in front of Landmark", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta, Entrance in front of Landmark.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta, Entrance in front of Landmark.webp",
           alt: "Glorietta Mall Posterbox Located at Entrance in front of Landmark",
         },
         { 
           text: "Glorietta 1 Entrance in front of SM", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 1, Entrance in front of SM.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta 1, Entrance in front of SM.webp",
           alt: "Glorietta 1 Mall Posterbox Located at Entrance in front of SM",
         },
         { 
           text: "Glorietta 1, Near True Value", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 1, Near True Value.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta 1, Near True Value.webp",
           alt: "Glorietta 1 Mall Posterbox Located near True Value",
         },
         { 
           text: "Glorietta 2, Ground fl. Entrance near Holiday Inn", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 2, Ground fl. Entrance near Holiday Inn.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta 2, Ground fl. Entrance near Holiday Inn.webp",
           alt: "Glorietta 2 Mall Posterbox Located at Ground flr. Entrance near Holiday Inn",
         },
         { 
           text: "Glorietta 3 Drop-off, in front of Steel Parking", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 3 Drop-off, in front of Steel Parking.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta 3 Drop-off, in front of Steel Parking.webp",
           alt: "Glorietta 3 Mall Posterbox Located at Drop-off, in front of Steel Parking",
         },
         { 
           text: "Glorietta 4, Drop-off Entrance", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 4, Drop-off Entrance.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta 4, Drop-off Entrance.webp",
           alt: "Glorietta 4 Mall Posterbox Located at Drop-off Entrance",
         },
         { 
           text: "Glorietta 4, Near Activity Center", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 4, Near Activity Center.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta 4, Near Activity Center.webp",
           alt: "Glorietta 4 Mall Posterbox Located Near Activity Center",
         },
         { 
           text: "Glorietta 4, 2nd fl. beside Havaianas", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 4, 2nd fl. beside Havaianas.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta 4, 2nd fl. beside Havaianas.webp",
           alt: "Glorietta 4 Mall Posterbox Located at 2nd flr. beside Havaianas",
         },
         { 
           text: "Glorietta 4, Activity Center, Beside Mcdonalds", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/glorietta/Glorietta 4, Activity Center, Beside Mcdonalds.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/glorietta/Glorietta 4, Activity Center, Beside Mcdonalds.webp",
           alt: "Glorietta 4 Mall Posterbox Located at Activity Center beside Mcdonalds",
         },
       ]
@@ -157,32 +157,32 @@ export class LedComponent implements OnInit {
       items: [
         { 
           text: "Phase 1 Building in front of Mercado Supermarket", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 1 Building in front of Mercado Supermarket.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/uptown center/Phase 1 Building in front of Mercado Supermarket.webp",
           alt: "UP Town Center Mall Posterbox Located at Phase 1 Building in front of Mercado Supermarket "
         },
         { 
           text: "Phase 1 Building in front of National Bookstore", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 1 Building in front of National Bookstore.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/uptown center/Phase 1 Building in front of National Bookstore.webp",
           alt: "UP Town Center Mall Posterbox Located at Phase 1 Building in front of National Bookstore"
         },
         { 
           text: "Phase 1 Building exit beside Pepper Lunch", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 1 Building exit beside Pepper Lunch.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/uptown center/Phase 1 Building exit beside Pepper Lunch.webp",
           alt: "UP Town Center Mall Posterbox Located at Phase 1 Building exit beside Pepper Lunch"
         },
         { 
           text: "Phase 1 Building, 2nd flr. beside Sbarro", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 1 Building, 2nd flr. beside Sbarro.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/uptown center/Phase 1 Building, 2nd flr. beside Sbarro.webp",
           alt: "UP Town Center Mall Posterbox Located at Phase 1 Building, 2nd flr. beside Sbarro"
         },
         { 
           text: "Phase 2 Building 2F in front of Dotonbori", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 2 Building 2F in front of Dotonbori.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/uptown center/Phase 2 Building 2F in front of Dotonbori.webp",
           alt: "UP Town Center Mall Posterbox Located at Phase 2 Building 2F in front of Dotonbori"
         },
         { 
           text: "Phase 2 Building entrance near Uniqlo", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/uptown center/Phase 2 Building entrance near Uniqlo.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/uptown center/Phase 2 Building entrance near Uniqlo.webp",
           alt: "UP Town Center Mall Posterbox Located at Phase 2 Building entrance near Uniqlo"
         },
       ]
@@ -192,37 +192,37 @@ export class LedComponent implements OnInit {
       items: [
         { 
           text: "Ground Level, North Car Park Drop Off", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Ground Level, North Car Park Drop Off.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/trinoma/Ground Level, North Car Park Drop Off.webp",
           alt: "Trinoma Mall Posterbox at Ground Level, North Car Park Drop Off"
         },
         { 
           text: "Level 1, Activity Center near Mister Donut", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 1, Activity Center near Mister Donut.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/trinoma/Level 1, Activity Center near Mister Donut.webp",
           alt: "Trinoma Mall Posterbox at Level 1, Activity Center near Mister Donut"
         },
         { 
           text: "Level 2, Near Shoe Salon", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 2, Near Shoe Salon.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/trinoma/Level 2, Near Shoe Salon.webp",
           alt: "Trinoma Mall Posterbox at Level 2, Near Shoe Salon"
         },
         { 
           text: "Level 2, Entrance near Bench Fix", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 2, Entrance near Bench Fix.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/trinoma/Level 2, Entrance near Bench Fix.webp",
           alt: "Trinoma Mall Posterbox at Level 2, Entrance near Bench Fix"
         },
         { 
           text: "Level 2, Food Choices 1", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 2, Food Choices 1.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/trinoma/Level 2, Food Choices 1.webp",
           alt: "Trinoma Mall Posterbox at Level 2, Food Choices 1"
         },
         { 
           text: "Level 2, Food Choices 2", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 2, Food Choices 2.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/trinoma/Level 2, Food Choices 2.webp",
           alt: "Trinoma Mall Posterbox at Level 2, Food Choices 2"
         },
         { 
           text: "Level 3, Near Irvins", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/trinoma/Level 3, Near Irvins.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/trinoma/Level 3, Near Irvins.webp",
           alt: "Trinoma Mall Posterbox at Level 3, Near Irvins"
         },
       ]
@@ -232,22 +232,22 @@ export class LedComponent implements OnInit {
       items: [
         { 
           text: "Ground Floor beside elevator in front of National Bookstore", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/market market/Ground Flr. beside elevator in front of National Bookstore.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/market market/Ground Flr. beside elevator in front of National Bookstore.webp",
           alt: "Market Market Mall Posterbox at Ground Floor beside elevator in front of National Bookstore"
         },
         { 
           text: "1st floor Activity Center in front of Levi's", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/market market/1st floor Activity Center in front of Levi's.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/market market/1st floor Activity Center in front of Levi's.webp",
           alt: "Market Market Mall Posterbox at 1st floor Activity Center in front of Levi's"
         },
         { 
           text: "2nd Floor in front of MoshiKoshi", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/market market/2nd Floor in front of MoshiKoshi.jpg",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/market market/2nd Floor in front of MoshiKoshi.webp",
           alt: "Market Market Mall Posterbox at 2nd Floor in front of MoshiKoshi"
         },
         { 
           text: "Drop-off, Entrance from Terminal", 
-          image: "https://nyxsys.ph/assets/images/led/mall posterboxes/market market/Drop-off Entrance from Terminal.png",
+          image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/market market/Drop-off Entrance from Terminal.webp",
           alt: "Market Market Mall Posterbox at Drop-off, Entrance from Terminal"
         },
       ]
@@ -257,27 +257,27 @@ export class LedComponent implements OnInit {
         items: [
           {
             text: "GF Entrance near Shakey's",
-            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/GF Entrance near Shakey's.jpg",
+            image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/ever commonwealth/GF Entrance near Shakey's.webp",
             alt: "Ever Commonwealth Mall Posterbox at Entrance near Shakey's"
           },
           {
             text: "GF Main Entrance",
-            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/GF Main Entrance.jpg",
+            image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/ever commonwealth/GF Main Entrance.webp",
             alt: "Ever Commonwealth Mall Posterbox at Main Entrance"
           },
           {
             text: "LGF near Activity Center Left Side",
-            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/LGF near Activity Center Left Side.jpg",
+            image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/ever commonwealth/LGF near Activity Center Left Side.webp",
             alt: "Ever Commonwealth Mall Posterbox at near activity center left side"
           },
           {
             text: "LGF near Activity Center Right Side",
-            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/LGF near Activity Center Right Side.jpg",
+            image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/ever commonwealth/LGF near Activity Center Right Side.webp",
             alt: "Ever Commonwealth Mall Posterbox at near activity center right side"
           },
           {
             text: "UGF near Escalator Going Up",
-            image: "https://nyxsys.ph/assets/images/led/mall posterboxes/ever commonwealth/UGF near Escalator Going Up.jpg",
+            image: "https://nyxsys.ph/assets/webp-images/led/mall posterboxes/ever commonwealth/UGF near Escalator Going Up.webp",
             alt: "Ever Commonwealth Mall Posterbox at near Escalator"
           }
         ]

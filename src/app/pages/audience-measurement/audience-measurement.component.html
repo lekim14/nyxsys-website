@@ -5,7 +5,7 @@
         <source src="https://nyxsys.ph/assets/videos/audience.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <img *ngIf="isVideoLoading" src="/assets/images/static.jpg" alt="" class="hero-video">
+    <img *ngIf="isVideoLoading" src="https://nyxsys.ph/assets/webp-images/static.webp" alt="" class="hero-video">
     <div class="audience-container">
         <div class="audience-wrapper">
             <h1 class="audience-header audience-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">
@@ -91,7 +91,7 @@
                             <ngx-slick-carousel [config]="slideConfig">
                                 @for (item of [ 2 ]; track $index) {
                                 <div ngxSlickItem>
-                                    <img [src]="'https://nyxsys.ph/assets/images/audience measurement/indoor/image' + item + '.png'"
+                                    <img [src]="'https://nyxsys.ph/assets/webp-images/audience measurement/indoor/image' + item + '.webp'"
                                         alt="Four shoppers viewing a posterbox showcasing audience measurement analytics in action." loading="lazy">
                                 </div>
                                 }
@@ -138,7 +138,7 @@
             <div class="my-5 row g-3 g-md-5 justify-content-between align-items-center position-relative">
                 <div class="gradient-bg-bottom-left"></div>
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
-                    <img src="https://nyxsys.ph/assets/images/audience measurement/indoor/graph 1.png" style="object-fit: contain;" 
+                    <img src="https://nyxsys.ph/assets/webp-images/audience measurement/indoor/graph 1.webp" style="object-fit: contain;" 
                         width="100%" height="500" alt="Graph of Dwell time for Posterbox from CaltonDatx">
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column">
@@ -166,14 +166,14 @@
                     </p>
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
-                    <img src="https://nyxsys.ph/assets/images/audience measurement/indoor/graph 2.png" style="object-fit: contain;" 
+                    <img src="https://nyxsys.ph/assets/webp-images/audience measurement/indoor/graph 2.webp" style="object-fit: contain;" 
                         width="100%" height="500" alt="Graph of Demographics for Posterbox from CaltonDatx">
                 </div>
             </div>
             <div class="my-5 row g-3 g-md-5 justify-content-between align-items-center position-relative">
                 <div class="gradient-bg-bottom-left"></div>
                 <div class="col-12 col-md-6 d-flex justify-content-center align-items-center position-relative">
-                    <img src="https://nyxsys.ph/assets/images/audience measurement/indoor/graph of impression.png" style="object-fit: contain;" 
+                    <img src="https://nyxsys.ph/assets/webp-images/audience measurement/indoor/graph of impression.webp" style="object-fit: contain;" 
                         width="100%" height="500" alt="Graph of Impression Count for Posterbox from CaltonDatx">
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column">
