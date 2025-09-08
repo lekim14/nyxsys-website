@@ -1,8 +1,8 @@
 <app-navbar />
     
 <section class="hero-section">
-    <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" class="hero-video" preload="none" (loadeddata)="onVideoLoaded()">
-        <source src="https://nyxsys.ph/assets/videos/led.mp4" per type="video/mp4">
+    <video [autoplay]="true" [muted]="true" [loop]="true" [playsInline]="true" aria-hidden="true" class="hero-video" preload="none" (loadeddata)="onVideoLoaded()">
+        <source src="https://nyxsys.ph/assets/videos/led.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <img *ngIf="isVideoLoading" src="https://nyxsys.ph/assets/webp-images/static.webp" alt="" class="hero-video">
@@ -32,7 +32,7 @@
 
 <app-companies/>
 
-<app-testimonials />
+<!-- <app-testimonials /> -->
 
 <app-call-to-action />
 
