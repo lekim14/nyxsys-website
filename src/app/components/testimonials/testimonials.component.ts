@@ -18,7 +18,7 @@ export class TestimonialsComponent {
   constructor(private utils: UtilityService) { }
 
   ngOnInit() {
-    this.onLoadTestimonials();
+    // this.onLoadTestimonials();
   }
 
   onLoadTestimonials() {
