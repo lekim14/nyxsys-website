@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, signal, ViewChild } from '@angular/core';
 import { MaterialUiModule } from '../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../modules/components/components.module';
 import { UtilityService } from '../../services/utility.service';
@@ -15,6 +15,7 @@ export class HomeComponent {
 
   showButton = signal<boolean>(false);
   isVideoLoading: boolean = true;
+  @ViewChild('videoElement') videoElementRef!: ElementRef<HTMLVideoElement>;
 
   constructor(private utils: UtilityService, private router: Router) {
     this.router.events.subscribe(event => {
@@ -48,7 +49,14 @@ export class HomeComponent {
     )
   }
 
-  ngAfterViewInit() { }
+  ngAfterViewInit() { 
+    const video = this.videoElementRef.nativeElement;
+    video.addEventListener('loadeddata', () => {
+      console.log('Video loaded once');
+      this.isVideoLoading = false;
+      
+    }, { once: true }); // Ensures it's only triggered once
+  }
 
   onClickScrollSection() {
     const element = document.getElementById('about');
