@@ -24,35 +24,7 @@ export class LedComponent implements OnInit {
   isVisible: boolean[] = [ false, false ];
   isVideoLoading: boolean = true;
 
-  ledInventories: any[] = [
-    { 
-      text: "ICONIC - EDSA ORENSE LED (SOUTH BOUND)",
-      address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
-      size: "80FT (H) x 140FT (W)",
-      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/iconic-2.webp",
-      alt: "Iconic LED Billboard along EDSA Orense Southbound",
-      why: 'High-visibility LED billboard along EDSA Southbound, ensuring massive daily foot and vehicle traffic.',
-      link: '/services/led-media-inventories/iconic-edsa-orense-led'
-    },
-    { 
-      text: "EDSA PARAGON LED (NORTHBOUND)",
-      address: "Ad wall of Paragon Plaza Bldg, 162 EDSA corner Reliance St., Mandaluyong City",
-      size: "70FT (H) x 60FT (W)",
-      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/paragon.webp",
-      alt: "Paragon LED Billboard along EDSA Northbound",
-      why: 'A highly prominent, high-visibility LED billboard strategically located along EDSA Northbound, guaranteeing exposure to a massive volume of daily foot and vehicle traffic, making it an ideal platform for maximum brand visibility and engagement.',
-      link: '/services/led-media-inventories/edsa-paragon-led'
-    },
-    { 
-      text: "C5 MARKET MARKET LED (NORTHBOUND)",
-      address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
-      size: "30FT (H) x 80FT (W)",
-      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/market market.webp",
-      alt: "C5 Market Market Billboard Northbound",
-      why: 'Positioned in a prime location along C5 at Market! Market!, this dynamic LED billboard attracts massive daily foot and vehicle traffic, maximizing brand reach.',
-      link: '/services/led-media-inventories/c5-market-market-led'
-    },
-  ]
+  ledInventories: any[] = [];
 
   whyChooseLED: any[] = [
     { title: 'Eye-Catching & Dynamic', text: "Motion graphics, vivid colors, and stunning visuals make your brand unforgettable.", icon: 'visibility', },
@@ -285,6 +257,7 @@ export class LedComponent implements OnInit {
   ]
 
   constructor(private utils: UtilityService, private router: Router) {
+    this.ledInventories = utils.ledInventories;
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         utils.setCanonicalURL()

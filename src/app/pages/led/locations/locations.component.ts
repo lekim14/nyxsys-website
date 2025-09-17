@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { MaterialUiModule } from '../../../modules/material-ui/material-ui.module';
 import { ComponentsModule } from '../../../modules/components/components.module';
 import { UtilityService } from '../../../services/utility.service';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-locations',
   standalone: true,
-  imports: [ MaterialUiModule, ComponentsModule ],
+  imports: [ MaterialUiModule, ComponentsModule, RouterLink ],
   templateUrl: './locations.component.html',
   styleUrl: './locations.component.scss'
 })
@@ -928,6 +928,8 @@ export class LocationsComponent {
       startCampaign: 'Long exposure. Daily traffic. High-recall value.'
     }
   ];
+
+  relatedBillboards: any[] = [];
   
   constructor(private utils: UtilityService, private router: Router, private sanitizer: DomSanitizer) {
     this.router.events.subscribe(event => {
@@ -965,6 +967,11 @@ export class LocationsComponent {
       'twitter:description',
       this.selectedMeta().metaDescription
     )
+    // Get billboard type
+    const isStatic = this.utils.staticInvetories.filter((obj: any) => obj.link === this.router.url).length;
+    const isLED = this.utils.ledInventories.filter((obj: any) => obj.link === this.router.url).length;
+    const type = isStatic ? 'static' : 'LED';
+    this.relatedBillboards = type === 'static' ? this.utils.staticInvetories.filter((obj: any) => obj.link !== this.router.url) : this.utils.ledInventories.filter((obj: any) => obj.link !== this.router.url)
   }
 
   filterRoute = (object: any) => object.link === this.router.url; 

@@ -24,44 +24,7 @@ export class StaticComponent implements OnInit {
   isVisible: boolean[] = [ false, false ];
   isVideoLoading: boolean = true;
 
-  staticInvetories: any[] = [
-    { 
-      text: 'EDSA NORTHBOUND STATIC BILLBOARD',
-      address: 'EDSA corner Orense St. Makati City',
-      size: '90ft (H) x 70ft (W)',
-      image: 'https://nyxsys.ph/assets/webp-images/static/edsa northbound static billboard.webp',
-      alt: 'Static Parallel Billboard located at Edsa Northbound',
-      why: 'Peak retention for all possible leads',
-      link: '/services/static-fixed-inventories/edsa-northbound-static-billboard'
-    },
-    { 
-      text: 'EDSA ORENSE PARALLEL NORTHBOUND STATIC BILLBOARD',
-      address: 'EDSA corner Orense St., Makati City',
-      size: '30FT (H) x 75FT (W)',
-      image: 'https://nyxsys.ph/assets/webp-images/static/edsa orense parallel.webp',
-      alt: 'Static Billboard located at Edsa Northbound',
-      why: 'Retention built to convert.',
-      link: '/services/static-fixed-inventories/edsa-orense-parallel-northbound-static-billboard'
-    },
-    { 
-      text: 'EDSA MARCALEON (DOUBLE-FACED, SOUTHBOUND)',
-      address: 'EDSA Mandaluyong - Marcaleon Site, next to Petron and Shell Gasoline stations, Mandaluyong City',
-      size: '80FT (H) x 70FT (W)',
-      image: 'https://nyxsys.ph/assets/webp-images/static/edsa marcaleon double-faced southbound.webp',
-      alt: 'Static Billboard located at Edsa Marcaleon Southbound',
-      why: 'Engagement that actually sticks.',
-      link: '/services/static-fixed-inventories/edsa-marcaleon-southbound-static-billboard'
-    },
-    { 
-      text: 'EDSA MARCALEON (DOUBLE-FACED, NORTHBOUND)',
-      address: 'EDSA Mandaluyong - Marcaleon Site, next to Petron and Shell Gasoline stations, Mandaluyong City',
-      size: '80FT (H) x 70FT (W)',
-      image: 'https://nyxsys.ph/assets/webp-images/static/edsa marcaleon double-faced northbound.webp',
-      alt: 'Static Billboard located at Edsa Marcaleon Northbound',
-      why: 'Retention that surely pays back.',
-      link: '/services/static-fixed-inventories/edsa-marcaleon-northbound-static-billboard'
-    },
-  ]
+  staticInvetories: any[] = [];
 
   whyChooseUs: any[] = [
     {
@@ -96,7 +59,8 @@ export class StaticComponent implements OnInit {
       if (event instanceof NavigationEnd) {
         utils.setCanonicalURL()
       }
-    })
+    });
+    this.staticInvetories = this.utils.staticInvetories;
   }
 
   ngOnInit(): void {
@@ -126,7 +90,7 @@ export class StaticComponent implements OnInit {
     this.utils.setMetaUpdateTag(
       'twitter:description',
       "Nyxsys’ static billboards offer durable, high-impact ads in strategic locations like EDSA Marcaleon & EDSA Orense, ensuring strong, lasting brand visibility."
-    )
+    );
   }
 
   onVideoLoaded(){

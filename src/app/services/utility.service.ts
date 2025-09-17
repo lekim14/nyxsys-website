@@ -57,6 +57,76 @@ export class UtilityService {
     }
   ]
 
+  ledInventories: any[] = [
+    { 
+      text: "ICONIC - EDSA ORENSE LED (SOUTH BOUND)",
+      address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
+      size: "80FT (H) x 140FT (W)",
+      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/iconic-2.webp",
+      alt: "Iconic LED Billboard along EDSA Orense Southbound",
+      why: 'High-visibility LED billboard along EDSA Southbound, ensuring massive daily foot and vehicle traffic.',
+      link: '/services/led-media-inventories/iconic-edsa-orense-led'
+    },
+    { 
+      text: "EDSA PARAGON LED (NORTHBOUND)",
+      address: "Ad wall of Paragon Plaza Bldg, 162 EDSA corner Reliance St., Mandaluyong City",
+      size: "70FT (H) x 60FT (W)",
+      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/paragon.webp",
+      alt: "Paragon LED Billboard along EDSA Northbound",
+      why: 'A highly prominent, high-visibility LED billboard strategically located along EDSA Northbound, guaranteeing exposure to a massive volume of daily foot and vehicle traffic, making it an ideal platform for maximum brand visibility and engagement.',
+      link: '/services/led-media-inventories/edsa-paragon-led'
+    },
+    { 
+      text: "C5 MARKET MARKET LED (NORTHBOUND)",
+      address: "447 Magsaysay Avenue, Guadalupe Nuevo, Makati City",
+      size: "30FT (H) x 80FT (W)",
+      image: "https://nyxsys.ph/assets/webp-images/led/led inventories/market market.webp",
+      alt: "C5 Market Market Billboard Northbound",
+      why: 'Positioned in a prime location along C5 at Market! Market!, this dynamic LED billboard attracts massive daily foot and vehicle traffic, maximizing brand reach.',
+      link: '/services/led-media-inventories/c5-market-market-led'
+    },
+  ];
+
+
+  staticInvetories: any[] = [
+    { 
+      text: 'EDSA NORTHBOUND STATIC BILLBOARD',
+      address: 'EDSA corner Orense St. Makati City',
+      size: '90ft (H) x 70ft (W)',
+      image: 'https://nyxsys.ph/assets/webp-images/static/edsa northbound static billboard.webp',
+      alt: 'Static Parallel Billboard located at Edsa Northbound',
+      why: 'Peak retention for all possible leads',
+      link: '/services/static-fixed-inventories/edsa-northbound-static-billboard'
+    },
+    { 
+      text: 'EDSA ORENSE PARALLEL NORTHBOUND STATIC BILLBOARD',
+      address: 'EDSA corner Orense St., Makati City',
+      size: '30FT (H) x 75FT (W)',
+      image: 'https://nyxsys.ph/assets/webp-images/static/edsa orense parallel.webp',
+      alt: 'Static Billboard located at Edsa Northbound',
+      why: 'Retention built to convert.',
+      link: '/services/static-fixed-inventories/edsa-orense-parallel-northbound-static-billboard'
+    },
+    { 
+      text: 'EDSA MARCALEON (DOUBLE-FACED, SOUTHBOUND)',
+      address: 'EDSA Mandaluyong - Marcaleon Site, next to Petron and Shell Gasoline stations, Mandaluyong City',
+      size: '80FT (H) x 70FT (W)',
+      image: 'https://nyxsys.ph/assets/webp-images/static/edsa marcaleon double-faced southbound.webp',
+      alt: 'Static Billboard located at Edsa Marcaleon Southbound',
+      why: 'Engagement that actually sticks.',
+      link: '/services/static-fixed-inventories/edsa-marcaleon-southbound-static-billboard'
+    },
+    { 
+      text: 'EDSA MARCALEON (DOUBLE-FACED, NORTHBOUND)',
+      address: 'EDSA Mandaluyong - Marcaleon Site, next to Petron and Shell Gasoline stations, Mandaluyong City',
+      size: '80FT (H) x 70FT (W)',
+      image: 'https://nyxsys.ph/assets/webp-images/static/edsa marcaleon double-faced northbound.webp',
+      alt: 'Static Billboard located at Edsa Marcaleon Northbound',
+      why: 'Retention that surely pays back.',
+      link: '/services/static-fixed-inventories/edsa-marcaleon-northbound-static-billboard'
+    },
+  ];
+
   constructor(
     private breakPointObserver: BreakpointObserver,
     private meta: Meta,
