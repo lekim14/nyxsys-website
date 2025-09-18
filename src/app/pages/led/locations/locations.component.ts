@@ -929,6 +929,7 @@ export class LocationsComponent {
     }
   ];
 
+  type!: 'Static' | 'LED';
   relatedBillboards: any[] = [];
   
   constructor(private utils: UtilityService, private router: Router, private sanitizer: DomSanitizer) {
@@ -970,8 +971,8 @@ export class LocationsComponent {
     // Get billboard type
     const isStatic = this.utils.staticInvetories.filter((obj: any) => obj.link === this.router.url).length;
     const isLED = this.utils.ledInventories.filter((obj: any) => obj.link === this.router.url).length;
-    const type = isStatic ? 'static' : 'LED';
-    this.relatedBillboards = type === 'static' ? this.utils.staticInvetories.filter((obj: any) => obj.link !== this.router.url) : this.utils.ledInventories.filter((obj: any) => obj.link !== this.router.url)
+    this.type = isStatic ? 'Static' : 'LED';
+    this.relatedBillboards = this.type === 'Static' ? this.utils.staticInvetories.filter((obj: any) => obj.link !== this.router.url) : this.utils.ledInventories.filter((obj: any) => obj.link !== this.router.url)
   }
 
   filterRoute = (object: any) => object.link === this.router.url; 
