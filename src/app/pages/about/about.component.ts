@@ -71,11 +71,11 @@ export class AboutComponent implements OnInit {
 
     this.utils.setPageTitle('Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech'); 
     
-    this.utils.setMetaUpdateTag('title', 'Who Is Nyxsys Philippines? | Pioneers in Digital Media & Tech',)
+    this.utils.setMetaUpdateTag('title', 'Digital Business Solutions Provider | Nyxsys Philippines',)
 
     this.utils.setMetaUpdateTag(
       'description',
-      "Since 2014, Nyxsys Philippines has pioneered digital media and tech, transforming OOH advertising into advanced, data-driven business solutions. Learn more."
+      "Get to know digital business solutions provider Nyxsys Philippines. We specialize in innovative Digital Out-of-Home (DOOH) media and technology."
     )
     
     // OG Meta

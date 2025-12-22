@@ -193,10 +193,10 @@ export class BusinessSolutionsComponent implements OnInit {
 
     this.utils.setPageTitle('Next-Level Digital Display Management | Effortless Control');
     
-    this.utils.setMetaUpdateTag('title', 'Next-Level Digital Display Management | Effortless Control',)
+    this.utils.setMetaUpdateTag('title', 'Digital Signage Software | Nyxsys Philippines',)
     this.utils.setMetaUpdateTag(
       'description',
-      "Nyxsys provides advanced digital display management with real-time updates, seamless integration, and optimized audience engagement for impactful advertising."
+      "Manage and control your screens effortlessly with our top-tier Digital Signage Software. Simplify content scheduling and deployment across all your displays."
     )
     
     // OG Meta

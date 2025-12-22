@@ -72,10 +72,10 @@ export class StaticComponent implements OnInit {
 
     this.utils.setPageTitle('Static Billboard Advertising | Long-Lasting Brand Visibility');
 
-    this.utils.setMetaUpdateTag('title', 'Static Billboard Advertising | Long-Lasting Brand Visibility',);
+    this.utils.setMetaUpdateTag('title', 'Static Billboarding Services | Nyxsys Philippines',);
     this.utils.setMetaUpdateTag(
       'description',
-      "Nyxsys’ static billboards offer durable, high-impact ads in strategic locations like EDSA Marcaleon & EDSA Orense, ensuring strong, lasting brand visibility."
+      "Guarantee steady brand visibility with our classic static billboarding services. We offer high-impact fixed inventories for long-lasting brand awareness."
     )
     
     // OG Meta

@@ -75,10 +75,10 @@ export class ContactsComponent implements OnInit {
 
     this.utils.setPageTitle('Contact Nyxsys Philippines | Let’s Connect & Collaborate');
     
-    this.utils.setMetaUpdateTag('title', 'Contact Nyxsys Philippines | Let’s Connect & Collaborate',);
+    this.utils.setMetaUpdateTag('title', 'Contact Us for Digital Solutions | Nyxsys Philippines',);
     this.utils.setMetaUpdateTag(
       'description',
-      "Need digital advertising solutions? Contact Nyxsys Philippines for expert DOOH, LED, and business tech services. Let’s build something great! Connect with Us"
+      "Ready to grow? Contact Nyxsys Philippines for innovative digital media and business technology solutions. Email, call, or visit our Mandaluyong office."
     )
     
     // OG Meta

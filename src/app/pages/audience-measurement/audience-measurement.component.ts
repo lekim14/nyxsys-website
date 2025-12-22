@@ -60,7 +60,7 @@ export class AudienceMeasurementComponent implements OnInit {
   outdoorAudienceMeasurement: any[] = [
     {
       name: 'What is Vehicle Count?',
-      subheader: 'Boost Ad Visibility with High-Traffic Vehicle Count Data',
+      subheader: 'Convert Traffic into Attention By Leveraging Verified Vehicle Dwell Time Data.',
       image: 'https://nyxsys.ph/assets/webp-images/audience measurement/outdoor/Vehicle Count.webp',
       text: 'Vehicle count measures the number of vehicles passing a location within a specific timeframe, making it essential for evaluating the reach of outdoor ads like billboards. High vehicle counts indicate greater visibility and more opportunities for impressions, enhancing brand awareness and recall. For example, ads along high-traffic roads like EDSA Guadalupe can reach millions of commuters daily, maximizing exposure and ROI. Using vehicle count data, businesses can strategically place ads to effectively reach their target audience and ensure campaign success.',
       alt: 'Graph of Vehicle Count for LED Billboards from CaltonDatx',
@@ -76,17 +76,21 @@ export class AudienceMeasurementComponent implements OnInit {
       name: 'What is Dwell Time?',
       subheader: 'Increase Ad Engagement with Vehicle Dwell Time Insights',
       image: 'https://nyxsys.ph/assets/webp-images/audience measurement/outdoor/Vehicle Dwell Time.webp',
-      text: 'Vehicle dwell time measures how long vehicles remain in front of a location, such as at stoplights or in traffic, making it a vital metric for outdoor advertising. Longer dwell times mean drivers and passengers have more time to notice and engage with ads, boosting brand recall and effectiveness. For example, billboards at high-traffic intersections ensure prolonged visibility, creating a captive audience for advertisers. Leveraging dwell time data helps businesses strategically place ads for maximum engagement and impact.',
-      alt: 'Graph of Dwell time for LED Billboards from CaltonDatx',
+      text: 'Calton Datx utilizes AI and Computer Vision to precisely track vehicle dwell time in seconds, turning traffic into a quantifiable audience metric. This verified data allows our clients to:',
+      list: [
+        'Identify high-value ad placements based on prolonged exposure.',
+        'Optimize ad creative length to match average stoplight duration.',
+        'Strategically place ads at intersections that guarantee maximum engagement and brand recall, driving real outdoor advertising ROI.'
+      ]
     },
   ];
 
   caltonDatxKeyPoints: any[] = [
-    { title: 'Smarter Decisions', text: 'It helps businesses make smarter decisions by turning raw data into clear, actionable insights.' },
-    { title: 'Unlocking Hidden Insights', text: 'CaltonDatx digs deep into all the data coollected to uncover trends and opportunities that businesses might otherwise miss.' },
-    { title: 'Driving Growth', text: 'By using AI to guide strategy, it empowers businesses to grow and stay ahead of the competition through utilizing the hidden insights.' },
+    { title: 'Real-Time Data-Driven Optimization', text: 'It helps businesses make smarter decisions by turning raw data into clear, actionable insights.' },
+    { title: 'DOOH Foot Traffic & Dwell Time Analysis', text: 'CaltonDatx digs deep into all the data coollected to uncover trends and opportunities that businesses might otherwise miss.' },
+    { title: 'Campaign Attribution & Sales Lift', text: 'By using AI to guide strategy, it empowers businesses to grow and stay ahead of the competition through utilizing the hidden insights.' },
     { title: 'State-of-the-Art Technology', text: 'CaltonDatx fixes on being the cutting-edge tech designed to help businesses adapt and thrive in an ever-shifting landscape.' },
-    { title: 'Built for Business Success', text: "Whether you're a small company or a large enterprise, CaltonDatx helps you get the most out of your data to drive success." },
+    { title: 'Enterprise-Grade Security & Scalability', text: "Whether you're a small company or a large enterprise, CaltonDatx helps you get the most out of your data to drive success." },
   ]
   
   constructor(private utils: UtilityService, private router: Router) {
@@ -106,10 +110,10 @@ export class AudienceMeasurementComponent implements OnInit {
   
     this.utils.setPageTitle('Audience Measurement | Data-Driven Insights by Calton Datx');
 
-    this.utils.setMetaUpdateTag('title', 'Audience Measurement | Data-Driven Insights by Calton Datx',)
+    this.utils.setMetaUpdateTag('title', 'Audience Measurement Technology | Nyxsys Philippines',)
     this.utils.setMetaUpdateTag(
       'description',
-      "Leverage Calton Datx's audience measurement for real-time insights, behavioral trends, and AI-driven analytics to optimize DOOH campaigns and engagement."
+      "Maximize your campaign ROI with advanced Audience Measurement from Calton Datx. Get real-time, predictive insights to boost your DOOH performance."
     )
     
     // OG Meta

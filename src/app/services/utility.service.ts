@@ -22,7 +22,7 @@ export class UtilityService {
     {
       id: 0,
       title: 'LED MEDIA INVENTORIES',
-      description: 'High-performance LED displays delivering unmatched quality and versatility for all your marketing and advertising needs.',
+      description: 'Help your brand stand out in any environment featuring our high-performance LED displays! Ideal for wide a wide range of marketing and advertising needs.',
       image: 'https://nyxsys.ph/assets/webp-images/led/led-services.webp',
       routerLink: '/services/led-media-inventories',
       buttonText: 'Explore Our LED Media Inventory Solutions',
@@ -31,7 +31,9 @@ export class UtilityService {
     {
       id: 1,
       title: 'STATIC FIXED INVENTORIES',
-      description: `Durable, high-quality static advertising solutions designed to deliver impactful, long-lasting brand messaging in high-traffic areas.`,
+      description: `Durable billboard solutions designed to keep your brand visible in the busiest, 
+                    high-traffic areas. Best for creating consistent impact and long-term brand 
+                    recognition.`,
       image: 'https://nyxsys.ph/assets/webp-images/static/edsa northbound static billboard.webp',
       routerLink: '/services/static-fixed-inventories',
       buttonText: 'See Our Static Billboard Advertising',
@@ -40,7 +42,8 @@ export class UtilityService {
     {
       id: 2,
       title: 'DIGITAL DISPLAY MANAGEMENT SERVICES',
-      description: `Dynamic, high-definition displays designed for impactful advertising, real-time updates, and seamless engagement across diverse industries.`,
+      description: `Experience digital display management services with high-definition screens 
+                    built for impactful advertising, real-time content updates, and smooth engagement across industries.`,
       image: 'https://nyxsys.ph/assets/webp-images/business solutions/globe.webp',
       routerLink: '/services/digital-display-management-services',
       buttonText: 'Learn How We Manage Digital Displays',
@@ -49,7 +52,9 @@ export class UtilityService {
     {
       id: 3,
       title: 'AUDIENCE MEASUREMENT',
-      description: `An advanced data platform that transforms real-time monitoring into actionable insights, empowering businesses to optimize operations and drive growth.`,
+      description: `An advanced data platform that transforms real-time monitoring into 
+                    actionable insights, empowering businesses to optimize operations and drive 
+                    growth.`,
       image: 'https://nyxsys.ph/assets/webp-images/audience measurement/indoor/indoor mall audience measurement 1.webp',
       routerLink: '/services/audience-measurement',
       buttonText: 'Discover How We Measure Advertising Impact',

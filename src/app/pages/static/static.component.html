@@ -8,13 +8,14 @@
     <img *ngIf="isVideoLoading" src="https://nyxsys.ph/assets/webp-images/static.webp" alt="" class="hero-video">
     <div class="static-container">
         <div class="static-wrapper">
-            <h1 class="static-header static-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Maximizing Impact: The Power of Static Fixed Billboard Inventories</h1>
-            <p class="static-subheader static-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
+            <h1 class="static-header static-item" [@slideIn]="isVisible[0] ? 'visible' : 'hidden'">Discover the Benefits of Static Fixed Billboard Inventories</h1>
+            <!-- <p class="static-subheader static-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
                 Stand Out. Be Seen. Build Your Brand.
-            </p>
+            </p> -->
             <p class="static-subheader static-item" [@slideIn]="isVisible[1] ? 'visible' : 'hidden'">
-                With Nyxsys' Static Billboard Advertising placed thoughtfully in busy locations, you can guarantee steady brand awareness. 
-                These high-end, non-digital billboards offer classic, affordable advertising that consistently conveys your message with professionalism and clarity.
+                Perfect for brands looking to make a lasting impression in high-traffic areas. 
+                These classic, non-digital ads are a cost-effective way to boost brand recognition and communicate your message with clarity. 
+                Trust Nyxsys to help your brand stand tall and be seen by your target audience.
             </p>
         </div>
     </div>
@@ -24,7 +25,14 @@
     <div class="static-container">
         <div class="static-wrapper text-center" style="margin-bottom: 10%;">
             <div class="mb-5">
-                <h2 class="mb-4 fw-bold">Why Consider Advertising On Static Billboards?</h2>
+                <h2 class="mb-4 fw-bold">Why Choose Our Static Billboard Services</h2>
+                <p class="static-subheader static-item">
+                    Discover the power of static billboard advertising to boost your brand’s visibility and impact.
+                    Our services offer affordable, reliable, and high-traffic exposure that connects you with a broad audience 24/7.
+                </p>
+                <p class="static-subheader static-item">
+                    With durable, weather-resistant displays and fixed pricing, you get unmatched value and trust-building presence for your business.
+                </p>
             </div>
             <div class="row justify-content-center my-5 g-3 g-md-4">
                 @for (item of whyChooseUs; track $index) {
@@ -67,10 +75,10 @@
                                 </div>
                             </div>
                             <mat-divider></mat-divider>
-                            <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Why Advertise Here?</p>
+                            <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Advertise Here</p>
                             <p>{{ item.why }}</p>
                             <div class="mt-auto">
-                                <a color="accent" [routerLink]="item.link" routerLinkActive="router-link-active"  mat-raised-button>Read more</a>
+                                <a color="accent" routerLink="/contact" routerLinkActive="router-link-active"  mat-raised-button>Book this Spot</a>
                             </div>
                         </div>
                     </div>

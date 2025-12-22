@@ -73,10 +73,10 @@ export class TeamComponent implements OnInit {
 
     this.utils.setPageTitle('Meet the Nyxsys Team | Innovators in Digital Advertising');
     
-    this.utils.setMetaUpdateTag('title', 'Meet the Nyxsys Team | Innovators in Digital Advertising');
+    this.utils.setMetaUpdateTag('title', 'Meet the Nyxsys Team: Digital Advertising Innovators');
     this.utils.setMetaUpdateTag(
       'description',
-      "Meet the experts at Nyxsys Philippines! Our team drives innovation in DOOH, LED advertising, and digital solutions for impactful brand experiences. Read More."
+      "Meet the dedicated team driving digital advertising innovation. We combine expertise and technology to deliver impactful business and DOOH media solutions."
     )
     
     // OG Meta

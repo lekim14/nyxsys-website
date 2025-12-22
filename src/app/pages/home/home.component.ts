@@ -28,10 +28,10 @@ export class HomeComponent {
   ngOnInit(): void {
     this.utils.setPageTitle('Nyxsys Philippines Inc. | Official Site | DOOH Advertising')
 
-    this.utils.setMetaUpdateTag('title', 'Nyxsys Philippines Inc. | Official Site | DOOH Advertising',)
+    this.utils.setMetaUpdateTag('title', 'Digital Signage Solutions & DOOH Media | Nyxsys Philippines',)
     this.utils.setMetaUpdateTag(
       'description',
-      'Nyxsys Philippines is a premier provider of Digital Out-of-Home (DOOH) media and business technology solutions. From LED billboards to audience measurement.'
+      'Transform your business growth with digital signage solutions from Nyxsys. We specialize in powerful digital out-of-home  media and innovative technology.'
     )
 
     // OG Meta

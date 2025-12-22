@@ -27,11 +27,11 @@ export class LedComponent implements OnInit {
   ledInventories: any[] = [];
 
   whyChooseLED: any[] = [
-    { title: 'Eye-Catching & Dynamic', text: "Motion graphics, vivid colors, and stunning visuals make your brand unforgettable.", icon: 'visibility', },
-    { title: 'Strategic Locations', text: "Our LED billboards are positioned in high-traffic areas, guaranteeing maximum brand visibility", icon: 'location_on' },
-    { title: '24/7 Brand Exposure', text: "Unlike traditional billboards, LED advertising runs day and night, continuously engaging your audience.", icon: 'schedule' },
-    { title: 'High ROI & Cost-Effective', text: "Get better reach and engagement than traditional print ads at a competitive price.", icon: 'paid' },
-    { title: 'Fast & Flexible Campaigns', text: "Update your ads instantly, run multiple creatives, and launch time-sensitive campaigns effortlessly.", icon: 'rocket_launch' },
+    { title: 'Eye-Catching & Dynamic Visuals', text: "Motion graphics, vibrant colors, and sharp visuals capture attention and make your message impossible to ignore. ", icon: 'visibility', },
+    { title: 'Strategic Locations', text: "Our LED billboards are installed in busy, high-traffic spots so your advertisements reach more potential customers every day.", icon: 'location_on' },
+    { title: '24/7 Brand Exposure', text: "Your audience stays engaged with your message day and night, increasing recall and brand awareness.", icon: 'schedule' },
+    { title: 'High ROI & Cost-Effective', text: "LED ads deliver more views and better engagement compared to print and static billboards—all at a competitive price.", icon: 'paid' },
+    { title: 'Fast & Flexible', text: "Run multiple creatives and launch time-sensitive promotions without delay, giving your campaigns the agility they need to succeed.", icon: 'rocket_launch' },
   ]
 
   whoBenefits: any[] = [
@@ -274,10 +274,10 @@ export class LedComponent implements OnInit {
 
     this.utils.setPageTitle('LED Billboard Advertising | High-Impact Digital Displays');
 
-    this.utils.setMetaUpdateTag('title', 'LED Billboard Advertising | High-Impact Digital Displays',);
+    this.utils.setMetaUpdateTag('title', 'High-Impact LED Billboard Advertising | Nyxsys Philippines',);
     this.utils.setMetaUpdateTag(
       'description',
-      "Capture attention with Nyxsys' LED billboards. Our HD digital displays deliver vibrant, engaging ads in prime spots like EDSA Orense and C5 Market Market."
+      "Dominate the market with high-impact LED Billboard advertising. Nyxsys positions your billboards in high-traffic locations for maximum brand visibility."
     )
     
     // OG Meta

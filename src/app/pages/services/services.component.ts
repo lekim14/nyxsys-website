@@ -40,10 +40,10 @@ export class ServicesComponent implements OnInit {
 
     this.utils.setPageTitle('Our Services | Nyxsys Philippines - Digital Advertising Experts')
 
-    this.utils.setMetaUpdateTag('title', 'Our Services | Nyxsys Philippines - Digital Advertising Experts',);
+    this.utils.setMetaUpdateTag('title', 'Outdoor Media & Advertising Services | Nyxsys Philippines',);
     this.utils.setMetaUpdateTag(
       'description',
-      "Explore Nyxsys Philippines' DOOH services, LED billboards, audience insights, and digital display management. Drive impact with cutting-edge solutions."
+      "Get seen and grow with outdoor media services from Nyxsys. We deliver cutting-edge billboard and digital advertising services."
     )
     
     // OG Meta

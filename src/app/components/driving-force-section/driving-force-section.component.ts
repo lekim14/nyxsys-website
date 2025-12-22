@@ -25,19 +25,19 @@ export class DrivingForceSectionComponent {
   drivingForce: any[] = [
     { 
       title: 'INNOVATION', 
-      details: 'Pioneering cutting-edge technology in digital media, such as iconic LED billboards and advanced advertising solutions, making Nyxsys a leader in outdoor media.' ,
+      details: 'We lead with advanced digital signage solutions, bringing to the market technology like LED billboards and smart advertising tools.' ,
       image: 'https://nyxsys.ph/assets/webp-images/innovation.webp',
       alt: 'Businessman holds glowing bulb with tech icons.'
     },
     { 
       title: 'CLIENT-CENTRIC APPROACH', 
-      details: `Focusing on delivering tailored solutions that meet the dynamic needs of advertisers and businesses.`, 
+      details: `Our digital signage solutions are designed around the needs of marketers and advertisers, adapting to market trends and goals.`, 
       image: 'https://nyxsys.ph/assets/webp-images/client.webp',
       alt: 'Businessman using mouse with digital client network icons.'
     },
     { 
       title: 'VISIONARY LEADERSHIP', 
-      details: `Empowered by strong leadership that inspires growth, collaboration, and service excellence, driving both innovation and company culture forward.` ,
+      details: `Strong leadership inspires the work we do at Nyxsys. Growth, teamwork and excellence at every level guides our digital signage solutions.` ,
       image: 'https://nyxsys.ph/assets/webp-images/visionary.webp',
       alt: 'Businessman holding digital human network hologram.'
     },

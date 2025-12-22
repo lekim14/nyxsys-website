@@ -23,7 +23,13 @@
                                 name }}</h4>
                             <p [@animateText]="currentState" (@animateText.done)="animationFinished($event)">{{ text }}
                             </p>
+                            
                         }
+                        <ul>
+                            @for (item of list; track $index) {
+                                <li>{{ item }}</li>
+                            }
+                        </ul>
                     </div>
                     <div class="testimonial-buttons">
                         <button (click)="onClickChangeCarouselItemList(-1)" [disabled]="currentIndex == 0"

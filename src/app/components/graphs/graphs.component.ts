@@ -77,6 +77,7 @@ export class GraphsComponent implements OnInit {
   image: string = '';
   alt: string = '';
   subheader: string = '';
+  list: string[] = [];
 
   currentValue: any;
 
@@ -88,6 +89,7 @@ export class GraphsComponent implements OnInit {
     this.subheader = this.carouselItemList[this.currentIndex]?.subheader;
 
     this.currentValue = this.carouselItemList[this.currentIndex];
+    this.list = this.carouselItemList[this.currentIndex]?.list;
   }
 
   onClickPrev() {
@@ -113,6 +115,8 @@ export class GraphsComponent implements OnInit {
       this.name = this.carouselItemList[this.currentIndex].name;
       this.image = this.carouselItemList[this.currentIndex].image;
       this.alt = this.carouselItemList[this.currentIndex].alt;
+      this.subheader = this.carouselItemList[this.currentIndex]?.subheader;
+      this.list = this.carouselItemList[this.currentIndex]?.list || [];
       this.currentState = 'visible';
     }
   }
