@@ -770,7 +770,7 @@ export class LocationsComponent {
     },
     {
       link: '/services/led-media-inventories/edsa-paragon-led',
-      fileName: 'https://nyxsys.ph/assets/webp-images/led/led inventories/iconic-2.webp',
+      fileName: 'https://nyxsys.ph/assets/webp-images/led/led inventories/paragon.webp',
       location: 'EDSA Guadalupe, directly across Guadalupe MRT Station (Northbound)'
     },
     {

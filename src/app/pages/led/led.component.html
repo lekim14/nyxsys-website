@@ -56,26 +56,27 @@
             <h2 class="fw-semibold">Premium LED Billboard Locations</h2>
             <div class="row g-3 mt-2 justify-content-center">
                 @for (item of ledInventories; track $index) {
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="led-content led-content-hover">
-                        <img [src]="item.image" [alt]="item.alt" loading="lazy">
-                        <div class="led-content-overlay d-flex flex-column h-100">
-                            <div class="led-content-text">
-                                <h6 class="fs-6 fw-semibold">{{ item.text }}</h6>
-                                <p>Location: {{ item.address }}</p>
-                                <div class="d-flex justify-content-between mb-1" style="align-items: center;">
-                                    <span>Size: {{ item.size }}</span>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="led-content led-content-hover">
+                            <img [src]="item.image" [alt]="item.alt" loading="lazy">
+                            <div class="led-content-overlay d-flex flex-column h-100">
+                                <div class="led-content-text">
+                                    <h6 class="fs-6 fw-semibold">{{ item.text }}</h6>
+                                    <p>Location: {{ item.address }}</p>
+                                    <div class="d-flex justify-content-between mb-1" style="align-items: center;">
+                                        <span>Size: {{ item.size }}</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <mat-divider></mat-divider>
-                            <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Advertise Here</p>
-                            <p>{{ item.why }}</p>
-                            <div class="mt-auto">
-                                <a color="accent" routerLink="/contact" routerLinkActive="router-link-active"  mat-raised-button>Book this Spot</a>
+                                <mat-divider></mat-divider>
+                                <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Advertise Here</p>
+                                <p>{{ item.why }}</p>
+                                <div class="mt-auto d-flex gap-1">
+                                    <a color="accent" routerLink="/contact" routerLinkActive="router-link-active"  mat-raised-button>Book this Spot</a>
+                                    <a color="secondary" [routerLink]="item.link" routerLinkActive="router-link-active"  mat-raised-button>Learn More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 }
             </div>
         </div>

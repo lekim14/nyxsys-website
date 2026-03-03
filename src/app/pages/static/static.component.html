@@ -77,8 +77,9 @@
                             <mat-divider></mat-divider>
                             <p class="fw-semibold mt-3 mx-1" style="color: #F58F20;">Advertise Here</p>
                             <p>{{ item.why }}</p>
-                            <div class="mt-auto">
+                            <div class="mt-auto d-flex gap-1">
                                 <a color="accent" routerLink="/contact" routerLinkActive="router-link-active"  mat-raised-button>Book this Spot</a>
+                                <a color="secondary" [routerLink]="item.link" routerLinkActive="router-link-active"  mat-raised-button>Learn More</a>
                             </div>
                         </div>
                     </div>
