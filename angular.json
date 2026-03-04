@@ -29,7 +29,9 @@
               "src/favicon.ico",
               "src/assets",
               "src/sitemap.xml",
-              "src/robots.txt" 
+              "src/robots.txt",
+              "src/.htaccess",
+              "src/404.shtml"
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
@@ -109,7 +111,9 @@
               "src/favicon.ico",
               "src/assets",
               "src/sitemap.xml",
-              "src/robots.txt" 
+              "src/robots.txt",
+              "src/.htaccess",
+              "src/404.shtml"
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
